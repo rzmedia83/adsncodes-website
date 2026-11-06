@@ -1,0 +1,76 @@
+# Ads n' Codes static site (Nov 2026). Previous WordPress .htaccess kept as .htaccess.wp-2026-11-04
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+ErrorDocument 410 /404.html
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# One canonical host: https://adsncodes.com (www and http 301 to it)
+RewriteCond %{HTTP_HOST} ^www\.adsncodes\.com$ [NC]
+RewriteRule ^(.*)$ https://adsncodes.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^adsncodes\.com$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^(.*)$ https://adsncodes.com/$1 [R=301,L]
+
+# Leave subdomain prototypes (medicare, inventa, grillhouse, backtoroots) untouched
+RewriteCond %{HTTP_HOST} !^(www\.)?adsncodes\.com$ [NC]
+RewriteRule ^ - [L]
+
+# Demo folders open only on their own subdomains
+RewriteRule ^(medicare|realestate|inventa|grillhouse)(/(.*))?$ https://$1.adsncodes.com/$3 [R=301,L]
+RewriteRule ^backtoroots(/.*)?$ https://backtoroots.adsncodes.com/ [R=301,L]
+
+# Old WordPress URLs -> new pages (301)
+RewriteCond %{QUERY_STRING} (^|&)(p|page_id|cat|author)=\d+ [NC]
+RewriteRule ^$ /? [R=301,L]
+RewriteRule ^(about-us|our-story|who-we-are)/?$ /about.html [R=301,L]
+RewriteRule ^(contact-us|get-in-touch)/?$ /contact.html [R=301,L]
+RewriteRule ^(portfolio|our-work|gallery)(/.*)?$ /work.html [R=301,L]
+RewriteRule ^(blog|news|category|tag|author)(/.*)?$ /insights.html [R=301,L]
+# WordPress feeds and core files are gone for good (410 tells Google to drop them fast)
+RewriteRule (^|/)(feed|comments/feed|trackback)/?$ - [G,L]
+RewriteRule ^(wp-includes|wp-json)(/.*)?$ - [G,L]
+RewriteRule ^(wp-sitemap.*|sitemap_index|page-sitemap|projects-sitemap|services-sitemap|team-sitemap)\.xml$ /sitemap.xml [R=301,L]
+RewriteRule ^about-dark/?$ /about.html [R=301,L]
+RewriteRule ^team(-dark)?(/.*)?$ /about.html [R=301,L]
+RewriteRule ^contact-dark/?$ /contact.html [R=301,L]
+RewriteRule ^(projects(-dark)?|testimonial-dark|gallery-video-dark|gallery-image-dark)(/.*)?$ /work.html [R=301,L]
+RewriteRule ^services/personal-branding-content-marketing/?$ /personal-branding-dubai.html [R=301,L]
+RewriteRule ^services/media-production/?$ /video-production-dubai.html [R=301,L]
+RewriteRule ^services/integrated-marketing-campaigns/?$ /digital-marketing-dubai.html [R=301,L]
+RewriteRule ^services/traditional-offline-marketing/?$ /marketing-agency-uae.html [R=301,L]
+RewriteRule ^services/tech-solution/?$ /web-development-dubai.html [R=301,L]
+RewriteRule ^services/digital-marketing/?$ /digital-marketing-dubai.html [R=301,L]
+RewriteRule ^services(-dark)?(/.*)?$ /services.html [R=301,L]
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(about|contact|work|services|insights|industries)/?$ /$1.html [R=301,L]
+
+# Old WordPress front end retired: block public entry points (files stay on disk for rollback)
+RewriteRule ^(wp-login\.php|xmlrpc\.php|wp-signup\.php|wp-activate\.php|wp-trackback\.php|wp-comments-post\.php|readme\.html|license\.txt|wp-config-sample\.php)$ - [F,L]
+RewriteRule ^wp-admin(/.*)?$ - [F,L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+<FilesMatch "\.(html|xml|txt)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|mp4|woff2)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+</IfModule>

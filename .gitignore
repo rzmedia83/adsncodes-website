@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+prod/
+hkeys.sh
+*.key
+.DS_Store

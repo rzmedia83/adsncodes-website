@@ -1,0 +1,126 @@
+<style>
+.intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,6vw,100px);align-items:center}
+.phones{display:flex;gap:3%;justify-content:center;align-items:flex-start}
+.phones figure{margin:0;width:31%;display:flex;flex-direction:column;gap:12px}
+.phones figure:nth-child(2){margin-top:12%}
+.phones figure:nth-child(3){margin-top:24%}
+@media (max-width:620px){.phones{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:8px}.phones figure{flex:0 0 62%;margin-top:0!important;scroll-snap-align:start}}
+.phones img{filter:drop-shadow(0 30px 50px rgba(65,64,66,.25))}
+.phones figcaption{font-size:14px;color:var(--ink-70)}
+@media (max-width:860px){.intro{grid-template-columns:minmax(0,1fr)}}
+.cap li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1.2fr);gap:20px 4vw;padding-block:34px;border-top:1px solid var(--ink-12);scroll-margin-top:100px}
+.cap li:last-child{border-bottom:1px solid var(--ink-12)}
+.cap h3{font-size:clamp(28px,3vw,44px);line-height:1}
+.cap p{color:var(--ink-70)}
+.cap .ex{font-size:15px}
+@media (max-width:900px){.cap li{grid-template-columns:minmax(0,1fr)}}
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.flow>div{padding:34px clamp(18px,2.4vw,36px) 38px;border-left:1px solid var(--paper-14)}
+.flow>div:first-child{border-left:0;padding-left:0}
+.flow h3{font-size:clamp(26px,2.6vw,38px);margin-bottom:18px}
+.flow li{padding-block:8px;color:var(--paper-70)}
+.flow .mid{background:var(--paper);color:var(--ink);border-left:0}
+.flow .mid li{color:var(--ink-70)}
+@media (max-width:860px){.flow{grid-template-columns:minmax(0,1fr)}.flow>div{border-left:0;padding-left:0;border-top:1px solid var(--paper-14)}.flow .mid{padding-left:24px}}
+.demos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.demos a{display:flex;flex-direction:column;gap:16px;text-decoration:none;color:inherit}
+.demos .media{background:var(--stone);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:7% 0;overflow:hidden}
+.demos .media img{height:100%;width:auto;max-width:56%;object-fit:contain!important;padding:0!important;background:none!important;filter:drop-shadow(0 30px 50px rgba(0,0,0,.25));transition:transform 1s var(--ease)}
+.demos a:hover .media img{transform:translateY(-10px)}
+@media (max-width:980px){.demos{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:620px){.demos{grid-template-columns:minmax(0,1fr)}}
+.princ{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 6vw}
+.princ p{color:var(--ink-70);margin-top:10px}
+.princ h3{font-size:clamp(22px,2vw,28px)}
+@media (max-width:760px){.princ{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<section class="phero">
+  <canvas class="silk" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Home</a> / AI and Automation</p>
+    <h1 class="hl"><span class="ln"><span>AI that knows</span></span><span class="ln"><span>your business</span></span></h1>
+    <p class="lede">AI agents and WhatsApp systems for any business that lives on enquiries: real estate, clinics, restaurants, retail, automotive, education and more. Built around your services, prices and the way you speak to customers.</p>
+    <div class="acts" style="margin-top:38px"><a class="btn btn-wa mag" href="https://wa.me/971565440310?text=Hi%2C%20I%27d%20like%20a%20free%20demo%20of%20the%20WhatsApp%20AI%20agent%20for%20my%20business.">Book a free demo</a><a class="tlink" href="#demos">Try the live demos</a></div>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="wrap intro">
+    <div>
+      <h2 class="mid">Everyone runs ads. Very few answer the leads in time.</h2>
+      <p class="lede dim" style="margin-top:24px">Someone sees your ad at 11 pm, sends a message, and waits. By the time your team replies the next morning, they've booked somewhere else.</p>
+      <p class="dim" style="margin-top:18px">Our systems reply straight away, in a way that sounds like your business. They answer questions, check what's available, take the booking or order, and save everything where your team will see it. When a customer needs a person, the chat moves to your staff with the details already there.</p>
+    </div>
+    {{AGENTSHOW}}
+  </div>
+</section>
+
+<section class="sec light" style="padding-top:0">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">What we build</span><h2 class="big">Four kinds of systems</h2></div>
+    <ul class="cap">
+      <li id="agents"><h3>AI agents</h3><p>Trained on your services, prices, policies and tone. They answer questions on WhatsApp and your website the way a well briefed team member would.</p><p class="ex">For example: a clinic agent that explains treatments, prices and insurance, then books the visit.</p></li>
+      <li id="whatsapp"><h3>WhatsApp automation</h3><p>Complete flows that run inside WhatsApp on your existing business number, from the first message to a confirmed booking or order.</p><p class="ex">For example: restaurant orders that land directly on the kitchen screen.</p></li>
+      <li id="workflows"><h3><a href="workflow-automation-dubai.html" style="color:inherit">Workflow automation</a></h3><p>The repetitive follow up work your team does every day, done on time without anyone remembering to do it.</p><p class="ex">For example: reminders the day before an appointment, and a nudge to leads who went quiet.</p></li>
+      <li id="crm"><h3>Integrations</h3><p>Every lead and conversation goes where your team already works, so nothing is typed in twice.</p><p class="ex">For example: Zoho, HubSpot, clinic booking software, restaurant POS, Google Sheets.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">How it fits</span><h2 class="big" style="max-width:15ch">Nothing new for your customers or your team</h2></div>
+    <div class="flow">
+      <div><h3>Messages come in</h3><ul><li>Your WhatsApp Business number</li><li>Website chat and forms</li><li>Instagram and Facebook messages</li><li>Click to WhatsApp ads</li></ul></div>
+      <div class="mid"><h3>The system handles it</h3><ul><li>Understands what the person wants</li><li>Answers using your information</li><li>Books, orders or qualifies</li><li>Follows your rules and hours</li></ul></div>
+      <div><h3>Results go to your tools</h3><ul><li>Booking system or POS</li><li>Your CRM</li><li>A notification to the right person</li><li>A full chat history</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" style="padding-top:0">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Industries</span><div><h2 class="big" style="max-width:16ch">Clinics, restaurants and much more</h2><p class="lede dim" style="margin-top:22px">Every agent is designed around how that business's customers actually buy.</p></div></div>
+    <ul class="cap">
+      <li><h3>Real estate</h3><p>Qualifies buyers and tenants by budget, area and timeline, shares matching listings and books viewings into the agent's calendar.</p><p class="ex">Off plan launches, rentals, secondary sales and holiday homes.</p></li>
+      <li><h3>Clinics and healthcare</h3><p>Shows the doctors, services and prices as carousels and books appointments in about a minute.</p><p class="ex">Dental, dermatology, aesthetics, physiotherapy, general practice.</p></li>
+      <li><h3>Restaurants and cafés</h3><p>Takes orders in plain words, prices them and sends them to the kitchen or POS.</p><p class="ex">Delivery, pickup and table bookings.</p></li>
+      <li><h3>E-commerce and retail</h3><p>Answers size and stock questions, shares catalogues, recovers carts and tracks orders.</p><p class="ex">Fashion, electronics, home and beauty stores.</p></li>
+      <li><h3>Automotive, education, salons and more</h3><p>Test drive bookings, course enquiries, beauty appointments, site visits for contractors and consultations for professional firms.</p><p class="ex"><a href="whatsapp-ai-agent-uae.html" style="color:var(--ink)">See every industry and how it works</a></p></li>
+    </ul>
+  </div>
+</section>
+
+{{LANDING}}<section class="sec light" id="demos">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Live demos</span><div><h2 class="big">Try them on your phone</h2><p class="lede dim" style="margin-top:22px">Each one runs the way a client's system would. A demo built on your own business, listings or menu can be ready within days.</p><p style="margin-top:18px"><a class="tlink" href="whatsapp-ai-agent-uae.html#try">Or try the clinic agent right here, no phone needed</a></p></div></div>
+    <div class="demos">
+      <a href="https://realestate.adsncodes.com"><div class="media"><img src="assets/img/demo-re-match.webp" alt="WhatsApp agent for a Dubai brokerage matching a typed request to Dubai Marina listings with prices and a cash, mortgage or payment plan question" loading="lazy"></div><div class="wk-cap"><h3>Real estate leads</h3><span>Open the demo</span></div></a>
+      <a href="https://medicare.adsncodes.com"><div class="media"><img src="assets/img/demo-clinic-wa.webp" alt="Clinic AI agent showing services, prices and doctors on WhatsApp" loading="lazy"></div><div class="wk-cap"><h3>Clinic booking</h3><span>Open the demo</span></div></a>
+      <a href="https://grillhouse.adsncodes.com"><div class="media"><img src="assets/img/demo-grillhouse.webp" alt="Restaurant demo" loading="lazy"></div><div class="wk-cap"><h3>Restaurant ordering</h3><span>Open the demo</span></div></a>
+    </div>
+    <nav class="related" aria-label="WhatsApp agents by industry" style="margin-top:34px"><a href="whatsapp-ai-agent-real-estate-dubai.html">WhatsApp AI agent for real estate</a><a href="whatsapp-ai-agent-clinics-dubai.html">WhatsApp AI agent for clinics</a><a href="whatsapp-ordering-restaurants-dubai.html">WhatsApp ordering for restaurants</a></nav>
+  </div>
+</section>
+
+<section class="sec light" style="padding-top:0">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">How we build</span><div class="princ">
+      <div><h3>Your team keeps its tools</h3><p>Staff carry on replying from the WhatsApp app and working in the software they know.</p></div>
+      <div><h3>What we demo is what you get</h3><p>Every flow follows WhatsApp and Meta policies, so nothing in the demo disappears at launch.</p></div>
+      <div><h3>A person is always one step away</h3><p>Customers can reach a human at any point, and the handover carries the whole conversation.</p></div>
+      <div><h3>Built for one business</h3><p>Your services, prices, tone and rules. We don't sell a template with your logo on it.</p></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="sec stone">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Questions</span><div class="faq faq-list">
+      <div class="qa"><button type="button" aria-expanded="true" aria-controls="b1" id="p1">How is this different from a chatbot?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="b1" role="region" aria-labelledby="p1"><div><p>A typical chatbot answers from a script. Ours check live availability, take the booking or order, write it into your software and bring your team in when needed.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false" aria-controls="b2" id="p2">Can we keep our WhatsApp number?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="b2" role="region" aria-labelledby="p2"><div><p>Yes. It runs on your existing WhatsApp Business number, and your team can still reply from the app.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false" aria-controls="b3" id="p3">What software can it connect to?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="b3" role="region" aria-labelledby="p3"><div><p>Most booking systems, POS systems and CRMs that offer an API, including Zoho and HubSpot. We check your setup before quoting.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false" aria-controls="b4" id="p4">Does it work with our ads?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="b4" role="region" aria-labelledby="p4"><div><p>That's where it pays off fastest. Click to WhatsApp ads bring in leads and the system replies instantly. It also handles messages from your website, referrals and returning customers.</p></div></div></div>
+    </div></div>
+  </div>
+</section>

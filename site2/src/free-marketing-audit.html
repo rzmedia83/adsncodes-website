@@ -1,0 +1,116 @@
+<style>
+.ct{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:start}
+.ct form{display:flex;flex-direction:column;gap:28px}
+.ct .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.ct .note{font-size:14px;color:var(--ink-70)}
+.au-side{position:sticky;top:110px;display:flex;flex-direction:column;gap:0}
+.au-side h2{font-size:clamp(26px,2.4vw,34px);line-height:1.08;margin-bottom:18px}
+.au-side ol{list-style:none;margin:0;padding:0;counter-reset:a}
+.au-side li{counter-increment:a;padding:18px 0 18px 44px;border-top:1px solid var(--ink-12);position:relative}
+.au-side li:last-child{border-bottom:1px solid var(--ink-12)}
+.au-side li::before{content:counter(a,decimal-leading-zero);position:absolute;left:0;top:19px;font:500 14px var(--body);color:var(--ink-45)}
+.au-side li b{display:block;font-weight:500;color:var(--ink);margin-bottom:4px}
+.au-side li span{color:var(--ink-70);font-size:15.5px}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.au-ok{display:none;padding:clamp(28px,3vw,44px);border-radius:18px;background:#fff;border:1px solid var(--ink-12)}
+.au-ok h2{font-size:clamp(28px,2.6vw,38px);line-height:1.05;margin-bottom:14px}
+.au-ok p{color:var(--ink-70)}
+.au-err{display:none;color:#a33a2b;font-size:15px}
+.ct form[aria-busy=true] button{opacity:.6;pointer-events:none}
+.ct button.btn{border:0;cursor:pointer;align-self:flex-start}
+.req{color:var(--ink-45);font-weight:400}
+@media (max-width:900px){.ct{grid-template-columns:minmax(0,1fr)}.au-side{position:static}.ct .pair{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<section class="phero">
+  <canvas class="silk" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Home</a> / Free marketing audit</p>
+    <h1 class="hl"><span class="ln"><span>Free marketing audit</span></span><span class="ln"><span>for UAE businesses</span></span></h1>
+    <p class="lede">An honest review of your social media, ads, Google presence, website and how fast you answer enquiries, with the three changes that would make the biggest difference. Free, and no obligation.</p>
+  </div>
+</section>
+
+<section class="light" style="padding-top:clamp(70px,8vw,120px);padding-bottom:clamp(70px,8vw,120px)">
+  <div class="wrap ct">
+    <div>
+      <form id="audit" action="audit.php" method="post" novalidate>
+        <div class="pair">
+          <div class="field"><label for="a-name">Your name <span class="req">(required)</span></label><input id="a-name" name="name" autocomplete="name" required maxlength="100"></div>
+          <div class="field"><label for="a-biz">Business name <span class="req">(required)</span></label><input id="a-biz" name="biz" autocomplete="organization" required maxlength="150"></div>
+        </div>
+        <div class="field"><label for="a-web">Website or Instagram</label><input id="a-web" name="web" placeholder="yourbusiness.ae or @yourbusiness" maxlength="300"></div>
+        <div class="pair">
+          <div class="field"><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+971" maxlength="40"></div>
+          <div class="field"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" maxlength="150"></div>
+        </div>
+        <div class="pair">
+          <div class="field"><label for="a-ind">Industry</label><select id="a-ind" name="industry"><option value="">Choose one</option><option>Clinic or healthcare</option><option>Real estate</option><option>Restaurant or café</option><option>Retail or e-commerce</option><option>Education or training</option><option>Hotel or tourism</option><option>Automotive</option><option>Beauty or wellness</option><option>Contracting or home services</option><option>B2B or professional services</option><option>Other</option></select></div>
+          <div class="field"><label for="a-em">Emirate</label><select id="a-em" name="emirate"><option value="">Choose one</option><option>Dubai</option><option>Abu Dhabi</option><option>Sharjah</option><option>Ajman</option><option>Ras Al Khaimah</option><option>Fujairah</option><option>Umm Al Quwain</option><option>Outside the UAE</option></select></div>
+        </div>
+        <fieldset class="field" style="border:0;margin:0;padding:0"><legend>What should we look at?</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="areas[]" value="Social media" checked>Social media</label>
+            <label><input type="checkbox" name="areas[]" value="Paid ads" checked>Paid ads</label>
+            <label><input type="checkbox" name="areas[]" value="Google and SEO" checked>Google and SEO</label>
+            <label><input type="checkbox" name="areas[]" value="Website" checked>Website</label>
+            <label><input type="checkbox" name="areas[]" value="WhatsApp and lead response" checked>WhatsApp and lead response</label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="a-goal">What is the main thing you want to improve?</label><textarea id="a-goal" name="goal" maxlength="2000" placeholder="More enquiries, better quality leads, more bookings, a stronger brand..."></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="a-site">Leave this empty</label><input id="a-site" name="company_site" tabindex="-1" autocomplete="off"></div>
+        <input type="hidden" name="t" id="a-t" value="">
+        <p class="au-err" id="auErr" role="alert">Something went wrong. Please try again, or send us a message on <a href="https://wa.me/971565440310?text=Hi%2C%20I%27d%20like%20a%20free%20marketing%20audit">WhatsApp</a>.</p>
+        <button class="btn btn-i mag" type="submit">Request my free audit</button>
+        <p class="note">Add a WhatsApp number or an email so we can send your audit. We only use your details to reply to this request.</p>
+      </form>
+      <div class="au-ok" id="auOk" role="status" tabindex="-1">
+        <h2>Thank you. Your request is in.</h2>
+        <p>We'll look at your business and send your audit within three to five working days. If we need anything, we'll message you first.</p>
+        <p style="margin-top:20px"><a class="tlink" href="case-studies.html" style="color:var(--ink)">See what we've done for others while you wait</a></p>
+      </div>
+    </div>
+    <aside class="au-side" aria-label="What the audit covers">
+      <h2>What you get</h2>
+      <ol>
+        <li><b>Social media review</b><span>What your profiles say about you in the first five seconds, and what your competitors do better.</span></li>
+        <li><b>Ads check</b><span>If you run ads: targeting, creative, tracking and where the budget leaks. If you don't: whether they are worth it for you.</span></li>
+        <li><b>Google and SEO</b><span>How you appear on Google Maps and in search for the services you sell, and what is missing.</span></li>
+        <li><b>Website</b><span>Speed on a phone, clarity, and how easy it is to call, WhatsApp or book.</span></li>
+        <li><b>Response test</b><span>We message you like a real customer and time the reply. Most businesses are surprised by the result.</span></li>
+        <li><b>Your top three fixes</b><span>A short, plain list of the changes that would make the biggest difference, in order.</span></li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+<section class="sec stone"><div class="wrap">
+  <div class="row-head"><span class="lab">Questions</span><div class="faq faq-list">
+    <div class="qa"><button type="button" aria-expanded="true" aria-controls="aq1" id="aqb1">Is the audit really free?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="aq1" role="region" aria-labelledby="aqb1"><div><p>Yes. There is no fee and no obligation. If you like what you read and want help with the fixes, we can talk about that. If not, the audit is yours to use however you like.</p></div></div></div>
+    <div class="qa"><button type="button" aria-expanded="false" aria-controls="aq2" id="aqb2">How long does it take?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="aq2" role="region" aria-labelledby="aqb2"><div><p>We send it within three to five working days. Each audit is done by a person who looks at your business properly, not generated by a tool.</p></div></div></div>
+    <div class="qa"><button type="button" aria-expanded="false" aria-controls="aq3" id="aqb3">Do you need access to our accounts?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="aq3" role="region" aria-labelledby="aqb3"><div><p>No. The audit uses what any customer can see: your profiles, your ads in the Meta Ad Library, Google results and your website. If you want us to review your ad accounts as well, we can ask for view only access afterwards.</p></div></div></div>
+    <div class="qa"><button type="button" aria-expanded="false" aria-controls="aq4" id="aqb4">Who is the audit for?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="aq4" role="region" aria-labelledby="aqb4"><div><p>Any business in the UAE that wants more enquiries or better ones: clinics, restaurants, real estate, retail, training centres, contractors and service companies, whether you spend on ads or not.</p></div></div></div>
+  </div></div>
+</div></section>
+
+<script>
+(function(){
+  var f=document.getElementById('audit'); if(!f) return;
+  var t=document.getElementById('a-t'); t.value=Math.floor(Date.now()/1000);
+  var err=document.getElementById('auErr'), ok=document.getElementById('auOk');
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); err.style.display='none';
+    var n=f.name.value.trim(), b=f.biz.value.trim(), p=f.phone.value.trim(), m=f.email.value.trim();
+    if(!n){f.name.focus();return} if(!b){f.biz.focus();return}
+    if(!p && !/^\S+@\S+\.\S+$/.test(m)){f.phone.focus();err.textContent='Please add a WhatsApp number or an email so we can send your audit.';err.style.display='block';return}
+    f.setAttribute('aria-busy','true');
+    fetch('audit.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json()}).then(function(j){
+      if(!j.ok) throw 0;
+      f.style.display='none'; ok.style.display='block'; ok.focus();
+      try{ window.gtag && gtag('event','generate_lead',{method:'audit_form',page_path:location.pathname}); }catch(_){}
+    }).catch(function(){
+      f.removeAttribute('aria-busy'); err.innerHTML='Something went wrong. Please try again, or send us a message on <a href="https://wa.me/971565440310?text=Hi%2C%20I%27d%20like%20a%20free%20marketing%20audit">WhatsApp</a>.'; err.style.display='block';
+    });
+  });
+})();
+</script>

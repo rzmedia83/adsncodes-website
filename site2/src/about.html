@@ -1,0 +1,98 @@
+<style>
+.name{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(40px,6vw,100px);align-items:center}
+.name .logo{background:var(--stone);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:14%;max-width:100%}
+.parts{margin-top:34px}
+.parts li{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px;padding-block:22px;border-top:1px solid var(--ink-12)}
+.parts li:last-child{border-bottom:1px solid var(--ink-12)}
+.parts b{font-family:var(--display);font-size:30px;font-weight:600;letter-spacing:-.04em;line-height:1}
+.parts p{color:var(--ink-70)}
+@media (max-width:860px){.name{grid-template-columns:minmax(0,1fr)}.parts li{grid-template-columns:minmax(0,1fr)}}
+.fd{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,6vw,100px);align-items:start}
+.fd .pic{aspect-ratio:4/5;overflow:hidden;position:relative;max-width:460px}
+.fd .pic img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:center top;filter:grayscale(1) contrast(1.06)}
+.fd .pic{border-radius:var(--rad-lg,20px)}
+.fd figcaption{margin-top:14px;font-size:14px;color:var(--paper-70)}
+.fd p+p{margin-top:18px}
+.facts{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;border-top:1px solid var(--paper-14);padding-top:24px}
+.facts b{display:block;font-family:var(--display);font-size:clamp(24px,2.4vw,34px);letter-spacing:-.04em;font-weight:500}
+.facts span{color:var(--paper-70);font-size:15px}
+@media (max-width:860px){.fd{grid-template-columns:minmax(0,1fr)}.facts{grid-template-columns:minmax(0,1fr)}}
+.vals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 6vw}
+.vals h3{font-size:clamp(26px,2.6vw,38px)}
+.vals p{color:var(--ink-70);margin-top:12px;max-width:30em}
+@media (max-width:760px){.vals{grid-template-columns:minmax(0,1fr)}}
+.places{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}
+.place{display:flex;flex-direction:column;gap:16px}
+.place .media{aspect-ratio:16/10;overflow:hidden;background:var(--stone);max-width:100%}
+.place .media img{width:100%;height:100%;object-fit:cover}
+.place h3{font-size:clamp(30px,3vw,46px)}
+.place p{color:var(--ink-70)}
+@media (max-width:760px){.places{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<section class="phero">
+  <canvas class="silk" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Home</a> / About</p>
+    <h1 class="hl"><span class="ln"><span>Marketing and</span></span><span class="ln"><span>technology,</span></span><span class="ln"><span>one roof</span></span></h1>
+    <p class="lede">Most businesses buy their marketing from one company and their website and systems from another, then lose customers in the gap between them. We started Ads n' Codes to close it.</p>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="wrap name">
+    <div class="logo"><img src="assets/logo-ink.png" alt="The Ads n' Codes logo"></div>
+    <div>
+      <h2 class="mid">The name says what we do.</h2>
+      <ul class="parts">
+        <li><b>Ads</b><p>The work that gets people to notice you: social media, paid campaigns, video, branding and content.</p></li>
+        <li><b>Codes</b><p>The work that gets them to choose you: websites, search, AI and the systems that reply and follow up.</p></li>
+        <li><b>The asterisk</b><p>Look at the o in Codes. In writing, an asterisk points to the detail behind a headline. For us that detail is the technology: the ad makes a promise, and the system behind it keeps it.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap fd">
+    <figure style="margin:0"><div class="pic"><img data-parallax src="assets/img/founder.webp" alt="Razal Mohammed, founder of Ads n' Codes" loading="lazy"></div><figcaption>Razal Mohammed, founder</figcaption></figure>
+    <div>
+      <h2 class="mid">Creative instinct. Engineering discipline.</h2>
+      <p class="lede dim" style="margin-top:26px">Ads n' Codes was founded in 2024 by Razal Mohammed, an engineer who spent years in film and content production before building a marketing and technology agency.</p>
+      <p class="dim">That mix runs through the work. The creative agency side decides what makes people stop and care. Engineering thinking makes sure the website, the ads and the systems behind them keep working when it matters.</p>
+      <p class="dim">Strategists, designers, photographers, editors, developers and ad specialists work together on every account, with one point of contact owning it from the first brief to the monthly report.</p>
+      <div class="facts"><div><b>2024</b><span>Founded</span></div><div><b>FZE LLC</b><span>Registered in the UAE</span></div><div><b>UAE wide</b><span>All seven emirates</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec stone">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">On set</span><div><h2 class="big" style="max-width:16ch">The work behind the work</h2><p class="lede dim" style="margin-top:22px;max-width:52ch">Lighting, sound, direction and a script on the monitor. A look at two of our shoots, from set up to final frame.</p></div></div>
+    <div class="onset">
+      <figure><div class="media reel-media"><div class="reel"><video data-src="assets/video/bts-bts-hd.mp4" poster="assets/video/bts-bts-hd.jpg" muted loop playsinline preload="none" aria-label="Behind the scenes of a founder film shoot"></video><button type="button" class="reel-sound" aria-label="Turn sound on" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="w1" d="M16.5 8.5a5 5 0 0 1 0 7"/><path class="x1" d="M16 9l5 6M21 9l-5 6"/></svg></button></div></div><figcaption>Founder film, studio set</figcaption></figure>
+      <figure><div class="media reel-media"><div class="reel"><video data-src="assets/video/bts-cut1-hd.mp4" poster="assets/video/bts-cut1-hd.jpg" muted loop playsinline preload="none" aria-label="Behind the scenes of a brand shoot"></video><button type="button" class="reel-sound" aria-label="Turn sound on" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="w1" d="M16.5 8.5a5 5 0 0 1 0 7"/><path class="x1" d="M16 9l5 6M21 9l-5 6"/></svg></button></div></div><figcaption>Brand shoot, lighting and camera</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">How we work</span><div class="vals">
+      <div><h3>We research before we create</h3><p>Your audience, your competitors and your numbers come first. Ideas come after.</p></div>
+      <div><h3>We keep it premium</h3><p>Clean, confident work that makes a business look established and worth what it charges.</p></div>
+      <div><h3>We build what works in practice</h3><p>Technology your team can live with, on the tools they already use.</p></div>
+      <div><h3>We report honestly</h3><p>What moved, what didn't, and what we're changing next month.</p></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="sec light" style="padding-top:0">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Offices</span><h2 class="big">Where to find us</h2></div>
+    <div class="places">
+      <div class="place"><div class="media mapbox live"><iframe src="https://maps.google.com/maps?q=Ads%20n%27%20Codes%2C%20Dubai&amp;z=16&amp;output=embed" title="Ads n' Codes office at B Hive, BurJuman, Dubai on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><h3>Dubai</h3><p>B Hive, Level 3, BurJuman Business Tower, Dubai. Our head office, working with clients across all seven emirates.</p><p><a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Ads+n%27+Codes+BurJuman+Dubai&amp;query_place_id=ChIJL8srqlxzh2kRtCTl_DkPRDY" style="color:var(--ink)">Get directions</a></p></div>
+      <div class="place"><div class="media mapbox live"><iframe src="https://maps.google.com/maps?q=Palazhi%2C%20Kozhikode%2C%20Kerala&amp;z=14&amp;output=embed" title="Ads n' Codes Calicut office at IT Park, Palazhi on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><h3>Calicut</h3><p>IT Park, Palazhi, Calicut, Kerala, India. Our second office.</p><p><a class="tlink" href="https://www.google.com/maps/place/palazhi+kozhikode/data=!4m2!3m1!1s0x3ba65b981cdaa65d:0x8f28b9b91005ce47">Get directions</a></p></div>
+    </div>
+  </div>
+</section>

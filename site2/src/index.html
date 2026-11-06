@@ -1,0 +1,383 @@
+<style>
+.nav{background:rgba(65,64,66,.86);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3)}
+.split{position:relative;height:max(760px,100svh);max-height:1000px;overflow:hidden;touch-action:pan-y;user-select:none}
+.layer{position:absolute;inset:0;overflow:hidden}
+.ads-layer{background:var(--paper);color:var(--ink);z-index:1}
+@media (min-width:901px){.split{height:auto;max-height:none}.ads-layer{position:relative;min-height:min(max(720px,100svh),1000px)}.ads-layer .lyr-in{min-height:inherit;height:auto}}
+.codes-layer{background:var(--ink);color:var(--paper);clip-path:inset(0 0 0 50%);z-index:2}
+@media (max-width:900px) and (prefers-reduced-motion:no-preference){.split .hero-h .ln>span{animation-name:lnup2}@keyframes lnup2{from{transform:translateY(42%)}to{transform:none}}}
+.stage>img.m-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;z-index:0;transition:opacity .6s}.stage>img.m-poster.off{opacity:0}
+@media (max-width:900px){.codes-layer{clip-path:inset(0 0 0 90%)}.split:not(.armed) .handle,.split:not(.armed) .codes-layer .side-chip,.split:not(.armed) .codes-layer .stage-cap{visibility:hidden}.split:not(.armed)::after{content:"";position:absolute;top:0;bottom:0;left:90%;width:1px;background:rgba(255,255,255,.85);z-index:6;pointer-events:none}}
+/* below the fold: skip layout and paint until near the screen */
+#ai,.uae,#split~section.sec:not(#services):not(#work):not(#industries),.foot{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.lyr-in{position:relative;z-index:2;height:100%;max-width:1400px;margin:0 auto;padding:130px max(var(--gr),3.5vw) 52px max(var(--gl),3.5vw);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:end}
+.kick{font:500 13px var(--body);letter-spacing:.14em;text-transform:uppercase;margin:0 0 22px;display:flex;align-items:center;gap:10px}
+.kick::before{content:"";width:22px;height:1px;background:var(--brass,#B8935A)}
+.hl.hero-h{font-size:clamp(48px,min(6.6vw,10.4vh),116px);line-height:.92;letter-spacing:-.04em;font-weight:500}
+.hl .ln>span{transition:opacity .4s}
+.ads-layer .hero-h .l2>span{opacity:.2}
+.codes-layer .hero-h .l1>span{opacity:.26}
+.hero-copy{display:flex;flex-direction:column;gap:30px}
+.hero-copy p{max-width:31em;font-size:clamp(16px,1.3vw,19px);opacity:.82}
+.ads-layer .btn-main{background:var(--ink);color:var(--paper)}
+.codes-layer .btn-main{background:var(--paper);color:var(--ink)}
+.world{position:relative;height:100%;min-height:420px}
+.tagline{position:absolute;bottom:0;font-size:14px;line-height:1.4;max-width:260px}
+.tagline b{display:block;font-family:var(--display);font-size:26px;font-weight:600;letter-spacing:-.04em}
+.ads-layer .tagline{left:0}
+@media (min-width:861px){.ads-layer .tagline{left:auto;right:76px;text-align:right}}
+.codes-layer .tagline{right:76px;text-align:right}
+.stage{position:absolute;inset:0 0 92px 0;border-radius:var(--rad-lg,20px);overflow:hidden;background:#2f2e30;box-shadow:0 40px 80px rgba(20,20,22,.28);isolation:isolate}
+.stage img,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.1);transition:opacity 1.2s var(--ease),transform 7s linear}
+.stage img.on,.stage video.on{opacity:1;transform:scale(1)}
+.stage img[data-fit],.stage video[data-fit]{object-fit:contain;object-position:center bottom;padding:9% 0 0;background:#F2F1EF}
+.stage img[data-fit="post"],.stage video[data-fit="post"]{object-position:center;padding:7% 0}
+.stage img[data-fit="1"]{object-position:center top;padding:5% 0 15%}
+.stage video[data-pos="face"]{object-position:center 30%}
+.stage video[data-pos="mid"]{object-position:center 55%}
+.stage video.vert{object-fit:contain;object-position:center;background-color:#1f1e21;background-size:cover;background-position:center}
+.stage video[data-pos="top"]{object-position:center 22%}
+@media (max-width:900px){.stage video[data-pos="face"]{object-position:center 62%}}
+.stage::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(25,25,27,.72),rgba(25,25,27,0) 38%);pointer-events:none}
+.stage-cap{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;color:#fff}
+.stage-cap b{display:block;font:600 22px/1.1 var(--display);letter-spacing:-.03em}
+.stage-cap span{font-size:13px;opacity:.78}
+.stage-cap em{font-style:normal;font-size:12px;letter-spacing:.12em;opacity:.7;font-variant-numeric:tabular-nums}
+.stage-bar{position:absolute;left:0;bottom:0;height:2px;width:100%;z-index:3;background:var(--brass,#B8935A);transform-origin:left;transform:scaleX(0)}
+.stage-bar.run{animation:stagebar var(--dur,5s) linear forwards}
+@keyframes stagebar{to{transform:scaleX(1)}}
+.codes-layer .stage{box-shadow:0 40px 80px rgba(0,0,0,.45)}
+@media (max-width:900px){.stage{inset:0 0 84px 0}}
+@media (max-width:900px){.ads-layer .stage>img[data-name="Carbar"]:first-child{opacity:0;transition:none}}
+.art{position:absolute;overflow:hidden;box-shadow:0 30px 60px rgba(65,64,66,.22);animation:drift 11s ease-in-out infinite}
+.art img{width:100%;height:100%;object-fit:cover}
+.shot{position:absolute;animation:drift 12s ease-in-out infinite;filter:drop-shadow(0 30px 50px rgba(0,0,0,.4))}
+.shot img{width:100%;height:auto}
+.sculpt{perspective:1200px;filter:drop-shadow(0 40px 60px rgba(0,0,0,.45))}
+.sculpt img{transform:rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));transition:transform .9s var(--ease);will-change:transform}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-12px) rotate(var(--r))}}
+.code{position:absolute;font:12px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--paper-70)}
+.code em{font-style:normal;color:var(--paper)}
+.handle{position:absolute;top:0;bottom:0;left:50%;width:0;z-index:5;cursor:ew-resize}
+.handle::before{content:"";position:absolute;top:0;bottom:0;left:-.5px;width:1px;background:rgba(255,255,255,.9);mix-blend-mode:difference}
+.knob{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;background:var(--ink);border:1px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center}
+.knob img{width:26px;animation:spin 16s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.knob-hint{position:absolute;top:calc(50% + 46px);left:0;transform:translateX(-50%);white-space:nowrap;font-size:12px;color:var(--paper);mix-blend-mode:difference}
+.split-size{visibility:hidden;display:none}
+@media (max-width:900px){
+  .split{height:auto;max-height:none}
+  .split-size{display:grid;height:auto!important}
+  .world{min-height:400px!important}
+  .lyr-in{grid-template-columns:minmax(0,1fr);padding-top:118px;align-items:start}
+  .world{min-height:420px}
+  .ads-layer .hero-h .l2>span{opacity:1}
+  .knob-hint{display:none}
+  .m-more{display:none}
+  .split .hero-copy{display:contents}
+  .split .lyr-in{row-gap:0}
+  .split .kick{order:1}
+  .split .hero-h{order:2;margin-bottom:22px}
+  .split .world{order:3;min-height:0!important;height:min(74vw,360px);margin-bottom:22px}
+  .split .hero-copy>p{order:4;margin-bottom:22px}
+  .split .acts{order:5}
+  .hero-copy{gap:22px}
+  .lyr-in{padding-top:104px}
+  .tagline{display:none}
+  .world{min-height:380px!important}
+  .stage{inset:0!important}
+}
+.journey{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px)}
+.jv{position:sticky;top:110px;height:min(78vh,720px);overflow:hidden;background:var(--stone)}
+.jv-shot{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease),transform 1.4s var(--ease);transform:scale(1.05)}
+.jv-shot.on{opacity:1;transform:none}
+.jv-shot img{width:100%;height:100%;object-fit:cover}
+.jv-shot.fit{background:radial-gradient(120% 90% at 50% 20%,#f7f6f3 0%,#eceae5 100%)}
+.jv-shot.fit img{object-fit:contain;padding:7% 0;filter:drop-shadow(0 30px 40px rgba(20,20,22,.22))}
+.chap .cimg.fit{background:radial-gradient(120% 90% at 50% 20%,#f7f6f3 0%,#eceae5 100%)}
+.jv-bar{position:absolute;left:24px;right:24px;bottom:24px;z-index:2;display:flex;gap:8px}
+.jv-dot{flex:1;height:2px;background:rgba(65,64,66,.18);overflow:hidden}
+.jv-dot::after{content:"";display:block;height:100%;width:0;background:var(--ink);transition:width .8s var(--ease)}
+.jv-dot.on::after{width:100%}
+.chap{min-height:72vh;display:flex;flex-direction:column;justify-content:center;gap:16px;opacity:.55;transition:opacity .5s}
+.chap.on{opacity:1}
+.chap .stage{font-family:var(--display);font-size:clamp(60px,7.4vw,120px);line-height:.86;letter-spacing:-.06em;font-weight:600}
+.chap h3{font-size:clamp(24px,2.4vw,34px);line-height:1.12;max-width:20ch;font-weight:500}
+.chap p{font-size:17px;color:var(--ink-70);max-width:30em}
+.chap .also{font-size:15px}
+.chap .also a{text-underline-offset:4px}
+.chap .cimg{display:none;aspect-ratio:16/11;overflow:hidden;max-width:100%;background:var(--stone)}
+@media (max-width:900px){.journey{grid-template-columns:minmax(0,1fr)}.jv{display:none}.chap{min-height:0;opacity:1;padding-block:32px;border-top:1px solid var(--ink-12)}.chap .cimg{display:block}}
+.ai-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,100px);align-items:center}
+.ai-rows{margin-top:36px}
+.ai-rows li{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:20px;padding-block:16px;border-top:1px solid var(--paper-14)}
+.ai-rows li:last-child{border-bottom:1px solid var(--paper-14)}
+.ai-rows b{font-weight:500}
+.ai-rows span{color:var(--paper-70);font-size:16px}
+.ai-phones{display:flex;gap:5%;justify-content:center;align-items:flex-start}
+.ai-phones figure{margin:0;width:44%;display:flex;flex-direction:column;gap:12px}
+.ai-phones figure:last-child{margin-top:12%}
+.ai-phones img{filter:drop-shadow(0 30px 50px rgba(0,0,0,.4))}
+.ai-phones figcaption{font-size:13px;color:var(--paper-70)}
+@media (max-width:900px){.ai-in{grid-template-columns:minmax(0,1fr)}}
+.uae{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.uae>img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;z-index:-2}
+.uae::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(65,64,66,.92),rgba(65,64,66,.15) 70%)}
+.uae-in{padding-block:120px 64px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:end}
+.emirates{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--display);font-size:clamp(20px,1.8vw,26px);letter-spacing:-.03em}
+.emirates span:not(:last-child)::after{content:","}
+@media (max-width:860px){.uae-in{grid-template-columns:minmax(0,1fr)}}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px)}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.founder{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,96px);align-items:center}
+.founder .pic{aspect-ratio:4/5;overflow:hidden;max-width:420px}
+.founder .pic img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.founder blockquote{margin:0;font-family:var(--display);font-size:clamp(28px,3.2vw,48px);line-height:1.1;letter-spacing:-.035em;font-weight:400}
+@media (max-width:860px){.founder{grid-template-columns:minmax(0,1fr)}}
+
+/* split hero v2: the comparison lives inside the card */
+.ads-layer .tagline{left:0!important;right:auto!important;text-align:left!important}
+.codes-layer .stage-cap{flex-direction:row-reverse;text-align:right}
+.stage-cap em{display:none}
+.side-chip{position:absolute;top:16px;left:16px;z-index:3;padding:6px 12px;border-radius:999px;background:rgba(20,20,22,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font:600 11px var(--body);letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.18)}
+.side-chip.sc-r{left:auto;right:16px}
+.handle::before{background:#fff;mix-blend-mode:normal;box-shadow:0 0 12px rgba(0,0,0,.35)}
+.knob{box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.knob-hint{top:calc(50% + 44px);padding:5px 11px;border-radius:999px;background:rgba(20,20,22,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;mix-blend-mode:normal;font-size:11px;letter-spacing:.04em;transition:opacity .6s}
+.split.touched .knob-hint{opacity:0}
+@keyframes rise{from{transform:translateY(22px) scale(.97)}to{transform:none}}
+.split .world{animation:rise 1.1s var(--ease) .2s both}
+@media (max-width:900px){
+  .split .world{height:min(112vw,500px)!important}
+  .knob{width:54px;height:54px}.knob img{width:21px}
+  .knob-hint{display:block!important;top:calc(50% + 36px)}
+  .stage-cap b{font-size:19px}.stage-cap span{font-size:12px}
+  .side-chip{top:12px;left:12px}.side-chip.sc-r{right:12px}
+}
+@media (prefers-reduced-motion: reduce){.split .world{animation:none}}
+
+/* services grouped: marketing, content, technology */
+.sgroups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,28px);margin-top:clamp(40px,5vw,64px)}
+.sg{background:linear-gradient(180deg,#fff,#fbfaf8);border-radius:var(--rad);padding:clamp(22px,2.2vw,32px);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 5px 0 #e7e4de,0 22px 40px rgba(20,20,22,.07)}
+.sg-h{padding-bottom:20px;margin-bottom:6px;border-bottom:1px solid var(--ink-12)}
+.sg-h span{font:500 12px var(--body);letter-spacing:.16em;color:var(--brass,#B8935A)}
+.sg-h .sg-name{font-size:clamp(32px,3vw,46px);letter-spacing:-.045em;line-height:1;margin:10px 0 8px;font-weight:500}
+.sg-h p{color:var(--ink-70);font-size:15px}
+.sg ul{list-style:none;margin:0;padding:0}
+.sg li+li{border-top:1px solid var(--ink-12)}
+.sg a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:16px;text-decoration:none;color:inherit}
+.sg h3{font-size:clamp(19px,1.5vw,22px);letter-spacing:-.025em;line-height:1.15;font-weight:500;transition:transform .5s var(--ease)}
+.sg .sg-t p{font-size:13.5px;color:var(--ink-70);margin-top:4px;line-height:1.45}
+.sg svg{flex:none;width:20px;height:20px;transition:transform .5s var(--ease);opacity:.6}
+.sg a:hover h3{transform:translateX(6px)}
+.sg a:hover svg{transform:rotate(-45deg);opacity:1}
+@media (max-width:900px){
+  .sgroups{grid-template-columns:minmax(0,1fr)}
+  .sg .sg-t p{display:none}
+  .sg a{padding-block:13px}
+  .sg-h{padding-bottom:14px}
+}
+
+.stage-cap>div{max-width:47%;min-width:0}
+.stage-cap span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ads-layer .tagline,.codes-layer .tagline{bottom:auto;top:calc(100% - 72px);max-width:44%}
+.codes-layer .tagline{right:0!important;left:auto!important;text-align:right}
+.knob-hint{opacity:0}
+.split.hmid:not(.touched) .knob-hint{opacity:1}
+@media (max-width:900px){.split .kick{max-width:300px}}
+
+/* mobile: full screen film opener */
+@media (max-width:900px){
+  .split-size{display:none!important}
+  .split{height:auto!important;max-height:none!important}
+  .ads-layer{position:relative;height:auto!important}
+  .split .lyr-in{height:auto!important;min-height:0!important}
+  .split .lyr-in{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"film" "kick" "copy" "acts";padding:0 0 44px!important;row-gap:0;align-items:start}
+  .split .world{grid-area:film;order:0;height:min(100svh,860px)!important;min-height:560px!important;margin:0!important;animation:none}
+  .split .stage{border-radius:0!important;box-shadow:none!important}
+  .split .stage video.vert{object-fit:cover}
+  .split .hero-h{grid-area:film;order:0;align-self:end;position:relative;z-index:4;margin:0!important;padding:0 20px 40px;color:#fff;font-size:clamp(44px,12.4vw,58px)!important;pointer-events:none}
+  .split .kick{grid-area:kick;order:0;margin:28px 20px 14px!important;max-width:none!important}
+  .split .hero-copy>p{grid-area:copy;order:0;margin:0 20px 24px!important}
+  .split .acts{grid-area:acts;order:0;margin:0 20px}
+  .ads-layer .hero-h .l2>span{opacity:.42!important}
+  .codes-layer .hero-h .l1>span{opacity:.32}
+  .split .stage::after{background:linear-gradient(0deg,rgba(18,18,20,.9) 0%,rgba(18,18,20,.45) 38%,rgba(18,18,20,0) 60%),linear-gradient(180deg,rgba(18,18,20,.5) 0%,rgba(18,18,20,0) 24%)}
+  .split .side-chip{top:84px}
+  .split .stage-cap{display:none}
+  .split .stage-bar{bottom:0}
+  .split .knob-hint{top:calc(50% + 36px)}
+}
+.film-card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;transition:transform 1.2s var(--ease)}
+.wk-item:hover .film-card video{transform:scale(1.04)}
+
+/* codes stage: live, scrolling screens */
+.stage .live{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease);display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 90% at 50% 12%,#f7f6f3 0%,#e4e1db 100%)}
+.stage .live.on{opacity:1}
+.stage .live img{position:static;inset:auto;opacity:1;transform:none;transition:none;width:100%;height:auto;object-fit:initial;padding:0;background:none}
+.lv-win{position:relative;overflow:hidden}
+.stage .live .lv-img{position:absolute;left:0;top:0;width:100%;height:auto;will-change:transform}
+.live.on.go .lv-img{animation:lvscroll var(--dur,8s) cubic-bezier(.45,.05,.35,1) forwards}
+@keyframes lvscroll{0%,12%{transform:translateY(0)}100%{transform:translateY(var(--dist,0px))}}
+.lv-wa .lv-phone{width:min(36%,230px);margin-top:-4%}
+.lv-duo{gap:5%}.lv-duo .lv-phone{width:min(31%,215px)}.lv-duo .lv-phone+.lv-phone{margin-top:2%}
+.lv-phone .lv-win{aspect-ratio:1/1.86;background:#efe7de}
+.lv-site .lv-browser{width:84%;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 30px 60px rgba(20,20,22,.25);margin:-6% 8% 0 0}
+.lv-bar{height:26px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#f3f2f0;border-bottom:1px solid rgba(0,0,0,.06)}
+.lv-bar i{width:8px;height:8px;border-radius:50%;background:#d6d3ce}
+.lv-bar span{margin:0 auto;font:500 10px var(--body);color:#8a8780;background:#e9e7e3;padding:3px 26px;border-radius:999px;transform:translateX(-16px)}
+.lv-browser .lv-win{aspect-ratio:16/10.5}
+.lv-site .lv-mini{position:absolute;right:5%;bottom:13%;width:24%}
+.lv-mini .lv-win{aspect-ratio:1/2.12}
+@media (max-width:900px){
+  .lv-wa .lv-phone{width:52%;margin-top:-30%}
+  .lv-duo{gap:4%}.lv-duo .lv-phone{width:43%;margin-top:-26%}.lv-duo .lv-phone+.lv-phone{margin-top:-14%}
+  .lv-site .lv-browser{width:84%;margin:-46% 12% 0 0;border-radius:8px}
+  .lv-site .lv-bar span{font-size:9px}
+  .lv-site .lv-mini{position:absolute;right:6%;bottom:17%;width:46%;margin:0;z-index:2}
+}
+@media (prefers-reduced-motion: reduce){.live.on.go .lv-img{animation:none}}
+.ads-layer::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 55% at 8% 0%,rgba(184,147,90,.10),transparent 70%),radial-gradient(50% 60% at 40% 100%,rgba(65,64,66,.05),transparent 70%)}
+.ads-deco{position:absolute;z-index:1;pointer-events:none;width:min(92vh,860px);aspect-ratio:247/214;left:max(-16vw,-260px);top:50%;margin-top:calc(min(92vh,860px)/-2 + 60px);transform:translate3d(var(--dx,0),var(--dy,0),0)}
+.ads-deco svg{width:100%;height:100%;display:block;animation:adspin 140s linear infinite}
+@keyframes adspin{to{transform:rotate(360deg)}}
+@media (max-width:900px){.ads-deco{width:110vw;left:auto;right:-46vw;top:auto;bottom:-20vw;margin:0}}
+@media (prefers-reduced-motion:reduce){.ads-deco svg{animation:none}}
+.stage video.vert{transform:scale(1.26)}.stage video.vert.on{transform:scale(1.14)}
+@media (max-width:900px){.stage video.vert,.stage video.vert.on{transform:none}}
+</style>
+
+<section class="split" id="split" aria-label="Ads n' Codes">
+  <div class="layer ads-layer">
+    <div class="ads-deco" aria-hidden="true"><svg viewBox="0 0 247 214"><defs><linearGradient id="adg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B8935A" stop-opacity=".17"/><stop offset=".6" stop-color="#B8935A" stop-opacity=".07"/><stop offset="1" stop-color="#414042" stop-opacity=".03"/></linearGradient></defs><polygon fill="url(#adg)" points="24.1,30.5 11.1,51.8 2.8,69.5 35.5,86.9 82.4,108.2 4.0,148.1 10.1,161.4 24.4,185.0 103.4,139.6 100.1,213.9 144.4,213.9 141.4,141.5 213.2,183.6 214.5,182.8 228.6,160.1 234.4,146.2 159.8,109.2 236.5,70.2 228.8,52.2 215.6,30.9 185.8,48.1 141.8,75.9 143.6,6.2 127.5,4.1 100.9,5.8 100.1,20.5 103.2,76.5 102.2,78.9"/></svg></div>
+    <div class="lyr-in">
+      <div class="hero-copy">
+        <h1 class="kick">Marketing and technology agency in Dubai, UAE</h1><div class="hl hero-h"><span class="ln l1"><span>Ads get you</span></span><span class="ln l1"><span>noticed.</span></span><span class="ln l2"><span>Codes get you</span></span><span class="ln l2"><span>chosen.</span></span></div>
+        <p>We help UAE businesses grow, with the marketing that gets attention and the technology that turns it into customers.<span class="m-more"> From brand and content to websites, SEO and AI agents, it all runs through one point of contact.</span></p>
+        <div class="acts"><a class="btn btn-main mag" href="contact.html">Start a project</a><a class="tlink" href="work.html">See the work</a></div>
+      </div>
+      <div class="world" aria-hidden="true">
+        <div class="stage"><img src="assets/work/carbar-facade.webp" srcset="assets/work/carbar-facade-900.webp 900w, assets/work/carbar-facade-1400.webp 1400w, assets/work/carbar-facade.webp 2000w" sizes="(max-width:900px) 10px, 80vw" alt="" data-name="Carbar" data-cat="Brand identity" class="on" fetchpriority="high"><video class="sv" data-vsrc="assets/video/event-tech-expo-hd.mp4" data-poster="assets/video/event-tech-expo-hd.jpg" muted loop playsinline preload="none" data-name="Tech expo" data-cat="Event film" aria-hidden="true"></video><video class="sv vert" style="background-image:url(assets/video/bts-cut1-bg.jpg)" data-vsrc="assets/video/bts-cut1-hd.mp4" data-vsrc-m="assets/video/bts-cut1-m.mp4" data-poster="assets/video/bts-cut1-hd.jpg" muted loop playsinline preload="none" data-name="Behind the scenes" data-cat="Production and direction" aria-hidden="true"></video><video class="sv" data-vsrc="assets/video/ragam-hd.mp4" data-poster="assets/video/ragam-hd.jpg" muted loop playsinline preload="none" data-name="Ragam '23" data-cat="Event coverage" aria-hidden="true"></video><video class="sv vert" style="background-image:url(assets/video/ad-social-bg.jpg)" data-vsrc="assets/video/ad-social-hd.mp4" data-poster="assets/video/ad-social-hd.jpg" muted loop playsinline preload="none" data-name="Social media package ad" data-cat="Video production" aria-hidden="true"></video><img data-ssrc="assets/work/iedc-hero.webp" alt="" data-name="IEDC, 10 years" data-cat="Event identity and coverage" style="object-position:34% center" loading="lazy"><div class="stage-cap"><div><b>Carbar</b><span>Brand identity</span></div><em>01 / 06</em></div><span class="side-chip">Ads</span><i class="stage-bar"></i></div><script>/* phones open on the BTS film: start it now, not after page load */(function(){if(!matchMedia('(max-width: 900px)').matches)return;var st=document.currentScript.previousElementSibling,b=st.querySelector('[data-name="Behind the scenes"]'),r=st.querySelector('[data-name="Tech expo"]'),c=st.querySelector('img.on');if(!b)return;if(r)st.insertBefore(r,st.firstChild);st.insertBefore(b,st.firstChild);if(c){c.classList.remove('on');c.removeAttribute('fetchpriority');window.addEventListener('load',function(){setTimeout(function(){c.sizes='240vw';},1500);});}b.poster=b.dataset.poster;b.preload='auto';b.dataset.vsrc=b.dataset.vsrcM;b.src=b.dataset.vsrc;b.classList.add('on');var mp=document.createElement('img');mp.className='m-poster';mp.alt='';mp.setAttribute('fetchpriority','high');mp.src=b.dataset.poster;st.insertBefore(mp,b.nextSibling);if(mp){b.addEventListener('playing',function(){setTimeout(function(){mp.classList.add('off');},700);},{once:true});setTimeout(function(){mp.classList.add('off');},4500);}var p=b.play();if(p&&p.catch)p.catch(function(){});})();</script>
+        <div class="tagline"><b>Ads</b>Social media, paid ads, branding, photo and video</div>
+      </div>
+    </div>
+  </div>
+  <div class="layer codes-layer" id="codesLayer" aria-hidden="true">
+    <canvas class="silk" style="z-index:0"></canvas>
+    <div class="veil" style="z-index:1"></div>
+    <div class="lyr-in">
+      <div class="hero-copy">
+        <div class="kick">Marketing and technology agency in Dubai, UAE</div><div class="hl hero-h"><span class="ln l1"><span>Ads get you</span></span><span class="ln l1"><span>noticed.</span></span><span class="ln l2"><span>Codes get you</span></span><span class="ln l2"><span>chosen.</span></span></div>
+        <p>We help UAE businesses grow, with the marketing that gets attention and the technology that turns it into customers.<span class="m-more"> From brand and content to websites, SEO and AI agents, it all runs through one point of contact.</span></p>
+        <div class="acts"><a class="btn btn-main" href="contact.html" tabindex="-1">Start a project</a><a class="tlink" href="work.html" tabindex="-1">See the work</a></div>
+      </div>
+      <div class="world">
+        <div class="stage"><div class="live lv-site on" data-name="LaryKlean" data-cat="E-commerce store, live" data-dur="9500"><div class="lv-browser"><div class="lv-bar"><i></i><i></i><i></i><span>laryklean.com</span></div><div class="lv-win"><img class="lv-img" data-ssrc="assets/work/lk-tour-d.webp" alt="LaryKlean online store, desktop"></div></div><div class="lv-phone lv-mini"><div class="lp-frame"><div class="lp-screen"><div class="lv-win"><img class="lv-img" data-ssrc="assets/work/lk-tour-m.webp" alt="LaryKlean online store, mobile"></div></div></div></div></div><div class="live lv-wa lv-duo" data-name="WhatsApp AI agents" data-cat="Real estate and clinic agents, live" data-dur="11000"><div class="lv-phone"><div class="lp-frame"><div class="lp-screen"><img class="lp-head" data-ssrc="assets/agent/re-head.webp" alt=""><div class="lv-win"><img class="lv-img" data-ssrc="assets/agent/re-chat.webp" alt="WhatsApp real estate agent conversation: welcome, buy, latest homes, a listing and a viewing booked"></div></div></div></div><div class="lv-phone"><div class="lp-frame"><div class="lp-screen"><img class="lp-head" data-ssrc="assets/agent/clinic-head.webp" alt=""><div class="lv-win"><img class="lv-img" data-ssrc="assets/agent/clinic-chat.webp" alt="WhatsApp clinic agent conversation"></div></div></div></div></div><img src="assets/work/app-ui-2.webp" srcset="assets/work/app-ui-2-900.webp 900w, assets/work/app-ui-2.webp 1600w" sizes="(max-width:900px) 100vw, 50vw" alt="" data-name="Shopping app" data-cat="UI and UX design"><img data-ssrc="assets/work/auditorium-app.webp" alt="" data-name="Auditorium Booking" data-cat="Booking app" loading="lazy"><div class="stage-cap"><div><b>LaryKlean</b><span>E-commerce store, live</span></div><em>01 / 04</em></div><span class="side-chip sc-r">Codes</span><i class="stage-bar"></i></div>
+        <div class="tagline"><b>Codes</b>Websites, e-commerce, apps, SEO and AI</div>
+      </div>
+    </div>
+  </div>
+  <div class="lyr-in split-size" aria-hidden="true"><div class="hero-copy"><div class="kick">Marketing and technology agency in Dubai, UAE</div><div class="hl hero-h"><span class="ln"><span>Ads get you</span></span><span class="ln"><span>noticed.</span></span><span class="ln"><span>Codes get you</span></span><span class="ln"><span>chosen.</span></span></div><p>We help UAE businesses grow, with the marketing that gets attention and the technology that turns it into customers.<span class="m-more"> From brand and content to websites, SEO and AI agents, it all runs through one point of contact.</span></p><div class="acts"><span class="btn">Start a project</span></div></div><div class="world"></div></div>
+  <div class="handle" id="splitHandle" role="slider" tabindex="0" aria-label="Compare the Ads side and the Codes side" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+    <span class="knob"><img src="assets/mark-white.png" alt=""></span><span class="knob-hint">Drag to compare</span>
+  </div>
+</section>
+
+<section class="clients light" aria-label="Brands we have worked with">
+  <div class="wrap clients-in">
+    <p>Brands we've designed for and worked with</p>
+    <div class="belt"><div class="belt-track">
+      <img src="assets/clients/aurea-life.webp" loading="lazy" decoding="async" alt="Aurea Life"><img src="assets/clients/mama-papa-zay.webp" loading="lazy" decoding="async" alt="Mama Papa Zay"><img src="assets/clients/laryklean.webp" loading="lazy" decoding="async" alt="LaryKlean"><img src="assets/clients/mother-mss-group.webp" loading="lazy" decoding="async" alt="Mother MSS Group"><img src="assets/clients/red-bricks.webp" loading="lazy" decoding="async" alt="Red Bricks International"><img src="assets/clients/the-gulf-pulse.webp" loading="lazy" decoding="async" alt="The Gulf Pulse"><img src="assets/clients/ramz.webp" loading="lazy" decoding="async" alt="Ramz"><img src="assets/clients/vital-vibes.webp" loading="lazy" decoding="async" alt="Vital Vibes"><img src="assets/clients/carbar.webp" loading="lazy" decoding="async" alt="Carbar"><img src="assets/clients/uslot-ai.webp" loading="lazy" decoding="async" alt="uslot.Ai"><img src="assets/clients/buildye.webp" loading="lazy" decoding="async" alt="Buildye"><img src="assets/clients/hands-on-properties.webp" loading="lazy" decoding="async" alt="Hands On Properties"><img src="assets/clients/xplore-more.webp" loading="lazy" decoding="async" alt="Xplore More"><img src="assets/clients/adora.webp" loading="lazy" decoding="async" alt="Adora">
+      <img src="assets/clients/aurea-life.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/mama-papa-zay.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/laryklean.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/mother-mss-group.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/red-bricks.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/the-gulf-pulse.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/ramz.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/vital-vibes.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/carbar.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/uslot-ai.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/buildye.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/hands-on-properties.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/xplore-more.webp" loading="lazy" decoding="async" alt="" aria-hidden="true"><img src="assets/clients/adora.webp" loading="lazy" decoding="async" alt="" aria-hidden="true">
+    </div></div>
+  </div>
+</section>
+
+<section class="sec light" style="padding-top:clamp(70px,8vw,120px)" id="services">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Services</span><div><h2 class="big">What we do</h2><p class="lede dim" style="margin-top:24px">A full service advertising and digital agency, with the technology to back it up. Take a single service, or bring us in across all of it.</p></div></div>
+    <ol class="gsteps" aria-label="How growth works">
+      <li><span>01 · Noticed</span><p>They see you for the first time, on social, in ads or in a video.</p><a href="social-media-agency-dubai.html">Social media and ads</a></li>
+      <li><span>02 · Trusted</span><p>They check your brand, website and Google before they decide.</p><a href="branding-agency-dubai.html">Branding, web and SEO</a></li>
+      <li><span>03 · Answered</span><p>They message you, and get a reply in seconds on WhatsApp.</p><a href="ai-automation.html">AI and automation</a></li>
+      <li><span>04 · Grown</span><p>They come back and tell someone, with follow ups and monthly reports.</p><a href="contact.html">Monthly plans</a></li>
+    </ol>
+    <div class="sgroups">
+      <div class="sg"><div class="sg-h"><span>01</span><h3 class="sg-name">Marketing</h3><p>Get seen by the right people.</p></div><ul><li data-peek="0"><a href="digital-marketing-dubai.html"><span class="sg-t"><h3>Digital marketing</h3><p>Social media marketing, Meta and Google ads, performance marketing and lead generation.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="2"><a href="branding-agency-dubai.html"><span class="sg-t"><h3>Branding and design</h3><p>Brand strategy, logos, identity, packaging, company profiles and brochures.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="10"><a href="personal-branding-dubai.html"><span class="sg-t"><h3>Personal branding</h3><p>For founders, doctors and experts: strategy, LinkedIn and Instagram content, video and portraits.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="11"><a href="influencer-marketing-dubai.html"><span class="sg-t"><h3>Influencer marketing</h3><p>Vetted UAE creators, permit compliant campaigns and paid amplification.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="12"><a href="ugc-content-dubai.html"><span class="sg-t"><h3>UGC content</h3><p>Phone first video ads, reviews and unboxings that run as ads.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li></ul></div>
+      <div class="sg"><div class="sg-h"><span>02</span><h3 class="sg-name">Content</h3><p>Make them stop and care.</p></div><ul><li data-peek="3"><a href="content-creation-dubai.html"><span class="sg-t"><h3>Content and creative</h3><p>Social content, ad creatives, motion graphics, copywriting, AI video and images.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="4"><a href="photography-dubai.html"><span class="sg-t"><h3>Photography</h3><p>Product, real estate, interior, corporate and event photography.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="5"><a href="video-production-dubai.html"><span class="sg-t"><h3>Video production</h3><p>Brand films, video ads, reels and real estate walkthroughs.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="9"><a href="event-photography-videography-dubai.html"><span class="sg-t"><h3>Events</h3><p>Event photography and film, same day reels, event branding and promotion.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li></ul></div>
+      <div class="sg"><div class="sg-h"><span>03</span><h3 class="sg-name">Technology</h3><p>Turn attention into customers.</p></div><ul><li data-peek="6"><a href="web-development-dubai.html"><span class="sg-t"><h3>Websites and e-commerce</h3><p>Websites, online stores, Amazon and Noon marketplace management.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="1"><a href="seo-agency-dubai.html"><span class="sg-t"><h3>SEO</h3><p>Technical and local SEO, Google Business Profile, AEO and GEO.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="7"><a href="app-development-dubai.html"><span class="sg-t"><h3>Apps and software</h3><p>Mobile and web apps, business software and CRM setup.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="8"><a href="ai-automation.html"><span class="sg-t"><h3>AI and automation</h3><p>AI agents, WhatsApp AI, lead qualification and process automation.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="8"><a href="workflow-automation-dubai.html"><span class="sg-t"><h3>Workflow automation</h3><p>Leads, CRM, invoices, reminders and reports that run on their own.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li data-peek="8"><a href="whatsapp-ai-agent-uae.html"><span class="sg-t"><h3>WhatsApp AI agents</h3><p>Reply to every lead in seconds, qualify and book on WhatsApp.</p></span><svg class="ar" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li></ul></div>
+    </div>
+  </div>
+  <div class="peek" id="peek" aria-hidden="true"><img src="assets/img/dm-card.webp" alt="" loading="lazy" decoding="async"><img src="assets/img/seo-card.webp" alt="" loading="lazy" decoding="async"><img src="assets/work/orula-billboard.webp" alt="" loading="lazy" decoding="async"><img src="assets/video/ad-social-hd.jpg" alt="" loading="lazy" decoding="async"><img src="assets/img/photographer.webp" alt="" loading="lazy" decoding="async"><img src="assets/video/reel-poster.jpg" alt="" loading="lazy" decoding="async"><img src="assets/work/app-ui-2.webp" alt="" loading="lazy" decoding="async"><img src="assets/work/auditorium-app.webp" alt="" loading="lazy" decoding="async"><img src="assets/img/phone-typing.webp" alt="" loading="lazy" decoding="async"><img src="assets/img/event-conference.webp" alt="" loading="lazy" decoding="async"><img src="assets/img/personal-brand.webp" alt="" loading="lazy" decoding="async"><img src="assets/img/influencer-shoot.webp" alt="" loading="lazy" decoding="async"><img src="assets/img/ugc-food.webp" alt="" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Selected work</span><div><h2 class="big">Recent work</h2><p class="lede dim" style="margin-top:24px">Brand identities, packaging, campaigns and digital products for businesses in the UAE and beyond.</p></div></div>
+    <div class="wk">
+      <a class="wk-item c-12" href="https://www.laryklean.com/" target="_blank" rel="noopener"><div class="media" style="aspect-ratio:18/13"><img src="assets/work/laryklean-store.webp" alt="LaryKlean online store on desktop and mobile" loading="lazy"></div><div class="wk-cap"><h3>LaryKlean</h3><span>Streetwear e-commerce, content and ads. <span class="tag">Live store</span></span></div></a>
+      <a class="wk-item c-7" href="work.html"><div class="media" style="aspect-ratio:4/3"><img src="assets/work/carbar-facade.webp" alt="Carbar logo sign on a modern building facade" loading="lazy"></div><div class="wk-cap"><h3>Carbar</h3><span>Full brand identity for a car care brand</span></div></a>
+      <a class="wk-item c-5 off-top" href="work.html"><div class="media film-card" style="aspect-ratio:4/5"><video data-src="assets/video/portrait-loop-hd.mp4" poster="assets/video/portrait-film-hd.jpg" muted loop playsinline preload="none" aria-label="Fashion film in a red saree with jasmine"></video></div><div class="wk-cap"><h3>Fashion film</h3><span>Concept, styling, shoot and edit</span></div></a>
+    </div>
+    <div class="stories">
+      <article><div class="snum">5x</div><p>online sales for a natural children's food brand, through content strategy and positioning alone.</p><span>Food and e-commerce</span></article>
+      <article><div class="snum">3x</div><p>sales for a Dubai smart automation company after we repositioned it as a premium brand and rebuilt its ads.</p><span>Technology, Dubai</span></article>
+      <article><div class="snum">0 to live</div><p>A GCC news portal launched end to end: website, social media and SEO, planned and run by us.</p><span>Media, GCC</span></article>
+    </div>
+    <p style="margin-top:56px"><a class="tlink" href="work.html">Case studies and all work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+
+{{VOICES}}
+<section class="sec" id="ai">
+  <div class="wrap ai-in">
+    <div>
+      <h2 class="mid">More enquiries than you can answer? We make sure every one gets a reply.</h2>
+      <p class="lede dim" style="margin-top:24px">Messages arrive from Google, Instagram, referrals, regular customers and ads, usually while you are busy running the business. Our WhatsApp AI agents answer in seconds, qualify the enquiry and book the next step, for real estate, clinics, restaurants, retail and more.</p>
+      <ul class="ai-rows">
+        <li><b>AI agents</b><span>Answer questions on WhatsApp and your website.</span></li>
+        <li><b>WhatsApp systems</b><span>Bookings, orders and lead qualification.</span></li>
+        <li><b>Automation</b><span>Follow ups, reminders and lead routing.</span></li>
+        <li><b>Integrations</b><span>CRMs, booking software and POS.</span></li>
+      </ul>
+      <p style="margin-top:32px;display:flex;gap:28px;flex-wrap:wrap;align-items:center"><a class="btn btn-wa mag" href="https://wa.me/971565440310?text=Hi%2C%20I%27d%20like%20a%20free%20demo%20of%20the%20WhatsApp%20AI%20agent%20for%20my%20business.">Book a free demo</a><a class="tlink" href="whatsapp-ai-agent-uae.html">How it works <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    </div>
+    {{AGENTSHOW}}
+  </div>
+</section>
+
+<section class="sec light ind-sec" id="industries"><div class="ind-pin">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Industries</span><div><h2 class="big">Industries we grow</h2><p class="lede dim" style="margin-top:24px">Every sector buys differently. <span class="ih-d">Hover over a sector</span><span class="ih-p">Swipe through the sectors</span> to see how we work in it.</p></div></div>
+    <div class="panels">
+      <button class="panel on" type="button" aria-expanded="true"><img src="assets/img/villa.webp" alt="" loading="lazy"><span class="pc"><h3>Real estate</h3><span class="pd">Property films, lead campaigns and a WhatsApp flow that qualifies buyers before your agents call.</span></span></button>
+      <button class="panel" type="button" aria-expanded="false"><img src="assets/img/clinic.webp" alt="" loading="lazy"><span class="pc"><h3>Clinics and healthcare</h3><span class="pd">Patient campaigns, doctor content, reviews and WhatsApp booking synced with your clinic software.</span></span></button>
+      <button class="panel" type="button" aria-expanded="false"><img src="assets/img/restaurant-table.webp" alt="" loading="lazy"><span class="pc"><h3>Restaurants and cafés</h3><span class="pd">Food shoots, social that fills tables, and WhatsApp ordering straight to the kitchen.</span></span></button>
+      <button class="panel" type="button" aria-expanded="false"><img src="assets/img/automotive.webp" alt="" loading="lazy"><span class="pc"><h3>Automotive</h3><span class="pd">Showroom shoots, launch campaigns and test drive bookings handled on WhatsApp.</span></span></button>
+      <button class="panel" type="button" aria-expanded="false"><img src="assets/img/ecom-card.webp" alt="" loading="lazy"><span class="pc"><h3>E-commerce</h3><span class="pd">Online stores, Amazon and Noon listings, product photography and ads that move stock.</span></span></button>
+    </div>
+    <div class="ind-prog" aria-hidden="true"><i></i></div>
+    <p class="dim ind-more">Also fashion and retail, hotels and tourism, education, construction, beauty and wellness, trading and B2B services. If your customers search, scroll or message before they buy, we can help.</p>
+    <nav class="ind-links" aria-label="Industry pages"><span>Explore by industry</span><a href="real-estate-marketing-agency-dubai.html">Real estate</a><a href="automotive-marketing-agency-dubai.html">Automotive</a><a href="healthcare-marketing-agency-dubai.html">Clinics</a><a href="restaurant-marketing-agency-dubai.html">Restaurants</a><a href="hotel-marketing-agency-dubai.html">Hotels</a><a href="ecommerce-marketing-agency-dubai.html">E-commerce</a><a href="education-marketing-agency-uae.html">Education</a><a href="fashion-marketing-agency-dubai.html">Fashion</a><a href="industries.html">All industries</a></nav>
+  </div>
+</div>
+</section>
+
+<section class="uae" aria-label="Across the UAE">
+  <img data-parallax src="assets/img/dubai-charcoal.webp" alt="Downtown Dubai skyline at twilight" loading="lazy">
+  <div class="wrap uae-in">
+    <div><h2 class="big" style="max-width:12ch">Based in Dubai. Working across the UAE.</h2><p class="areas" style="margin-top:30px"><a href="digital-marketing-dubai.html">Dubai</a><a href="digital-marketing-agency-abu-dhabi.html">Abu Dhabi</a><a href="digital-marketing-agency-sharjah.html">Sharjah</a><a href="digital-marketing-agency-ajman.html">Ajman</a><a href="digital-marketing-agency-ras-al-khaimah.html">Ras Al Khaimah</a><a href="digital-marketing-agency-ras-al-khaimah.html">Fujairah</a><a href="digital-marketing-agency-ras-al-khaimah.html">Umm Al Quwain</a></p></div>
+    <div><p class="dim">We meet clients in person in Dubai and Sharjah, and work with businesses in every emirate online. You'll find us at B Hive, Level 3, BurJuman.</p><p style="margin-top:20px"><a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Ads+n%27+Codes+BurJuman+Dubai&amp;query_place_id=ChIJL8srqlxzh2kRtCTl_DkPRDY">Get directions</a></p></div>
+  </div>
+</section>
+
+<section class="sec light" style="padding-top:0">
+  <div class="wrap">
+    <div class="row-head"><span class="lab">Questions</span><div class="faq faq-list">
+      <div class="qa"><button type="button" aria-expanded="true" aria-controls="a1" id="q1">Are you a marketing agency or a tech company?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>Both. On the marketing side we do social media, paid ads, SEO, branding, content, photography and video. On the technology side we build websites, online stores, apps, CRMs and AI systems, so the attention we create turns into actual customers.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false" aria-controls="a2" id="q2">Which parts of the UAE do you cover?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>All seven emirates. Our office is at B Hive, BurJuman Business Tower in Dubai, and we meet clients across Dubai, Abu Dhabi, Sharjah and the Northern Emirates.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false" aria-controls="a3" id="q3">Can we start with a single project?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>Yes. You can start with a single campaign, a brand identity or a website, and move to a monthly plan later if it makes sense.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false" aria-controls="a4" id="q4">How do we get started?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>Message us on WhatsApp or email bd@adsncodes.com with a few lines about your business. We'll set up a short call and come back with a plan and a price.</p></div></div></div>
+    </div></div>
+  </div>
+</section>

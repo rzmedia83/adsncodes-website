@@ -1,0 +1,112 @@
+<style>
+.calc{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start}
+.calc-in{display:flex;flex-direction:column;gap:30px;padding:clamp(24px,3vw,40px);border-radius:18px;background:linear-gradient(180deg,#fff 0%,#f7f6f3 100%);border:1px solid rgba(20,20,22,.06);box-shadow:inset 0 1px 0 #fff,0 6px 0 -2px #e4e1db,0 30px 60px -34px rgba(20,20,22,.35)}
+.cf label,.cf legend{display:flex;justify-content:space-between;gap:16px;font-size:15px;font-weight:500;color:var(--ink);padding:0;margin-bottom:12px;width:100%}
+.cf label output{font:500 17px var(--body);color:var(--ink);white-space:nowrap}
+.cf small{display:block;font-size:13.5px;color:var(--ink-70);margin-top:8px;font-weight:400}
+.cf input[type=range]{width:100%;accent-color:#414042;height:28px;margin:0}
+.cf select{font:400 17px var(--body);color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink-45);padding:12px 0;min-height:50px;width:100%}
+.cf .tog{display:flex;align-items:center;gap:12px;font-size:15.5px;cursor:pointer;margin:0}
+.cf .tog input{width:20px;height:20px;accent-color:#414042;flex:none}
+.calc-out{position:sticky;top:100px;background:var(--ink);color:var(--paper);border-radius:18px;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:22px}
+.calc-out .big{font:500 clamp(46px,5.2vw,78px)/1 var(--display);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.calc-out .lbl{font-size:14px;color:var(--paper-70)}
+.calc-out .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;border-top:1px solid rgba(255,255,255,.14);padding-top:20px}
+.calc-out .row b{display:block;font:500 clamp(26px,2.4vw,34px)/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.calc-out .row span{font-size:13.5px;color:var(--paper-70)}
+.calc-out p{color:var(--paper-70);font-size:15px;margin:0}
+.calc-out .acts{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:4px}
+.calc-out .tlink{color:var(--paper)}
+.copy-ok{font-size:13px;color:var(--paper-70)}
+.assume{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0;border-top:1px solid var(--ink-12);margin-top:30px}
+.assume div{padding:18px 16px 18px 0;border-bottom:1px solid var(--ink-12)}
+.assume b{display:block;font:500 26px var(--display);letter-spacing:-.03em}
+.assume span{font-size:14px;color:var(--ink-70)}
+@media (max-width:900px){.calc{grid-template-columns:minmax(0,1fr)}.calc-out{position:static}}
+</style>
+
+<section class="phero">
+  <canvas class="silk" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Home</a> / <a href="ai-automation.html">AI and Automation</a> / Missed enquiry calculator</p>
+    <h1 class="hl"><span class="ln"><span>What slow replies</span></span><span class="ln"><span>cost your business</span></span></h1>
+    <p class="lede">A free calculator for UAE businesses. Enter how many enquiries you get, how fast you reply and what a customer is worth, and see roughly how much revenue slow replies cost you every month.</p>
+  </div>
+</section>
+
+<section class="light" style="padding-top:clamp(64px,7vw,110px);padding-bottom:clamp(64px,7vw,110px)">
+  <div class="wrap calc">
+    <form class="calc-in" id="calc" onsubmit="return false" aria-label="Missed enquiry calculator">
+      <div class="cf"><label for="c-n">Enquiries per month <output id="o-n" for="c-n">300</output></label><input type="range" id="c-n" min="0" max="100" step="1" value="54"><small>WhatsApp messages, calls, Instagram DMs and website forms from new customers.</small></div>
+      <div class="cf"><label for="c-rt">How fast you usually reply</label>
+        <select id="c-rt"><option value="1">Within 5 minutes</option><option value=".85">5 to 30 minutes</option><option value=".7" selected>30 to 60 minutes</option><option value=".55">1 to 3 hours</option><option value=".45">Later the same day</option><option value=".35">Next day</option></select></div>
+      <div class="cf"><label for="c-ah">Enquiries outside working hours <output id="o-ah" for="c-ah">35%</output></label><input type="range" id="c-ah" min="0" max="80" step="5" value="35"><small>Evenings, Fridays, weekends and holidays.</small></div>
+      <div class="cf"><label class="tog"><input type="checkbox" id="c-247"> We already reply fast at night and on weekends</label></div>
+      <div class="cf"><label for="c-cv">Enquiries that become customers today <output id="o-cv" for="c-cv">15%</output></label><input type="range" id="c-cv" min="1" max="60" step="1" value="15"></div>
+      <div class="cf"><label for="c-v">Average value of a customer <output id="o-v" for="c-v">AED 850</output></label><input type="range" id="c-v" min="0" max="100" step="1" value="41"><small>What a new customer is usually worth to you, over their first purchase or booking.</small></div>
+    </form>
+    <div class="calc-out" aria-live="polite">
+      <div><div class="lbl">Revenue you may be losing to slow replies</div><div class="big" id="r-m">AED 0</div><div class="lbl">per month</div></div>
+      <div class="row">
+        <div><b id="r-c">0</b><span>customers a month you could be winning</span></div>
+        <div><b id="r-y">AED 0</b><span>over a year</span></div>
+      </div>
+      <p id="r-note">Today about <span id="r-now">0</span> enquiries a month become customers. With every enquiry answered within minutes, day and night, that could be around <span id="r-best">0</span>.</p>
+      <div class="acts"><a class="btn btn-w mag" href="whatsapp-ai-agent-uae.html">See how we reply in seconds</a><a class="tlink" href="free-marketing-audit.html">Test my reply speed for free</a></div>
+      <div class="acts"><button type="button" class="tlink" id="c-share" style="background:none;border:0;padding:6px 0;font:inherit;cursor:pointer">Copy a link to this result</button><span class="copy-ok" id="c-ok" aria-live="polite"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec stone"><div class="wrap">
+  <div class="row-head"><span class="lab">How it works</span><div><h2 class="mid" style="max-width:20ch">How we estimate it</h2>
+  <p class="lede dim" style="margin-top:22px">People who message a business usually message two or three at once, and most go with whoever answers first. Research published in Harvard Business Review, based on more than a million inbound leads, found that companies replying within an hour were about seven times more likely to qualify a lead than those who waited longer, and over sixty times more likely than those who waited a day.</p>
+  <p class="dim" style="margin-top:18px">We use much more cautious numbers than that. The calculator assumes an enquiry answered within five minutes is as likely as possible to become a customer, and gives slower replies a lower chance:</p>
+  <div class="assume">
+    <div><b>100%</b><span>within 5 minutes</span></div><div><b>85%</b><span>5 to 30 minutes</span></div><div><b>70%</b><span>30 to 60 minutes</span></div><div><b>55%</b><span>1 to 3 hours</span></div><div><b>45%</b><span>later the same day</span></div><div><b>35%</b><span>next day</span></div>
+  </div>
+  <p class="dim" style="margin-top:22px">Enquiries outside working hours count as next day replies unless you tick that you already cover nights and weekends. To keep it realistic, the estimate never assumes more than double your current customers. It is an estimate to help you decide, not a promise of results.</p></div></div>
+</div></section>
+
+<section class="sec light"><div class="wrap">
+  <div class="row-head"><span class="lab">Questions</span><div class="faq faq-list">
+    <div class="qa"><button type="button" aria-expanded="true" aria-controls="cq1" id="cqb1">Is this calculator accurate for my business?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="cq1" role="region" aria-labelledby="cqb1"><div><p>It gives a cautious estimate based on your own numbers and published research on reply speed. Every business is different, so treat the result as a guide. The quickest way to know for sure is to measure your own reply times for a week.</p></div></div></div>
+    <div class="qa"><button type="button" aria-expanded="false" aria-controls="cq2" id="cqb2">How do I find my average reply time?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="cq2" role="region" aria-labelledby="cqb2"><div><p>Look at your last 20 WhatsApp enquiries from new customers and note how long each waited for a real reply. Include the ones that came in at night. Most owners find the real number is slower than they expected.</p></div></div></div>
+    <div class="qa"><button type="button" aria-expanded="false" aria-controls="cq3" id="cqb3">How can we reply faster without hiring more staff?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="cq3" role="region" aria-labelledby="cqb3"><div><p>A WhatsApp AI agent answers every message in seconds, day and night, in Arabic, English and other languages. It answers common questions, takes bookings and orders, and passes the conversation to your team when a person is needed.</p></div></div></div>
+    <div class="qa"><button type="button" aria-expanded="false" aria-controls="cq4" id="cqb4">Does this only apply if we run ads?<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="cq4" role="region" aria-labelledby="cqb4"><div><p>No. Enquiries from Google Maps, Instagram, your website, referrals and regular customers are lost the same way when nobody replies in time. If you also run ads, slow replies make every lead you pay for more expensive.</p></div></div></div>
+  </div></div>
+  <div class="row-head" style="margin-top:56px"><span class="lab">Related</span><p class="areas"><a href="whatsapp-ai-agent-uae.html">WhatsApp AI agent</a><a href="insights-whatsapp-lead-response-uae.html">Why UAE businesses lose leads on WhatsApp</a><a href="free-marketing-audit.html">Free marketing audit</a></p></div>
+</div></section>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var n=$('c-n'),rt=$('c-rt'),ah=$('c-ah'),c247=$('c-247'),cv=$('c-cv'),v=$('c-v');
+  var fmt=function(x){return Math.round(x).toLocaleString('en-US')};
+  var nice=function(x){ var m=Math.pow(10,Math.floor(Math.log10(x))-1); return Math.round(x/m)*m; };
+  var lg=function(p,lo,hi){ return nice(lo*Math.pow(hi/lo,p/100)); };
+  var N_=function(){ return lg(+n.value,20,3000); }, V_=function(){ return lg(+v.value,50,50000); };
+  var aed=function(x){return 'AED '+fmt(x)};
+  try{ var q=new URLSearchParams(location.search);
+    if(q.get('n')) n.value=q.get('n'); if(q.get('rt')) rt.value=q.get('rt'); if(q.get('ah')) ah.value=q.get('ah');
+    if(q.get('cv')) cv.value=q.get('cv'); if(q.get('v')) v.value=q.get('v'); if(q.get('c')==='1') c247.checked=true; }catch(e){}
+  function calc(){
+    var N=N_(), f=+rt.value, h=(+ah.value)/100, conv=(+cv.value)/100, val=V_();
+    var fah = c247.checked ? f : .35;
+    var wf = (1-h)*f + h*fah;
+    var mult = Math.min(2, 1/Math.max(wf,.01));
+    var now = N*conv, best = now*mult, lost = Math.max(0,best-now);
+    $('o-n').textContent=fmt(N); $('o-ah').textContent=ah.value+'%'; $('o-cv').textContent=cv.value+'%'; $('o-v').textContent=aed(val);
+    $('r-m').textContent=aed(lost*val); $('r-y').textContent=aed(lost*val*12); $('r-c').textContent=fmt(lost);
+    $('r-now').textContent=fmt(now); $('r-best').textContent=fmt(best);
+  }
+  [n,rt,ah,c247,cv,v].forEach(function(el){ el.addEventListener('input',calc); el.addEventListener('change',calc); });
+  calc();
+  var sent=false; $('calc').addEventListener('change',function(){ if(sent) return; sent=true; try{ window.gtag && gtag('event','calculator_use',{page_path:location.pathname}); }catch(e){} });
+  $('c-share').addEventListener('click',function(){
+    var u=location.origin+location.pathname+'?n='+n.value+'&rt='+rt.value+'&ah='+ah.value+'&cv='+cv.value+'&v='+v.value+(c247.checked?'&c=1':'');
+    var done=function(){ $('c-ok').textContent='Link copied'; setTimeout(function(){ $('c-ok').textContent=''; },2500); };
+    if(navigator.clipboard) navigator.clipboard.writeText(u).then(done,function(){ prompt('Copy this link',u); }); else prompt('Copy this link',u);
+  });
+})();
+</script>
