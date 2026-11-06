@@ -21,10 +21,14 @@ Contact: bd@adsncodes.com (projects), hello@adsncodes.com (general), +971 56 544
 - [Events](https://adsncodes.com/event-photography-videography-dubai.html): event photography and videography, same day reels, event branding, event promotion and registration
 - [Websites and e-commerce](https://adsncodes.com/web-development-dubai.html): websites, online stores, Amazon and Noon management
 - [Apps and software](https://adsncodes.com/app-development-dubai.html): mobile and web apps, business software, CRM
-- [WhatsApp automation and AI agent for lead response](https://adsncodes.com/whatsapp-ai-agent-uae.html): replies in seconds to every WhatsApp enquiry, from Google, Instagram, the website, referrals, regular customers and ads,, qualifies leads and books viewings, appointments and orders, for real estate, clinics, restaurants, e-commerce and more across the UAE
+- [WhatsApp automation and AI agent for lead response](https://adsncodes.com/whatsapp-ai-agent-uae.html): replies in seconds to every WhatsApp enquiry, from Google, Instagram, the website, referrals, regular customers and ads, qualifies leads and books viewings, appointments and orders, for real estate, clinics, restaurants, e-commerce and more across the UAE
 - [AI and automation](https://adsncodes.com/ai-automation.html): AI agents, WhatsApp AI, lead qualification, process automation
 - [WhatsApp AI agent for real estate](https://adsncodes.com/whatsapp-ai-agent-real-estate-dubai.html): instant replies to portal and ad leads, qualification, live listings, viewings and agent handover for Dubai brokerages
 - [WhatsApp AI agent for clinics](https://adsncodes.com/whatsapp-ai-agent-clinics-dubai.html): services, prices, doctors and booking by real availability, synced with clinic software
+- [WhatsApp AI agent for dental clinics](https://adsncodes.com/whatsapp-ai-agent-dental-clinics-dubai.html): dentist booking by live availability, insurance questions, reminders and six month recalls
+- [WhatsApp AI agent for aesthetic clinics](https://adsncodes.com/whatsapp-ai-agent-aesthetic-clinics-dubai.html): instant replies to Instagram and ad leads, consultation booking by practitioner, course follow up
+- [WhatsApp AI agent for physiotherapy clinics](https://adsncodes.com/whatsapp-ai-agent-physiotherapy-clinics-dubai.html): assessments, follow up sessions, home visits, reminders and easy rescheduling
+- [WhatsApp AI agent for vet clinics](https://adsncodes.com/whatsapp-ai-agent-vet-clinics-dubai.html): consultations, vaccinations, grooming and boarding, pet details on file, vaccine reminders
 - [WhatsApp ordering for restaurants](https://adsncodes.com/whatsapp-ordering-restaurants-dubai.html): menu cards, typed orders, delivery or pickup, orders sent to the POS and kitchen
 - Live WhatsApp AI agent demos: [real estate brokerage](https://realestate.adsncodes.com), [clinic](https://medicare.adsncodes.com), [restaurant](https://grillhouse.adsncodes.com)
 - [Workflow automation](https://adsncodes.com/workflow-automation-dubai.html): lead routing, CRM updates, quotes, invoices, payment reminders, reports and approvals using n8n, Make, Zapier and Power Automate
