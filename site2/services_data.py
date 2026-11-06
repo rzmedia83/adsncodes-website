@@ -417,3 +417,18 @@ SERVICES.append(dict(
 
 from city_services import CITY_SERVICES
 SERVICES.extend(CITY_SERVICES)
+
+# Extra FAQs (Nov 2026): cover related searches people use for these services
+_EXTRA_SVC_FAQ = {
+ 'web-development-dubai': [
+  ("Do you build e-commerce websites in Dubai?", "Yes. As an e-commerce website development company in Dubai, we build online stores on Shopify, WooCommerce and custom setups, with UAE payment gateways, cash on delivery, Arabic and English, delivery zones by emirate and product feeds for Google and Meta shopping ads."),
+ ],
+ 'content-creation-dubai': [
+  ("Do you offer content marketing services in Dubai?", "Yes. Beyond shooting and editing, our content marketing services in Dubai cover the plan behind the content: monthly themes, captions, blog articles, email content and the ads that put the best pieces in front of the right people, with a monthly report on what worked."),
+ ],
+}
+for _S in SERVICES:
+    _x = _EXTRA_SVC_FAQ.get(_S.get('slug'))
+    if _x:
+        _have = {q for q, _ in _S.get('faq', [])}
+        _S['faq'] = list(_S.get('faq', [])) + [qa for qa in _x if qa[0] not in _have]
