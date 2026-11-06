@@ -10,7 +10,7 @@ SEO = {
                            "WhatsApp automation for UAE businesses: an AI agent on Meta's official platform that replies in seconds in Arabic, English or Hindi and books leads 24/7."),
  'work': ("Our Work: Branding, Campaigns & Apps | Ads n' Codes",
           "Recent work by Ads n' Codes: brand identities, packaging, social campaigns, video ads, e-commerce stores and WhatsApp AI agents for UAE businesses."),
- 'about': ("About Ads n' Codes | Creative & Tech Agency in Dubai",
+ 'about': ("About Ads n' Codes | Marketing & Technology Agency in Dubai",
            "Ads n' Codes is a Dubai marketing and technology agency at B Hive, BurJuman, combining creative work with websites, apps and AI for UAE businesses."),
  'contact': ("Contact Ads n' Codes | Marketing Agency in Dubai",
              "Talk to Ads n' Codes in Dubai. Call or WhatsApp +971 56 544 0310, email bd@adsncodes.com or visit us at B Hive, Level 3, BurJuman."),
