@@ -106,7 +106,7 @@ READS_MAP = {'influencer-marketing-dubai':[('influencer-campaign-uae-how-it-work
  'lead-generation-agency-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp')],
  'ppc-google-ads-agency-dubai':[('how-long-does-seo-take-dubai','How long does SEO take, and should you run ads meanwhile?')],
  'workflow-automation-dubai':[('whatsapp-api-charges-uae','WhatsApp API charges from October 2026')],
- 'digital-marketing-dubai':[('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('google-business-profile-dubai','Google Business Profile checklist')],
+ 'digital-marketing-dubai':[('best-digital-marketing-agencies-dubai','The best digital marketing agencies in Dubai: a 2026 shortlist'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('google-business-profile-dubai','Google Business Profile checklist')],
  'content-creation-dubai':[('choose-content-creation-agency-dubai','How to choose a content creation agency in Dubai'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
  'social-media-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media management agency in Dubai'),('best-social-media-agencies-dubai','The best social media marketing companies in Dubai')],
  'instagram-marketing-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media management agency in Dubai')]}

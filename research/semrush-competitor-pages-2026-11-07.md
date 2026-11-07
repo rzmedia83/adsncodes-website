@@ -30,4 +30,4 @@ Traffic = Semrush estimated monthly organic visits from the UAE.
 
 ## Actions
 - Done 7 Nov: Facebook and Meta ads agency page, linked from footer, services hub and Instagram page.
-- Next: "Best digital marketing agencies in Dubai" listicle; "Digital marketing consultant in Dubai" page.
+- Done 7 Nov: "Best digital marketing agencies in Dubai" list article and "Digital marketing consultant in Dubai" page.

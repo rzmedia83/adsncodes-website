@@ -384,6 +384,35 @@ SERVICES.append(dict(
 ))
 
 SERVICES.append(dict(
+  slug='digital-marketing-consultant-dubai', nav='Marketing consultant', short='Digital marketing consultant',
+  title="Digital Marketing Consultant in Dubai | Ads n' Codes",
+  desc="A digital marketing consultant in Dubai for owners who want clear direction: audits, a 90 day plan, channel decisions and hands on help to carry them out.",
+  h1=['Digital marketing', 'consultant in Dubai'], img='assets/img/dubai-charcoal.webp', img_pos='70% center',
+  alt='Dubai skyline at dusk with Burj Khalifa',
+  ftitle="Let's work out what your marketing should do next.",
+  lede="For business owners who are spending on marketing without a clear plan. You get senior advice on what to fix, what to stop and where to put the budget, and a team that can carry it out if you want it.",
+  intro_h="Most businesses do not need more marketing. They need the right marketing.",
+  intro=["Many UAE businesses run ads, post on social media and pay for a website, yet still cannot say which of it brings customers. Agencies sell the service they offer, freelancers do the task they are given, and nobody looks at the whole picture.",
+         "A consultant starts there. Razal Mohammed, our founder, reviews your channels, your numbers and your competitors, then gives you a written plan for the next 90 days: what to keep, what to stop, what to build and how to measure it. You can carry it out with your own team, or have Ads n' Codes do it with you. Either way, the advice comes first and is not shaped by what we want to sell."],
+  subs_h='How a consultant engagement works',
+  subs=[('Marketing audit','A full review of your website, Google presence, social media, ads, tracking and how enquiries are handled.'),
+        ('90 day plan','A written plan with priorities, budgets by channel and the numbers to watch, in plain language.'),
+        ('Channel decisions','Honest answers on Google or Meta, SEO or ads, agency or in house, and which platforms to drop.'),
+        ('Tracking and reporting','Analytics, Pixel and call and WhatsApp tracking set up so every decision is based on real enquiries.'),
+        ('Monthly advisory','A monthly review call and report, acting as the senior marketing lead you have not hired yet.'),
+        ('Hands on delivery','When you want it done for you, our team runs the ads, content, website and automation from the same plan.')],
+  work=[('assets/img/founder.webp','Razal Mohammed, founder of Ads n\' Codes'),('assets/proof/meta-full.webp','Meta Ads results reviewed with a UAE client'),('assets/img/on-set.webp','On set for a client shoot')],
+  results=True,
+  process=[('Call','A short call about your business, goals and what you have tried so far.'),('Audit','We review your channels, data and competitors and note what is working and what is wasting money.'),('Plan','You receive a written 90 day plan and we walk you through it.'),('Carry it out','Your team, our team or both put the plan into action, with a monthly review.')],
+  faq=[("What does a digital marketing consultant do?","A consultant looks at your marketing as a whole, finds what is and is not bringing customers, and tells you what to do next. Unlike an agency that sells one service, the job is to give you the right plan, even when that means spending less."),
+       ("Do we have to hire Ads n' Codes to carry out the plan?","No. The plan is yours, and many businesses carry it out with their own team or freelancers. If you want us to do it, the same people who wrote the plan run it."),
+       ("Who is the consultant?","Razal Mohammed, founder of Ads n' Codes. He combines an engineering background with years of film, content and marketing work for UAE brands, and leads every consultant engagement personally."),
+       ("Is a consultant or a marketing agency better for us?","If you are unsure what to do, start with a consultant. If you already know what you need and want it carried out, an agency is enough. Our consulting leads straight into delivery when you are ready, so you do not need two separate firms."),
+       ("How long until we see results?","The audit and plan take one to two weeks. Quick wins such as fixing tracking, Google Business Profile and slow lead replies often show results within the first month. Channels like SEO take longer.")],
+  related=['digital-marketing-dubai','lead-generation-agency-dubai','facebook-meta-ads-agency-dubai'],
+))
+
+SERVICES.append(dict(
   slug='ppc-google-ads-agency-dubai', nav='PPC and Google Ads', short='PPC and Google Ads',
   title="PPC Company & Google Ads Agency in Dubai | Ads n' Codes",
   desc="PPC and Google Ads management in Dubai and Abu Dhabi: Search, Performance Max and YouTube ads, tracked to the calls, WhatsApp chats and leads they bring.",
