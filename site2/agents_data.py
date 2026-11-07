@@ -83,7 +83,7 @@ AGENTS = [
 
  dict(slug='whatsapp-ai-agent-aesthetic-clinics-dubai', short='WhatsApp AI agent for aesthetic clinics', nav='Aesthetic clinic agent',
   title="WhatsApp AI Agent for Aesthetic Clinics in Dubai | Ads n' Codes",
-  desc="A WhatsApp AI agent for UAE aesthetic and skin clinics: replies to Instagram and ad leads in seconds, books consultations and treatments, and follows up between sessions.",
+  desc="A WhatsApp AI agent for UAE aesthetic and skin clinics that replies to Instagram and ad leads in seconds, books consultations and follows up.",
   h1=['WhatsApp AI agent', 'for aesthetic clinics'], img='assets/img/clinic-aesthetic.webp', alt='Client receiving a facial treatment in a calm treatment room',
   lede="Your Instagram and Meta ads bring a steady flow of WhatsApp enquiries about skin, laser and injectables. The agent replies in seconds, books the consultation with the right practitioner and keeps clients coming back for every session of their course.",
   demo='clinic', area_h='For aesthetic, dermatology and skin clinics across the UAE', ftitle="Let's turn your ad leads into booked consultations.",
@@ -109,7 +109,7 @@ AGENTS = [
 
  dict(slug='whatsapp-ai-agent-physiotherapy-clinics-dubai', short='WhatsApp AI agent for physiotherapy clinics', nav='Physio clinic agent',
   title="WhatsApp AI Agent for Physio Clinics in Dubai | Ads n' Codes",
-  desc="A WhatsApp AI agent for UAE physiotherapy clinics: books assessments and follow up sessions by therapist availability, handles home visit requests and sends reminders.",
+  desc="A WhatsApp AI agent for UAE physiotherapy clinics that books assessments by therapist availability, handles home visits and sends reminders.",
   h1=['WhatsApp AI agent', 'for physio clinics'], img='assets/img/clinic-physio.webp', alt='Quiet physiotherapy treatment room with a treatment bed',
   lede="Physio patients need a first assessment and then a run of sessions that fit around work and training. The agent books both on WhatsApp by real therapist availability, sends reminders, and makes rescheduling easy so plans are finished, not abandoned.",
   demo='clinic', area_h='For physiotherapy, sports injury and rehab clinics across the UAE', ftitle="Let's keep your therapists' diaries full.",
