@@ -99,14 +99,14 @@ ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="cur
 
 READS_MAP = {'influencer-marketing-dubai':[('influencer-campaign-uae-how-it-works','How an influencer campaign works in the UAE'),('uae-advertiser-permit-brands','The UAE Advertiser Permit: what brands must check'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
  'ugc-content-dubai':[('influencer-vs-ugc-uae','Influencer marketing or UGC?'),('uae-advertiser-permit-brands','The UAE Advertiser Permit explained')],
- 'seo-agency-dubai':[('google-business-profile-dubai','A Google Business Profile checklist for Dubai'),('best-seo-agencies-dubai','The best SEO agencies in Dubai: a 2026 shortlist'),('how-long-does-seo-take-dubai','How long does SEO take in Dubai?')],
- 'seo-agency-abu-dhabi':[('best-seo-agencies-dubai','The best SEO agencies in Dubai: a 2026 shortlist'),('how-long-does-seo-take-dubai','How long does SEO take in Dubai?')],
+ 'seo-agency-dubai':[('google-business-profile-dubai','A Google Business Profile checklist for Dubai'),('best-seo-agencies-dubai','The best SEO agencies in Dubai, and who each one suits'),('how-long-does-seo-take-dubai','How long does SEO take in Dubai?')],
+ 'seo-agency-abu-dhabi':[('best-seo-agencies-dubai','The best SEO agencies in Dubai, and who each one suits'),('how-long-does-seo-take-dubai','How long does SEO take in Dubai?')],
  'real-estate-marketing-agency-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works')],
  'whatsapp-ai-agent-real-estate-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works')],
  'lead-generation-agency-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp')],
  'ppc-google-ads-agency-dubai':[('how-long-does-seo-take-dubai','How long does SEO take, and should you run ads meanwhile?')],
  'workflow-automation-dubai':[('whatsapp-api-charges-uae','WhatsApp API charges from October 2026')],
- 'digital-marketing-dubai':[('best-digital-marketing-agencies-dubai','The best digital marketing agencies in Dubai: a 2026 shortlist'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('google-business-profile-dubai','Google Business Profile checklist')],
+ 'digital-marketing-dubai':[('best-digital-marketing-agencies-dubai','The best digital marketing agencies in Dubai, and who each one suits'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('google-business-profile-dubai','Google Business Profile checklist')],
  'content-creation-dubai':[('choose-content-creation-agency-dubai','How to choose a content creation agency in Dubai'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
  'social-media-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media management agency in Dubai'),('best-social-media-agencies-dubai','The best social media marketing companies in Dubai')],
  'instagram-marketing-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media management agency in Dubai')]}
