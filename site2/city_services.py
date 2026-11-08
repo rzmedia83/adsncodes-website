@@ -72,8 +72,8 @@ dict(AD, slug='seo-agency-abu-dhabi', nav='SEO in Abu Dhabi', short='SEO in Abu 
 ),
 
 dict(AD, slug='social-media-agency-abu-dhabi', nav='Social media in Abu Dhabi', short='Social media in Abu Dhabi', stype='Social media management',
-  title="Social Media Agency in Abu Dhabi | Management & Ads | Ads n' Codes",
-  desc="Social media management in Abu Dhabi and Al Ain: Instagram, TikTok, LinkedIn and Facebook content in Arabic and English, shoots on site and Meta ads that bring enquiries.",
+  title="Social Media Agency in Abu Dhabi | Ads n' Codes",
+  desc="Social media management in Abu Dhabi and Al Ain: Instagram, TikTok and LinkedIn content in Arabic and English, shoots on site and Meta ads that bring enquiries.",
   h1=['Social media agency', 'in Abu Dhabi'], img='assets/img/ad-towers.webp', img_pos='50% 40%',
   alt='Etihad Towers in Abu Dhabi at sunset behind a glass pavilion and palm trees',
   ftitle="Let's make Abu Dhabi notice you.",

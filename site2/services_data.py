@@ -316,7 +316,7 @@ SERVICES.insert(1, dict(
         ('Influencer and UGC', 'Creators who fit your brand, briefed properly, with usage rights you can run as ads.'),
         ('Reporting', 'Monthly numbers that matter, in plain language, with the next steps attached.')],
   work=[('assets/video/ad-social-hd.mp4', 'Presenter led social ad'), ('assets/work/aurea-life-switches.webp', 'Social campaign for a smart home brand'), ('assets/video/portrait-film-hd.mp4', 'Fashion reel, shot and edited by us')],
-  faq=[('How many posts a month do you make?', 'Most brands start with 12 to 20 posts a month, including reels and stories. We set the number after looking at your goals and how much you can shoot.'),
+  faq=[('How many posts a month do you make?', 'There is no fixed number. We plan from your goal and what keeps the right people engaged, then adjust as the results come in. For most brands that lands between 12 and 20 posts a month, including reels and stories.'),
        ('Do you shoot the content or do we send it?', 'Both work. We can shoot in Dubai on a monthly shoot day, use what your team sends, or mix the two.'),
        ('Can you handle Arabic content?', 'Yes. Captions and replies can be in English, Arabic or both, written for a UAE audience rather than translated word for word.'),
        ('Do you manage social media in Abu Dhabi too?', 'Yes. We plan and shoot content for Abu Dhabi and Al Ain brands as well, with ads aimed at each area. See [social media in Abu Dhabi](social-media-agency-abu-dhabi.html).'),
