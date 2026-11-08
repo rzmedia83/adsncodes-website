@@ -25,7 +25,7 @@ def article_page(a):
     faq = ''.join(f'<div class="qa"><button type="button" aria-expanded="{"true" if i == 0 else "false"}" aria-controls="f{i}" id="fq{i}">{e(q)}<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="f{i}" role="region" aria-labelledby="fq{i}"><div><p>{e(x)}</p></div></div></div>' for i, (q, x) in enumerate(a['faq']))
     src = ''
     if a.get('sources'):
-        src = '<div class="art-src"><p>Sources</p><ul>' + ''.join(f'<li><a href="{u}" target="_blank" rel="noopener">{e(t)}</a></li>' for t, u in a['sources']) + '</ul></div>'
+        src = '<div class="art-src"><p>Sources</p><ul>' + ''.join(f'<li><a href="{u}" target="_blank" rel="nofollow noopener">{e(t)}</a></li>' for t, u in a['sources']) + '</ul></div>'
     rel = ''.join(f'<a href="{r}.html">{e(BYSLUG[r]["short"])}</a>' for r in a['related'])
     others = [o for o in ARTICLES if o['slug'] != a['slug']][:3]
     more = ''.join(f'<a class="icard" href="insights-{o["slug"]}.html"><span>{e(o["kicker"])}</span><h3>{e(o["h1"])}</h3><em>{o["read"]} read</em></a>' for o in others)

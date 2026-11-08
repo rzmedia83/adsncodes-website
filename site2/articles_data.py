@@ -797,3 +797,30 @@ ARTICLES.insert(0, dict(slug='get-recommended-by-chatgpt-uae', date='2026-11-08'
            ("Aggarwal et al.: GEO, Generative Engine Optimization (KDD 2024)","https://arxiv.org/abs/2311.09735"),
            ("Search Engine World: Mapbox local search comes to ChatGPT","https://www.searchengineworld.com/getting-your-business-on-the-map-in-chatgpt-local-search-comes-to-chatgpt")],
   related=['ai-seo-agency-dubai','seo-agency-dubai','content-creation-dubai']))
+
+# Shortlist articles: criteria first, our own team first (clearly marked), competitors after.
+_FAIR = "A note on fairness: we are a Dubai agency ourselves, so our own team comes first and is clearly marked as ours. The other four are described from what they and the regional trade press publish, listed under sources. Please check anything that matters to you directly with each agency."
+_CAVEAT = {
+ 'best-digital-marketing-agencies-dubai': "Worth knowing: a newer team than the others here, where you work directly with the founder rather than through an account manager.",
+ 'best-seo-agencies-dubai': "Worth knowing: a newer team than the others on this list, where you work directly with the founder rather than through an account manager.",
+ 'best-social-media-agencies-dubai': "Worth knowing: a newer team than the regional networks below, where you work directly with the founder rather than through layers of a holding company.",
+}
+def _reorder(a):
+    b = a['body']
+    h2 = [i for i, (k, v) in enumerate(b) if k == 'h2']
+    ours = next(i for i in h2 if v_ours(b[i][1]))
+    choose = next(i for i in h2 if b[i][1].startswith('How to choose'))
+    intro = [x for x in b[:h2[0]]]
+    intro = [('p', _FAIR) if (k == 'p' and v.startswith('A note on fairness')) else (k, v) for k, v in intro]
+    comp = b[h2[0]:ours]
+    us = list(b[ours:choose])
+    us[0] = ('h2', "Ads n' Codes (our own team)")
+    us = [(k, [_CAVEAT[a['slug']] if x.startswith('Worth knowing') or x.startswith('A newer and smaller') else x for x in v]) if k == 'ul' else (k, v) for k, v in us]
+    ch = b[choose:choose + 2]
+    tail = b[choose + 2:]
+    lead = ('p', "Before the names, here is what to compare. Use these questions with every agency you speak to, including us.")
+    if ch[0][1] == 'How to choose between them': ch[0] = ('h2', 'How to choose a social media agency in Dubai')
+    a['body'] = intro + [ch[0], lead, ch[1]] + us + comp + tail
+def v_ours(t): return t.startswith("Ads n' Codes")
+for _a in ARTICLES:
+    if _a['slug'] in _CAVEAT: _reorder(_a)
