@@ -125,9 +125,14 @@
     var scale = opts.scale || (lite ? .32 : .5), mx = .62, my = .55, tx = .62, ty = .55, vis = true, t0 = performance.now();
     function fit(){ cv.width = Math.max(1, Math.round(cv.clientWidth * scale)); cv.height = Math.max(1, Math.round(cv.clientHeight * scale)); gl.viewport(0, 0, cv.width, cv.height); }
     fit(); window.addEventListener('resize', fit);
-    window.addEventListener('pointermove', function(e){ var r = cv.getBoundingClientRect(); tx = (e.clientX - r.left) / r.width; ty = 1 - (e.clientY - r.top) / r.height; }, { passive: true });
+    var fineP = matchMedia('(pointer:fine)').matches, lastP = -1e9;
+    function aim(e){ var r = cv.getBoundingClientRect(); tx = (e.clientX - r.left) / r.width; ty = 1 - (e.clientY - r.top) / r.height; lastP = performance.now(); }
+    window.addEventListener('pointermove', aim, { passive: true });
+    /* touch screens: a tap drops the ripple where the finger lands, and between taps the light drifts slowly on its own */
+    window.addEventListener('pointerdown', aim, { passive: true });
     if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ vis = es[0].isIntersecting; }).observe(cv);
     function draw(now){
+      if (!fineP && now - lastP > 2600) { tx = .58 + .2 * Math.sin(now / 3400); ty = .52 + .16 * Math.cos(now / 4300); }
       mx += (tx - mx) * .06; my += (ty - my) * .06;
       gl.uniform2f(uR, cv.width, cv.height); gl.uniform1f(uT, reduce ? 8 : (now - t0) / 1000); gl.uniform2f(uM, mx, my);
       gl.uniform1f(uS, Math.min(window.scrollY / Math.max(window.innerHeight, 1), 1.5));
