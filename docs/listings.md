@@ -35,6 +35,7 @@ Standard details used everywhere:
 | townin.com | razal@adsncodes.com (email code login) | Submitted Nov 8 2026 (free Starter plan), awaiting Townin approval; public email hello@ | townin.com/Dubai/advertising-media-promotions | Yes |
 | Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
 | Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS calls to verify within 3 working days | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
+| Mapbox (feeds ChatGPT maps, per reports) | no account (Contribute form at labs.mapbox.com/contribute, status emails to razal@adsncodes.com) | Business submitted Nov 8 2026, in Mapbox review | labs.mapbox.com/contribute | Yes (pin in BurJuman Business Tower, 25.2515, 55.3016) |
 
 Not available to us:
 - HiDubai: now redirects to Invest in Dubai, which lists Dubai licensed companies only (we hold an Ajman free zone licence).
