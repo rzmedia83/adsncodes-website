@@ -1,7 +1,7 @@
 # Search titles (keyword first, under ~60 characters) and meta descriptions (under ~158 characters), one primary topic per page.
 SEO = {
  'index': ("Ads n' Codes | Marketing & Advertising Agency in Dubai",
-           "Ads n' Codes is a marketing and technology agency in Dubai: digital marketing, ads, SEO, branding, video, websites and WhatsApp AI agents for UAE brands."),
+           "Ads n' Codes is a marketing and technology agency in Dubai: marketing, ads, SEO and AI search, branding, video, websites and WhatsApp AI agents for UAE brands."),
  'services': ("Marketing, Branding & Tech Services in Dubai | Ads n' Codes",
               "Every service in one place: digital marketing, SEO, branding, influencer and UGC content, photo, video, events, websites, apps and AI automation in Dubai."),
  'ai-automation': ("AI Agents & Automation in Dubai, UAE | Ads n' Codes",

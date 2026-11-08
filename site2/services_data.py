@@ -41,7 +41,7 @@ SERVICES = [
   work=[('assets/img/phone-scroll.webp','Found on the first search'),('assets/work/location-pages.webp','Location pages we built for UAE local search'),('assets/img/ad-towers.webp','Local search across the UAE')],
   results=False,
   faq=[('How long does SEO take in Dubai?','Expect early movement in two to three months and solid results in four to six, depending on competition. Local SEO and Google Business Profile changes often show sooner.'),
-       ('What is AEO and GEO?','Answer Engine Optimisation and Generative Engine Optimisation. They make your content easy for search features and AI assistants like ChatGPT and Gemini to understand, quote and recommend.'),
+       ('What is AEO and GEO?','Answer Engine Optimisation and Generative Engine Optimisation. They make your content easy for search features and AI assistants like ChatGPT and Gemini to understand, quote and recommend. See our [AI SEO service](ai-seo-agency-dubai.html).'),
        ('Do you manage our Google Business Profile?','Yes. We keep your details accurate, add photos and posts, choose the right categories and help you build reviews.')],
   related=['digital-marketing-dubai','web-development-dubai','content-creation-dubai']),
 
@@ -475,6 +475,38 @@ SERVICES.append(dict(
        ("Do you run lead generation in Abu Dhabi and Sharjah?","Yes. Each emirate gets its own campaigns, budget and creative, because buyers and costs differ. Abu Dhabi campaigns often lean on Arabic ads and [Google search](ppc-agency-abu-dhabi.html), while Sharjah responds well to family focused offers and WhatsApp ordering."),
        ("Do you do B2B lead generation in the UAE?","Yes. For B2B we use LinkedIn, Google Search and content campaigns aimed at decision makers, with lead forms and follow up built for longer sales cycles.")],
   related=['ppc-google-ads-agency-dubai','digital-marketing-dubai','whatsapp-ai-agent-uae'],
+))
+
+SERVICES.append(dict(
+  slug='ai-seo-agency-dubai', nav='AI search optimisation', short='AI SEO',
+  title="AI SEO Agency in Dubai | ChatGPT & AI Answers | Ads n' Codes",
+  desc="AI SEO in Dubai: get your business found, quoted and recommended in ChatGPT, Gemini, Perplexity and Google AI Overviews, alongside classic Google rankings.",
+  h1=['AI SEO agency', 'in Dubai'], img='assets/img/ai-seo-hero.webp', img_pos='80% center',
+  alt='An AI assistant answering which clinic marketing agency in Dubai to hire, with a business recommended first and its website listed as a source',
+  ftitle="Let's make AI recommend you.",
+  lede="More UAE buyers now ask ChatGPT, Gemini or Google's AI answers before they search the old way. We make sure those answers know your business, describe it correctly and recommend it.",
+  intro_h="The shortlist is now written by AI.",
+  intro=["Someone in Dubai asks an AI assistant for the best clinic, contractor or agency near them, and gets three names. If yours is not one of them, you never reach the comparison stage. AI assistants build that answer from what they can read and trust: your website, your Google Business Profile, directories, reviews and articles that mention you.",
+         "AI SEO makes all of that clear, consistent and easy to quote. We fix how your site is structured for AI crawlers, write pages that answer the questions buyers ask, make your details match everywhere they appear, and track which AI answers mention you and which mention your competitors. It sits on top of normal SEO, because Google's AI answers still lean on the pages that rank."],
+  subs_h='What AI SEO covers',
+  subs=[('AI visibility audit','We ask ChatGPT, Gemini, Perplexity and Google the questions your buyers ask, and record who gets named, who gets cited and what is said about you.'),
+        ('Answer ready pages','Service, area and FAQ pages written so each answer stands on its own and can be quoted directly.'),
+        ('Structured data','Schema for your business, services, reviews, FAQs and people, so AI systems read facts instead of guessing.'),
+        ('AI crawler access','robots.txt, llms.txt, sitemaps and page speed checked so AI search crawlers can reach and read every page.'),
+        ('Entity consistency','Name, address, founding details and services matched across your site, Google, Apple Maps, LinkedIn and directories.'),
+        ('Third party mentions','Directory listings, review platforms and articles that AI assistants trust when they build a shortlist.'),
+        ('Wrong answer fixes','When an AI answer gets a fact about you wrong, we find the source it came from and correct it.'),
+        ('Monthly AI visibility report','Which prompts mention you, which cite your site, and how that changes month by month next to your Google rankings.')],
+  work=[('assets/img/ai-seo-hero.webp','How a buyer meets you in an AI answer'),('assets/work/location-pages.webp','Location pages we built for UAE search'),('assets/img/seo-console.webp','Search performance tracked every month')],
+  results=False,
+  process=[('Audit','We test the prompts your buyers use across the main AI assistants and Google, and map where you appear and where you do not.'),('Fix','Technical access, structured data and consistent business details across the web.'),('Build','Answer ready pages, FAQs and third party mentions for the questions you are missing from.'),('Track','A monthly report on AI mentions, citations and rankings, with the next set of prompts to win.')],
+  faq=[("What is AI SEO?","AI SEO, also called GEO or AEO, is the work of getting your business found, quoted and recommended inside AI answers from ChatGPT, Gemini, Perplexity, Copilot and Google AI Overviews. It builds on normal SEO and adds clear answer ready content, structured data and consistent mentions across the web."),
+       ("Can you guarantee ChatGPT will recommend us?","No one can guarantee that. AI answers change from one question to the next and from one month to the next. What we can do is make your business the easiest one for AI to understand and trust, and show you every month where you appear and where you do not."),
+       ("Is AI SEO different from normal SEO?","They overlap. Google's AI Overviews mostly draw on pages that already rank, so classic SEO still matters. Other assistants also read directories, reviews and articles, and reward pages that answer a question clearly on their own. We do both together, see our [SEO services in Dubai](seo-agency-dubai.html)."),
+       ("How long does AI SEO take?","Technical fixes and structured data can show up within weeks once AI crawlers revisit your site. Being named in competitive answers usually takes a few months, because it depends on mentions and reviews building up around your business."),
+       ("Which AI assistants do you track?","ChatGPT, Gemini, Perplexity, Copilot and Google AI Overviews, in English and, where your buyers use it, Arabic."),
+       ("An AI tool says something wrong about our business. Can you fix it?","Usually yes. Wrong answers almost always come from an outdated or confusing source, such as an old listing or an article. We find it, correct it or outweigh it with clear facts on your own site and profiles.")],
+  related=['seo-agency-dubai','content-creation-dubai','web-development-dubai'],
 ))
 
 from city_services import CITY_SERVICES

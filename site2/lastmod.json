@@ -1,11 +1,11 @@
 {
 "index": {
-"h": "926e1557714e6eb496dacc8aae7ffec4",
-"d": "2026-11-05"
+"h": "32ed374802e71bae411580d36eb6b66d",
+"d": "2026-11-08"
 },
 "services": {
-"h": "71b1aa2003d76c639c7e862be118a637",
-"d": "2026-11-07"
+"h": "36da28237f205af852d5b3bdebb63cd6",
+"d": "2026-11-08"
 },
 "ai-automation": {
 "h": "2c47fcf1a13beaeae3f16d1963ed065b",
@@ -48,8 +48,8 @@
 "d": "2026-11-08"
 },
 "seo-agency-dubai": {
-"h": "b439050a20244ff56f82e35199e5267a",
-"d": "2026-11-07"
+"h": "7019947f9e230096bbbf354400e81946",
+"d": "2026-11-08"
 },
 "branding-agency-dubai": {
 "h": "19e06c22d9efebd8098404d5e51e431c",
@@ -128,24 +128,24 @@
 "d": "2026-11-05"
 },
 "marketing-agency-uae": {
-"h": "6765a04de2b4235c5ee43cb69d63732a",
-"d": "2026-11-07"
+"h": "66052928ccfc68ff08b968d30e6bf6c4",
+"d": "2026-11-08"
 },
 "digital-marketing-agency-abu-dhabi": {
-"h": "933fafbb33bfceac87a98089e0206822",
+"h": "43fbc8c31b0437b50136f8c39f2814f6",
 "d": "2026-11-08"
 },
 "digital-marketing-agency-sharjah": {
-"h": "64ead27c9055f0c6d1b3b25f3470bc9a",
-"d": "2026-11-07"
+"h": "affdfe02686205172ea4e0aa78b6be85",
+"d": "2026-11-08"
 },
 "digital-marketing-agency-ajman": {
-"h": "80695f477f41d19e2db084a3bf04982a",
-"d": "2026-11-07"
+"h": "2c6fe00a6509d4455b7df9f52e1d5950",
+"d": "2026-11-08"
 },
 "digital-marketing-agency-ras-al-khaimah": {
-"h": "d6cdf93a14f39d8883fd08858b4392cb",
-"d": "2026-11-07"
+"h": "191b3e28069bec0ec2b17c2636b35539",
+"d": "2026-11-08"
 },
 "whatsapp-ai-agent-real-estate-dubai": {
 "h": "080a22d32dcd9d3778b6e6d12b2826c8",
@@ -309,6 +309,10 @@
 },
 "social-media-agency-abu-dhabi": {
 "h": "7bfff503ae8e93ead586e4db21424e55",
+"d": "2026-11-08"
+},
+"ai-seo-agency-dubai": {
+"h": "18b7685c68a9d5564fa36244b9f45eed",
 "d": "2026-11-08"
 }
 }
