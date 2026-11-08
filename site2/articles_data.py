@@ -1110,3 +1110,16 @@ ARTICLES.insert(0, dict(slug='best-advertising-agencies-dubai', date='2026-12-07
            ("LBBOnline: Dubai's TBWA\\RAAD named world's Best Place to Work","https://lbbonline.com/news/Dubais-TBWARAAD-Named-Worlds-Best-Place-to-Work-Marking-a-Middle-East-First"),
            ("Campaign Middle East: The Hanging House on winning Independent Creative Agency of the Year","https://campaignme.com/aoty-2025-the-hanging-house-on-winning-the-independent-creative-agency-of-the-year/")],
   related=['digital-marketing-dubai','facebook-meta-ads-agency-dubai','influencer-marketing-dubai']))
+
+# Social list: best social media marketing company in dubai 6600/KD38, top social media marketing agency in dubai 3600/12,
+# best social media agency in dubai 2900/48, social media agencies in dubai 1300/17, social media marketing companies in dubai 1300/16
+# SEO list: best seo company in dubai 2900/52, top seo agency dubai 1900/43, top 10 seo companies in dubai 480/47
+for _a in ARTICLES:
+    if _a['slug'] == 'best-social-media-agencies-dubai':
+        _a['title'] = "Top Social Media Marketing Agencies & Companies in Dubai | Ads n' Codes"
+        _a['desc'] = "The best and top social media marketing agencies and companies in Dubai: who each one suits, what they are known for, and the questions to ask before you choose."
+        _a['h1'] = 'The top social media marketing agencies in Dubai, and who each one suits'
+    if _a['slug'] == 'best-seo-agencies-dubai':
+        _a['title'] = "Top SEO Agencies & Companies in Dubai, and Who Each Suits | Ads n' Codes"
+        _a['desc'] = "The best and top SEO agencies and companies in Dubai: who each one suits, what they are known for, and the questions to ask before you choose."
+        _a['h1'] = 'The top SEO agencies and companies in Dubai, and who each one suits'
