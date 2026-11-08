@@ -299,8 +299,8 @@ SERVICES = [
 
 SERVICES.insert(1, dict(
   slug='social-media-agency-dubai', nav='Social media', short='Social media',
-  title="Social Media Marketing Company & Agency in Dubai | Ads n' Codes",
-  desc="Social media agency in Dubai: monthly social media management, content, reels, community replies and paid social on Instagram, TikTok and LinkedIn.",
+  title="Social Media Marketing Agency & Company in Dubai, UAE | Ads n' Codes",
+  desc="Social media marketing agency in Dubai serving the whole UAE: monthly social media management, content, reels, community replies and paid social on Instagram, TikTok and LinkedIn.",
   h1=['Social media', 'agency in Dubai'],
   img='assets/img/social-hero.webp', video='assets/video/social-hero.mp4', img_pos='72% center', alt='Instagram profile grid and a Reel on two phones, with a new DM and a WhatsApp enquiry',
   lede="Content people stop for, posted on a plan, answered on time and backed by paid social when it is worth it. For brands in Dubai and across the UAE.",
