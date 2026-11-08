@@ -206,7 +206,7 @@ def location_page(L):
     else:
         hero = '<section class="phero"><canvas class="silk" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div>'
     focus = ''.join(f'<li><h3>{e(a)}</h3><p>{e(b)}</p></li>' for a, b in L['focus'])
-    svc = ''.join(f'<a href="{x["slug"]}.html">{e(x["short"])}</a>' for x in SERVICES if not x.get('city')) + '<a href="ai-automation.html">AI and automation</a>'
+    svc = ''.join(f'<a href="{x["slug"]}.html">{e(x["short"])}</a>' for x in SERVICES if not x.get('city') and not x.get('sub')) + '<a href="ai-automation.html">AI and automation</a>'
     local = [x for x in SERVICES if x.get('city') == L['city']]
     localnav = (f'<div class="row-head" style="margin:0 0 56px"><span class="lab">In {e(L["city"])}</span><div><h2 class="mid" style="max-width:22ch">Specialist services for {e(L["city"])}</h2><nav class="related" aria-label="{e(L["city"])} services" style="margin-top:28px">' + ''.join(f'<a href="{x["slug"]}.html">{e(x["short"])}</a>' for x in local) + '</nav></div></div>') if local else ''
     others = ''.join(f'<a href="{o["slug"]}.html">{e(o["city"] if o["city"] != "UAE" else "All of the UAE")}</a>' for o in LOCATIONS if o['slug'] != L['slug'])

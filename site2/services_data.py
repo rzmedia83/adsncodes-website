@@ -185,7 +185,7 @@ SERVICES = [
   faq=[('Do you shoot product photos for Amazon and Noon?','Yes. We shoot to marketplace requirements, including white background images, and provide lifestyle shots for your store and ads.'),
        ('Do you cover locations outside Dubai?','Yes. We shoot across the UAE, including Abu Dhabi, Sharjah and the Northern Emirates.'),
        ('How fast do we get the photos?','Edited images are usually delivered within three to five working days, faster for urgent campaigns.')],
-  related=['video-production-dubai','content-creation-dubai','web-development-dubai']),
+  related=['real-estate-photography-dubai','product-photography-dubai','corporate-photography-dubai','video-production-dubai']),
 
  dict(slug='video-production-dubai', nav='Video production', short='Video production',
   title="Video Production Company in Dubai & UAE | Video Ads, Brand Films & Real Estate Walkthroughs | Ads n' Codes",
@@ -250,7 +250,7 @@ SERVICES = [
   faq=[('How long does a website take?','A company website usually takes three to six weeks. E-commerce stores take longer depending on the number of products and integrations.'),
        ('Do you manage Amazon and Noon stores?','Yes. We set up and manage marketplace stores, optimise listings and keep your catalogue updated.'),
        ('Will our website be SEO friendly?','Yes. Every site is built with clean structure, fast loading, proper metadata and schema, ready for SEO work.')],
-  related=['seo-agency-dubai','app-development-dubai','branding-agency-dubai']),
+  related=['ecommerce-website-development-dubai','seo-agency-dubai','app-development-dubai','branding-agency-dubai']),
 
  dict(slug='workflow-automation-dubai', nav='Workflow automation', short='Workflow automation',
   title="Workflow Automation Agency in Dubai & UAE | Ads n' Codes",
@@ -299,7 +299,7 @@ SERVICES = [
 
 SERVICES.insert(1, dict(
   slug='social-media-agency-dubai', nav='Social media', short='Social media',
-  title="Social Media Marketing Agency in Dubai | Ads n' Codes",
+  title="Social Media Marketing Company & Agency in Dubai | Ads n' Codes",
   desc="Social media agency in Dubai: monthly social media management, content, reels, community replies and paid social on Instagram, TikTok and LinkedIn.",
   h1=['Social media', 'agency in Dubai'],
   img='assets/img/social-hero.webp', video='assets/video/social-hero.mp4', img_pos='72% center', alt='Instagram profile grid and a Reel on two phones, with a new DM and a WhatsApp enquiry',
@@ -511,6 +511,8 @@ SERVICES.append(dict(
 
 from city_services import CITY_SERVICES
 SERVICES.extend(CITY_SERVICES)
+from extra_services import EXTRA_SERVICES
+SERVICES.extend(EXTRA_SERVICES)
 
 # Extra FAQs (Nov 2026): cover related searches people use for these services
 _EXTRA_SVC_FAQ = {

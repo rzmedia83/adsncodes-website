@@ -824,3 +824,97 @@ def _reorder(a):
 def v_ours(t): return t.startswith("Ads n' Codes")
 for _a in ARTICLES:
     if _a['slug'] in _CAVEAT: _reorder(_a)
+
+# Nov 8 keyword push: WhatsApp questions UAE businesses search (Semrush ae).
+# how to verify whatsapp business account 1000/KD33, whatsapp business verification process 40/30
+ARTICLES.insert(0, dict(slug='verify-whatsapp-business-account-uae', date='2026-11-08', read='6 min',
+  kicker='WhatsApp for business',
+  title="How to Verify a WhatsApp Business Account (Blue Tick) in the UAE | Ads n' Codes",
+  desc="How WhatsApp Business verification works for UAE businesses: Meta Verified on the app, the blue tick on the WhatsApp Business Platform, who qualifies, how to apply and what to do if you are refused.",
+  h1='How to verify a WhatsApp Business account and get the blue tick',
+  lede="A verified badge tells customers they are talking to the real business, not a scammer using your name. There are two routes to it, depending on whether you use the WhatsApp Business app or the WhatsApp Business Platform. Here is how each works.",
+  author='Razal Mohammed',
+  body=[
+   ('p',"Fake WhatsApp accounts using real company names and logos are common in the UAE, especially for banks, delivery firms, clinics and real estate. A verified badge next to your name is the quickest way for a customer to know the chat is genuine. It also makes your messages look more trustworthy when someone sees your number for the first time."),
+   ('p',"The old green tick has been replaced by Meta's blue verified badge, the same one used on Facebook and Instagram. How you get it depends on which version of WhatsApp your business runs on."),
+   ('h2',"Route 1: Meta Verified on the WhatsApp Business app"),
+   ('p',"If your team uses the free WhatsApp Business app on a phone, verification comes through Meta Verified, a paid monthly subscription. Meta has been rolling it out country by country, so it is not available to every business in every market yet."),
+   ('ul',["Open the WhatsApp Business app and look under Settings or Business tools for Meta Verified. If you do not see it, it is not available for your account or country yet.",
+          "Make sure your business profile is complete: name, category, address, hours, website and a clear logo.",
+          "Turn on two step verification for the number.",
+          "Choose a plan, then submit your business details and documents, such as your trade licence, so Meta can confirm the business is real.",
+          "Once approved, the badge appears on your profile, and some plans add extras such as more linked devices and account support."]),
+   ('h2',"Route 2: the blue tick on the WhatsApp Business Platform"),
+   ('p',"If your business uses the WhatsApp Business Platform, sometimes called the WhatsApp API, through a provider or an AI agent, the badge is applied for through Meta's Business Manager. Meta reserves it for businesses it considers notable, which in practice means a recognised brand with genuine press coverage."),
+   ('ul',["Verify your business in Meta Business Manager with your trade licence and matching company details.",
+          "Turn on two step verification on the WhatsApp number and use a display name that matches your brand everywhere else.",
+          "Make sure the account has been active and within WhatsApp's business and commerce policies for some time.",
+          "Request the badge from WhatsApp Manager, adding links to independent news articles about your business. Paid articles and press releases usually do not count.",
+          "If you are refused, improve your public profile and apply again after the waiting period Meta gives you."]),
+   ('h2',"Which route fits your business"),
+   ('ul',["A small business replying from one or two phones: start with the WhatsApp Business app and Meta Verified, if it is offered in your country.",
+          "A business with a team, high message volume or an AI agent answering customers: the WhatsApp Business Platform, where the badge is one part of a bigger setup.",
+          "A new brand without press coverage: focus on a complete profile, a display name that matches your website and Google profile, and consistent branding. Those already reduce doubt while you build the reputation the badge needs."]),
+   ('h2',"Verification is not the same as a good WhatsApp experience"),
+   ('p',"A badge gets the first message opened. What wins the customer is what happens next: a fast, accurate reply at any hour. Most UAE businesses lose more enquiries to slow replies than to missing badges. See [how fast UAE businesses really reply on WhatsApp](insights-whatsapp-lead-response-uae.html), and how a [WhatsApp AI agent](whatsapp-ai-agent-uae.html) answers in seconds on your own verified number."),
+   ('p',"Meta changes these programmes often, so check the current options inside the app and in Meta Business Manager before you apply."),
+  ],
+  faq=[("Can any business get the WhatsApp blue tick?","No. On the WhatsApp Business app it comes through Meta Verified, which is a paid subscription not yet available in every country. On the WhatsApp Business Platform, Meta gives the badge only to businesses it considers notable, usually brands with independent press coverage."),
+       ("What happened to the WhatsApp green tick?","Meta replaced the green tick with the blue verified badge used across Facebook, Instagram and WhatsApp, so verified businesses look the same on all three apps."),
+       ("Do I need the WhatsApp API to get verified?","No. Small businesses on the WhatsApp Business app can verify through Meta Verified where it is available. The API route suits larger businesses and teams that already use the WhatsApp Business Platform."),
+       ("Why was my WhatsApp verification request rejected?","Common reasons are a display name that does not match your brand, an unverified Meta business account, missing two step verification, or not enough independent press coverage for the platform badge. Fix those and apply again after the waiting period."),
+       ("Does a verified badge improve message delivery?","Not directly. It builds trust, so more people open and reply. Delivery depends on your account quality, which comes from customers wanting your messages and not blocking or reporting you.")],
+  sources=[("Meta: New AI tools, Meta Verified and more for businesses on WhatsApp","https://about.fb.com/news/2024/06/new-ai-tools-meta-verified-and-more-for-businesses-on-whatsapp/"),
+           ("WhatsApp Business: Meta Verified for business","https://whatsappbusiness.com/resources/resource-library/meta-verified-business/"),
+           ("SleekFlow: How to get a verified blue checkmark on WhatsApp Business","https://sleekflow.io/en-us/blog/whatsapp-business-verification-blue-tick")],
+  related=['whatsapp-ai-agent-uae','arabic-ai-chatbot-uae','ai-automation']))
+
+# whatsapp business multiple users 480/KD25, whatsapp business multiple devices, whatsapp business web 22200/35
+ARTICLES.insert(0, dict(slug='whatsapp-business-multiple-users-uae', date='2026-11-08', read='6 min',
+  kicker='WhatsApp for business',
+  title="WhatsApp Business Multiple Users: How a UAE Team Shares One Number | Ads n' Codes",
+  desc="Can several staff use one WhatsApp Business number? How linked devices and WhatsApp Web work, their limits, and when a UAE team needs a shared inbox or an AI agent on the WhatsApp Business Platform.",
+  h1='WhatsApp Business with multiple users: how your team can share one number',
+  lede="Your customers message one number. Your sales, reception and support staff all need to answer it. Here is what the WhatsApp Business app allows, where it breaks down, and what growing UAE teams use instead.",
+  author='Razal Mohammed',
+  body=[
+   ('p',"In most UAE businesses WhatsApp is the main sales channel, and one person's phone quickly becomes a bottleneck. When that person is busy, on leave or asleep, enquiries wait. The obvious fix is to let more people answer the same number. WhatsApp allows that, within limits."),
+   ('h2',"Option 1: linked devices on the WhatsApp Business app"),
+   ('p',"The free WhatsApp Business app lets one main phone link a small number of extra devices, such as laptops through WhatsApp Web or the desktop app, and other phones. At the time of writing that is the main phone plus four linked devices, and Meta Verified subscribers can link more where the subscription is offered."),
+   ('ul',["On the main phone, open Settings, then Linked devices, then Link a device.",
+          "On the second phone or computer, open WhatsApp Business or web.whatsapp.com and scan the QR code.",
+          "Chats sync across devices, and each linked device keeps working even when the main phone is offline for a while.",
+          "Use labels such as New lead, Booked and Paid so the team can see where each chat stands."]),
+   ('h2',"Where linked devices stop working for a team"),
+   ('ul',["Everyone sees every chat. You cannot give one person only their own customers.",
+          "There is no proper assignment. Two staff can reply to the same customer, or both can assume the other did.",
+          "Replies show as the business, so you cannot easily see who said what or how fast each person answered.",
+          "There is a hard device limit, so a team larger than a handful of people runs out of seats.",
+          "Nothing answers at night or on weekends unless someone is awake to do it."]),
+   ('h2',"Option 2: a shared inbox on the WhatsApp Business Platform"),
+   ('p',"Growing teams move to the WhatsApp Business Platform, the official system Meta built for businesses, usually through a provider's shared inbox. Each staff member logs in with their own account, chats are assigned to a person or team, and managers can see response times and history. There is no practical limit on users."),
+   ('p',"The trade offs are a setup process with Meta, a monthly cost for the inbox software, and Meta's own conversation charges. We explain those in [WhatsApp API charges in the UAE](insights-whatsapp-api-charges-uae.html)."),
+   ('h2',"Option 3: let an AI agent take the first reply"),
+   ('p',"On the WhatsApp Business Platform you can also put an AI agent in front of the team. It answers routine questions in seconds, in Arabic and English, books appointments or takes orders, and hands the chat to the right person with a summary when it needs a human. Staff only spend time on conversations that need them, and nothing waits overnight."),
+   ('p',"That is what we build as a [WhatsApp AI agent](whatsapp-ai-agent-uae.html), including an [Arabic AI chatbot](arabic-ai-chatbot-uae.html) for customers who prefer Arabic."),
+   ('h2',"Which option fits"),
+   ('ul',["One to three people answering, modest volume: the WhatsApp Business app with linked devices and labels.",
+          "A team of sales or support staff who need assignment and accountability: a shared inbox on the WhatsApp Business Platform.",
+          "High volume, the same questions all day, or enquiries outside working hours: an AI agent on the platform, with the team handling handovers."]),
+  ],
+  faq=[("Can two people use the same WhatsApp Business number?","Yes. Link a second phone or a computer from Settings, then Linked devices on the main phone. Both can read and reply to the same chats."),
+       ("How many devices can use one WhatsApp Business account?","On the WhatsApp Business app, the main phone plus four linked devices at the time of writing, with more available to Meta Verified subscribers where offered. The WhatsApp Business Platform has no practical limit on team members."),
+       ("Can I assign WhatsApp chats to different staff?","Not properly on the free app. You can use labels to show who is handling a chat, but true assignment, permissions and response time reports need a shared inbox on the WhatsApp Business Platform."),
+       ("Can I use WhatsApp Business on a laptop?","Yes. Use the WhatsApp desktop app or web.whatsapp.com and link it from your phone under Linked devices."),
+       ("Can I keep my number if I move to the WhatsApp Business Platform?","Usually yes. The number can be moved to the platform, and in some setups the app and platform can be used together. We check your number before any change.")],
+  sources=[("WhatsApp blog: One WhatsApp account, now across multiple phones","https://blog.whatsapp.com/one-whatsapp-account-now-across-multiple-phones"),
+           ("Meta: New AI tools, Meta Verified and more for businesses on WhatsApp","https://about.fb.com/news/2024/06/new-ai-tools-meta-verified-and-more-for-businesses-on-whatsapp/"),
+           ("respond.io: WhatsApp Business multiple users","https://respond.io/blog/whatsapp-business-multiple-users")],
+  related=['whatsapp-ai-agent-uae','arabic-ai-chatbot-uae','workflow-automation-dubai']))
+
+# influencer license dubai 320/KD16, social media influencer license dubai 210/15, influencer license dubai cost 110/8
+for _a in ARTICLES:
+    if _a['slug'] == 'uae-advertiser-permit-brands':
+        _a['title'] = "Influencer License in Dubai & UAE: The Advertiser Permit Explained | Ads n' Codes"
+        _a['desc'] = "The UAE influencer licence explained: the Media Council Advertiser Permit, who needs it, who is exempt, what it costs, and what brands must check before paying a creator."
+        _a['faq'] = list(_a['faq']) + [("Do influencers need a licence in Dubai?","Yes. Anyone promoting other people's products or services on social media in the UAE, paid or gifted, needs the UAE Media Council Advertiser Permit, which is what most people mean by an influencer licence. A business promoting itself on its own accounts does not.")]
