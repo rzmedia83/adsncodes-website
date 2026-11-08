@@ -4,7 +4,7 @@
 "d": "2026-11-08"
 },
 "services": {
-"h": "5a4f2168ab8b5b133efe8eb60cfa6321",
+"h": "a07bf9fa285e5c36460e174e5603a86e",
 "d": "2026-11-08"
 },
 "ai-automation": {
@@ -128,23 +128,23 @@
 "d": "2026-11-05"
 },
 "marketing-agency-uae": {
-"h": "66052928ccfc68ff08b968d30e6bf6c4",
+"h": "a2e57c80cd11b84eda2737e9161055d9",
 "d": "2026-11-08"
 },
 "digital-marketing-agency-abu-dhabi": {
-"h": "43fbc8c31b0437b50136f8c39f2814f6",
+"h": "ce8640f9a220959e4fd9b414ef23e5e5",
 "d": "2026-11-08"
 },
 "digital-marketing-agency-sharjah": {
-"h": "affdfe02686205172ea4e0aa78b6be85",
+"h": "54e74d1360d2cf6dd3ad32068a2704ff",
 "d": "2026-11-08"
 },
 "digital-marketing-agency-ajman": {
-"h": "2c6fe00a6509d4455b7df9f52e1d5950",
+"h": "7309c08cb7cd9120844c6e1c52f046fd",
 "d": "2026-11-08"
 },
 "digital-marketing-agency-ras-al-khaimah": {
-"h": "191b3e28069bec0ec2b17c2636b35539",
+"h": "19f07dc1f9cfa0b3a0b7c5d18e863bfd",
 "d": "2026-11-08"
 },
 "whatsapp-ai-agent-real-estate-dubai": {
@@ -353,6 +353,10 @@
 },
 "insights-whatsapp-vs-whatsapp-business-uae": {
 "h": "430db390cdd156836026030ef6eb9b18",
+"d": "2026-11-08"
+},
+"email-marketing-agency-dubai": {
+"h": "36638272fcd728ceb2afc8691e7fb281",
 "d": "2026-11-08"
 }
 }

@@ -28,7 +28,7 @@ ORG = {
   "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00"}],
   "hasMap": "https://www.google.com/maps/search/?api=1&query=Ads+n%27+Codes+BurJuman+Dubai&query_place_id=ChIJL8srqlxzh2kRtCTl_DkPRDY",
   "foundingDate": "2024-05",
-  "knowsAbout": ["Digital marketing", "Social media marketing", "Meta ads", "Google ads", "SEO", "Local SEO", "Generative engine optimization", "AI SEO", "AI search optimisation", "Branding", "Personal branding", "Influencer marketing", "UGC content", "Content creation", "Photography", "Video production", "Event coverage", "Web development", "E-commerce", "App development", "WhatsApp automation", "AI agents"],
+  "knowsAbout": ["Digital marketing", "Social media marketing", "Meta ads", "Google ads", "SEO", "Local SEO", "Generative engine optimization", "AI SEO", "AI search optimisation", "Branding", "Personal branding", "Influencer marketing", "Email marketing", "UGC content", "Content creation", "Photography", "Video production", "Event coverage", "Web development", "E-commerce", "App development", "WhatsApp automation", "AI agents"],
   "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": "bd@adsncodes.com", "telephone": "+971565440310", "areaServed": "AE", "availableLanguage": ["English"]}],
 }
 nav = (S / '_nav.html').read_text()
