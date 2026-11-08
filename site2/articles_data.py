@@ -1044,3 +1044,11 @@ ARTICLES.insert(0, dict(slug='how-to-use-whatsapp-business-web', date='2026-11-0
   sources=[("WhatsApp blog: One WhatsApp account, now across multiple phones","https://blog.whatsapp.com/one-whatsapp-account-now-across-multiple-phones"),
            ("WhatsApp Business: About the WhatsApp Business app","https://business.whatsapp.com/products/business-app")],
   related=['whatsapp-ai-agent-uae','arabic-ai-chatbot-uae','workflow-automation-dubai']))
+
+# Shortlist retune, Nov 8: also answer "top digital marketing agencies in dubai" 390, "top 10 digital marketing companies in dubai" 880,
+# "best digital marketing agency in uae" 1600, "best marketing agency in dubai" 320, "top marketing agency in dubai" 170
+for _a in ARTICLES:
+    if _a['slug'] == 'best-digital-marketing-agencies-dubai':
+        _a['title'] = "Top Digital Marketing Agencies in Dubai & UAE, and Who Each Suits | Ads n' Codes"
+        _a['desc'] = "The top digital marketing and advertising agencies in Dubai and the UAE compared: who each one suits, what they are known for, and the questions to ask before you choose."
+        _a['h1'] = 'The top digital marketing agencies in Dubai and the UAE, and who each one suits'
