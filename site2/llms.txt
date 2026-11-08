@@ -73,6 +73,8 @@ Contact: bd@adsncodes.com (projects), hello@adsncodes.com (general), +971 56 544
 - [Dubai smart automation company: 3x sales](https://adsncodes.com/case-study-smart-automation-company.html)
 
 ## Insights
+- [WhatsApp Business Solution Provider in the UAE](https://adsncodes.com/insights-whatsapp-business-solution-provider-uae.html): what BSPs do, going direct with the Cloud API, and questions to ask before choosing
+- [WhatsApp vs WhatsApp Business](https://adsncodes.com/insights-whatsapp-vs-whatsapp-business-uae.html): the app, the business app and the platform compared, and when to switch
 - [How to verify a WhatsApp Business account](https://adsncodes.com/insights-verify-whatsapp-business-account-uae.html): Meta Verified on the app and the blue tick on the WhatsApp Business Platform
 - [WhatsApp Business with multiple users](https://adsncodes.com/insights-whatsapp-business-multiple-users-uae.html): linked devices, shared inboxes and AI agents for teams sharing one number
 - [How to get your business recommended by ChatGPT in the UAE](https://adsncodes.com/insights-get-recommended-by-chatgpt-uae.html): how ChatGPT, Gemini and Google AI choose which businesses to mention, and six practical steps for UAE businesses
