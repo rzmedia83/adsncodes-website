@@ -20,6 +20,7 @@ def article_page(a):
     for kind, v in a['body']:
         if kind == 'p': parts.append(f'<p>{_inline(v)}</p>')
         elif kind == 'h2': parts.append(f'<h2>{e(v)}</h2>')
+        elif kind == 'img': parts.append(f'<figure class="art-fig"><img src="{v[0]}" alt="{e(v[1])}" width="1480" height="832" loading="lazy" decoding="async"><figcaption>{e(v[1])}</figcaption></figure>')
         elif kind == 'ul': parts.append('<ul>' + ''.join(f'<li>{_inline(x)}</li>' for x in v) + '</ul>')
     faq = ''.join(f'<div class="qa"><button type="button" aria-expanded="{"true" if i == 0 else "false"}" aria-controls="f{i}" id="fq{i}">{e(q)}<span class="pm" aria-hidden="true">+</span></button><div class="ans" id="f{i}" role="region" aria-labelledby="fq{i}"><div><p>{e(x)}</p></div></div></div>' for i, (q, x) in enumerate(a['faq']))
     src = ''
@@ -51,7 +52,7 @@ def article_page(a):
     url = DOMAIN + 'insights-' + a['slug'] + '.html'
     ld = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": a['h1'], "description": a['desc'], "datePublished": a['date'], "dateModified": a['date'],
           "author": dict({"@type": "Person", "name": a.get('author','Razal Mohammed')}, **({"url": DOMAIN + "about.html"} if a.get('author','Razal Mohammed') == 'Razal Mohammed' else {})), "publisher": {"@id": DOMAIN + "#org"},
-          "mainEntityOfPage": url, "inLanguage": "en-AE", "image": DOMAIN + "assets/og.jpg"}
+          "mainEntityOfPage": url, "inLanguage": "en-AE", "image": DOMAIN + OGMAP.get("insights-" + a["slug"], "assets/og.jpg")}
     return page('insights-' + a['slug'], 'insights', a['title'], a['desc'], "Want this done for your business? Let's talk.", body,
                 [ld, faq_ld(a['faq']), crumbs_ld([("Home", ""), ("Insights", "insights.html"), (a['h1'], 'insights-' + a['slug'] + '.html')])])
 def insights_index():

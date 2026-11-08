@@ -740,6 +740,7 @@ ARTICLES.insert(0, dict(slug='get-recommended-by-chatgpt-uae', date='2026-11-08'
   body=[
    ('p',"Ask ChatGPT for the best dental clinic in Al Barsha or a good marketing agency in Dubai and it gives a short list with a few names and a reason for each. For the business on that list, it is the new first page of Google. For everyone else, the customer never even sees them."),
    ('p',"There is no ad slot to buy and no form to fill in. AI assistants build their answers from what they can read about you on the web: your website, your Google and map listings, directories, reviews and what other sites say about you. The work is making sure that picture is clear, consistent and convincing."),
+   ('img',("assets/img/ai-answer-figure.webp","An AI assistant answering which agency to hire, with a short list of businesses and the sources it used")),
    ('h2',"How AI assistants choose which businesses to mention"),
    ('ul',["**They search the live web.** ChatGPT search uses its own crawler, OAI-SearchBot, and OpenAI says sites that block it will not appear in ChatGPT search answers.",
           "**Google's AI uses Google's index.** Google says there is nothing extra to add for AI Overviews or AI Mode. A page has to be indexed and eligible to show with a snippet, so normal SEO decides it.",

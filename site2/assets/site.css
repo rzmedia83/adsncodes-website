@@ -1011,3 +1011,4 @@ h1,h2,h3{overflow-wrap:break-word}
 :root{--brass-ink:#80602C;--brass-ink-dark:#D4B784}
 .gsteps span,.icard span,.sg-h span,.re-steps li::before,.legal li::marker{color:var(--brass-ink)!important}
 .lands .lk,.stories span{color:var(--brass-ink-dark)!important}
+.art-fig{margin:36px 0 40px}.art-fig img{display:block;width:100%;height:auto;border-radius:14px}.art-fig figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:#77767a}
