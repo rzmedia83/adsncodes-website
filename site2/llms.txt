@@ -1,6 +1,6 @@
 # Ads n' Codes
 
-> Marketing and technology agency based at B Hive, Level 3, BurJuman Business Tower, Dubai, serving businesses across all seven emirates of the UAE (Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, Umm Al Quwain).
+> Marketing and technology agency founded in 2024 by Razal Mohammed, based at B Hive, Level 3, BurJuman Business Tower, Dubai, serving businesses across all seven emirates of the UAE (Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, Umm Al Quwain).
 
 Contact: bd@adsncodes.com (projects), hello@adsncodes.com (general), +971 56 544 0310 (call and WhatsApp).
 
@@ -79,6 +79,8 @@ Contact: bd@adsncodes.com (projects), hello@adsncodes.com (general), +971 56 544
 - [Which UAE businesses gain the most from a WhatsApp AI agent](https://adsncodes.com/insights-whatsapp-ai-agent-industries-uae.html)
 - [WhatsApp API charges changed on 1 October 2026: what UAE businesses should do](https://adsncodes.com/insights-whatsapp-api-charges-uae.html)
 - [Why UAE businesses lose leads on WhatsApp, and how to fix it](https://adsncodes.com/insights-whatsapp-lead-response-uae.html)
+- [WhatsApp auto reply for business: setup guide for the UAE](https://adsncodes.com/insights-whatsapp-auto-reply-business-uae.html)
+- [WhatsApp chatbot or AI agent: which one a UAE business needs](https://adsncodes.com/insights-whatsapp-chatbot-vs-ai-agent-uae.html)
 - [The UAE Advertiser Permit: what brands must check before hiring an influencer](https://adsncodes.com/insights-uae-advertiser-permit-brands.html)
 - [A Google Business Profile checklist for Dubai businesses](https://adsncodes.com/insights-google-business-profile-dubai.html)
 - [Influencer marketing or UGC: which one does a UAE brand need?](https://adsncodes.com/insights-influencer-vs-ugc-uae.html)
