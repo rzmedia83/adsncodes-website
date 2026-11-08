@@ -33,7 +33,7 @@ Standard details used everywhere:
 | Microsoft Clarity | Razal's account | Live | clarity.microsoft.com | n/a |
 | UptimeRobot | Razal's account | Live, 5 minute checks | uptimerobot.com | n/a |
 | townin.com | razal@adsncodes.com (email code login) | Free Starter plan (1 year) form filled with logo, banner and 3 photos; Razal to tick captcha and submit | townin.com | Yes |
-| Foursquare for Business | adsncodesofficial@gmail.com | Account profile step pending (Razal), then list the business | business.foursquare.com | Yes |
+| Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
 | Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS calls to verify within 3 working days | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
 
 Not available to us:
