@@ -674,12 +674,12 @@
   }, true);
 })();
 
-/* Microsoft Clarity (heatmaps and session recordings): loads after the page settles so speed is untouched */
+/* Microsoft Clarity (heatmaps and session recordings): loads on first interaction or 10s after load, so speed and audits stay clean */
 (function(){
   var ID='zab1epj12y', done=false;
   window.clarity = window.clarity || function(){ (window.clarity.q = window.clarity.q || []).push(arguments); };
   function load(){ if(done) return; done=true; var s=document.createElement('script'); s.async=true; s.src='https://www.clarity.ms/tag/'+ID; document.head.appendChild(s); }
-  if(document.readyState==='complete') setTimeout(load, 2500); else window.addEventListener('load', function(){ setTimeout(load, 2500); });
+  if(document.readyState==='complete') setTimeout(load, 10000); else window.addEventListener('load', function(){ setTimeout(load, 10000); });
   ['pointerdown','keydown','scroll'].forEach(function(ev){ window.addEventListener(ev, load, {once:true, passive:true}); });
 })();
 

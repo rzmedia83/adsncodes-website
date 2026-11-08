@@ -319,6 +319,7 @@ SERVICES.insert(1, dict(
   faq=[('How many posts a month do you make?', 'Most brands start with 12 to 20 posts a month, including reels and stories. We set the number after looking at your goals and how much you can shoot.'),
        ('Do you shoot the content or do we send it?', 'Both work. We can shoot in Dubai on a monthly shoot day, use what your team sends, or mix the two.'),
        ('Can you handle Arabic content?', 'Yes. Captions and replies can be in English, Arabic or both, written for a UAE audience rather than translated word for word.'),
+       ('Do you manage social media in Abu Dhabi too?', 'Yes. We plan and shoot content for Abu Dhabi and Al Ain brands as well, with ads aimed at each area. See [social media in Abu Dhabi](social-media-agency-abu-dhabi.html).'),
        ('Is social media the same as digital marketing?', 'Social media is one part of it. Digital marketing also covers search ads, SEO, landing pages and tracking. Many clients start with social and add the rest later.')],
   related=['instagram-marketing-agency-dubai', 'influencer-marketing-dubai', 'content-creation-dubai'],
 ))
