@@ -97,7 +97,7 @@
     if (!gl) return;
     try { var dbg = gl.getExtension('WEBGL_debug_renderer_info'); var rn = dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) : ''; if (/swiftshader|llvmpipe|software|basic render/i.test(rn)) { cv.classList.add('silk-static'); return; } } catch (e) {}
     var vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
-    var fs = ['precision highp float;uniform vec2 R;uniform float T;uniform vec2 M;uniform float S;',
+    var fs = ['precision highp float;uniform vec2 R;uniform float T;uniform vec2 M;uniform float S;uniform float G;',
       'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
       'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}',
       'float fbm(vec2 p){float v=0.,a=.5;mat2 r=mat2(.8,.6,-.6,.8);for(int i=0;i<4;i++){v+=a*n(p);p=r*p*2.02;a*=.5;}return v;}',
@@ -111,7 +111,7 @@
       'vec3 N=normalize(vec3(-dx/e*.35,-dy/e*.35,1.));vec3 L=normalize(vec3(.6+(M.x-.5)*.8,.7+(M.y-.5)*.8,.9));',
       'float di=clamp(dot(N,L),0.,1.);float sp=pow(clamp(dot(reflect(-L,N),vec3(0,0,1)),0.,1.),28.);float fr=pow(1.-N.z,2.);',
       'vec3 ink=vec3(.255,.251,.259);vec3 col=ink*(.55+.75*di)+vec3(1.)*(sp*.95+fr*.35);',
-      'col=mix(col,ink*.75,smoothstep(.4,1.2,length(uv-vec2(.7,.55))));col+=(h(gl_FragCoord.xy+T)-.5)*.035;',
+      'col=mix(col,ink*.75,smoothstep(.4,1.2,length(uv-vec2(.7,.55))));col+=(h(gl_FragCoord.xy+T)-.5)*G;',
       'gl_FragColor=vec4(clamp(col,0.,1.),1.);}'].join('\n');
     function sh(t, s){ var o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return o; }
     var pr = gl.createProgram(); gl.attachShader(pr, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(pr);
@@ -122,7 +122,9 @@
     var loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     var uR = gl.getUniformLocation(pr, 'R'), uT = gl.getUniformLocation(pr, 'T'), uM = gl.getUniformLocation(pr, 'M'), uS = gl.getUniformLocation(pr, 'S');
     var lite = matchMedia('(max-width:760px)').matches || (navigator.hardwareConcurrency || 8) <= 4, skip = 0;
-    var scale = opts.scale || (lite ? .32 : .5), mx = .62, my = .55, tx = .62, ty = .55, vis = true, t0 = performance.now();
+    var scale = opts.scale || (lite ? .42 : .5), mx = .62, my = .55, tx = .62, ty = .55, vis = true, t0 = performance.now();
+    /* film grain: subtle on desktop, almost none on phones where the lower render size would blow it up into visible noise */
+    gl.uniform1f(gl.getUniformLocation(pr, 'G'), lite ? .008 : .03);
     function fit(){ cv.width = Math.max(1, Math.round(cv.clientWidth * scale)); cv.height = Math.max(1, Math.round(cv.clientHeight * scale)); gl.viewport(0, 0, cv.width, cv.height); }
     fit(); window.addEventListener('resize', fit);
     var fineP = matchMedia('(pointer:fine)').matches, lastP = -1e9;
