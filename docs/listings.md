@@ -18,7 +18,7 @@ Standard details used everywhere:
 | Google Business Profile | adsncodesofficial@gmail.com | Live | business.google.com | Yes |
 | Google Search Console | adsncodesofficial@gmail.com | Verified, sitemap 85 URLs | search.google.com/search-console (domain property) | n/a |
 | Bing Webmaster Tools | signed in in Chrome | Verified, sitemap and 85 URLs submitted | bing.com/webmasters | n/a |
-| Bing Places | to be created (sign in with Google) | Pending | bingplaces.com | Yes |
+| Bing Places | adsncodesofficial@gmail.com (Google sign in) | Verified, synced with Google Business Profile, publishing in 7 to 12 days | bing.com/forbusiness | Yes (synced from Google) |
 | Apple Business (Maps) | Apple account of Ads N Codes FZE LLC | In review (location 1549660661071479646) | business.apple.com | Yes |
 | Clutch | razal@adsncodes.com | Created, location in validation | clutch.co | Yes |
 | GoodFirms | razal@adsncodes.com | Submitted for review | goodfirms.co | Yes |
