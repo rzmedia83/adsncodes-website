@@ -674,6 +674,15 @@
   }, true);
 })();
 
+/* Microsoft Clarity (heatmaps and session recordings): loads after the page settles so speed is untouched */
+(function(){
+  var ID='zab1epj12y', done=false;
+  window.clarity = window.clarity || function(){ (window.clarity.q = window.clarity.q || []).push(arguments); };
+  function load(){ if(done) return; done=true; var s=document.createElement('script'); s.async=true; s.src='https://www.clarity.ms/tag/'+ID; document.head.appendChild(s); }
+  if(document.readyState==='complete') setTimeout(load, 2500); else window.addEventListener('load', function(){ setTimeout(load, 2500); });
+  ['pointerdown','keydown','scroll'].forEach(function(ev){ window.addEventListener(ev, load, {once:true, passive:true}); });
+})();
+
 /* Google Analytics 4: page views queue at once, the library loads after the page so speed is untouched */
 (function(){
   var GA='G-P5X3FL8DLN', loaded=false;
