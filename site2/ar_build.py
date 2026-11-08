@@ -1,6 +1,7 @@
 # ---------- Arabic pages (/ar/) ----------
-# Kept noindex until a native speaker has reviewed them. Flip AR_LIVE to True to index and add hreflang.
-AR_LIVE = False
+# Live and indexed (approved by Razal, Nov 2026). Set AR_LIVE to False to noindex them again.
+AR_LIVE = True
+AR_PAIRS = []
 _ae = __import__("html").escape
 (R / 'ar').mkdir(exist_ok=True)
 
@@ -11,6 +12,7 @@ html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3,html[dir=rtl] h4,html[dir=rtl
 html[dir=rtl] .hl{line-height:1.22}
 html[dir=rtl] .hl .ln{padding-bottom:.16em;padding-top:.04em}
 html[dir=rtl] .qa button{text-align:right}
+html[dir=rtl] .wa-fab{right:auto;left:calc(18px + env(safe-area-inset-left,0px))}
 html[dir=rtl] .tlink svg{transform:scaleX(-1)}
 html[dir=rtl] .tlink:hover svg{transform:scaleX(-1) translateX(4px)}
 html[dir=rtl] .facts li{padding:28px 0 28px 28px}
@@ -76,6 +78,7 @@ AR_FOOT = """<footer class="foot">
 
 def ar_page(slug, en, title, desc, ftitle, body, lds=(), region=('AE-DU', 'Dubai')):
     path = 'ar/' if slug == 'index' else f'ar/{slug}.html'
+    AR_PAIRS.append((path, en))
     url = DOMAIN + path
     enurl = DOMAIN + ('' if en == 'index' else en + '.html')
     robots = 'index, follow, max-image-preview:large' if AR_LIVE else 'noindex, follow'
@@ -347,3 +350,14 @@ def ar_home():
                    'ما الذي يبطئ نمو شركتك؟ لنتحدث.', body, [site, faq_ld(faq)])
 
 AR_BUILT = [ar_home(), ar_abu_dhabi()] + [ar_service(s) for s in AR_SVC]
+
+# hreflang from the English pages to their Arabic versions
+if AR_LIVE:
+    for _arp, _en in AR_PAIRS:
+        _f = R / (_en + '.html')
+        if not _f.exists(): continue
+        _s = _f.read_text()
+        _tag = f'<link rel="alternate" hreflang="ar-ae" href="{DOMAIN + _arp}">'
+        if _tag not in _s:
+            _s = _s.replace('<link rel="alternate" hreflang="en-ae"', _tag + '\n<link rel="alternate" hreflang="x-default" href="' + DOMAIN + ('' if _en == 'index' else _en + '.html') + '">\n<link rel="alternate" hreflang="en-ae"', 1)
+            _f.write_text(_s)

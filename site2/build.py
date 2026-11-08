@@ -103,9 +103,9 @@ READS_MAP = {'influencer-marketing-dubai':[('influencer-campaign-uae-how-it-work
  'seo-agency-abu-dhabi':[('best-seo-agencies-dubai','The best SEO agencies in Dubai, and who each one suits'),('how-long-does-seo-take-dubai','How long does SEO take in Dubai?')],
  'real-estate-marketing-agency-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works')],
  'whatsapp-ai-agent-real-estate-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works')],
- 'lead-generation-agency-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp')],
+ 'lead-generation-agency-dubai':[('real-estate-lead-generation-dubai','Real estate lead generation in Dubai: what works'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('whatsapp-ai-agent-industries-uae','Which UAE businesses gain most from a WhatsApp AI agent')],
  'ppc-google-ads-agency-dubai':[('how-long-does-seo-take-dubai','How long does SEO take, and should you run ads meanwhile?')],
- 'workflow-automation-dubai':[('whatsapp-api-charges-uae','WhatsApp API charges from October 2026')],
+ 'workflow-automation-dubai':[('whatsapp-api-charges-uae','WhatsApp API charges from October 2026'),('whatsapp-ai-agent-industries-uae','Which UAE businesses gain most from a WhatsApp AI agent')],
  'digital-marketing-dubai':[('best-digital-marketing-agencies-dubai','The best digital marketing agencies in Dubai, and who each one suits'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('google-business-profile-dubai','Google Business Profile checklist')],
  'content-creation-dubai':[('choose-content-creation-agency-dubai','How to choose a content creation agency in Dubai'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
  'social-media-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media management agency in Dubai'),('best-social-media-agencies-dubai','The best social media marketing companies in Dubai')],
@@ -275,8 +275,6 @@ for name, cur, title, desc, ftitle in STATIC:
     if name in ('free-marketing-audit', 'missed-enquiry-cost-calculator'):
         qs = re.findall(r'id="[ac]qb\d+">([^<]+)<span', body); ans = [re.sub('<[^>]+>', '', x) for x in re.findall(r'aria-labelledby="[ac]qb\d+"><div><p>(.*?)</p>', body)]
         if qs and len(qs) == len(ans): extra.append(faq_ld(list(zip(qs, ans))))
-    if name == 'missed-enquiry-cost-calculator':
-        extra.append({"@context": "https://schema.org", "@type": "WebApplication", "name": "Missed enquiry cost calculator", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "url": DOMAIN + name + ".html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"}, "provider": {"@id": DOMAIN + "#org"}, "description": desc})
     built.append(page(name, cur, title, desc, ftitle, body, extra))
 for s in SERVICES:
     built.append(service_page(s))
@@ -304,6 +302,7 @@ for n in built:
     if _lm.get(n, {}).get('h') != _h: _lm[n] = {'h': _h, 'd': _today}
 _lmf.write_text(_js.dumps(_lm, indent=0))
 urls = ''.join(f'<url><loc>{DOMAIN}{"" if n == "index" else n + ".html"}</loc><lastmod>{_lm[n]["d"]}</lastmod><changefreq>monthly</changefreq><priority>{"1.0" if n == "index" else "0.8"}</priority></url>' for n in built)
+if AR_LIVE: urls += ''.join(f'<url><loc>{DOMAIN}{p}</loc><lastmod>{_today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>' for p, _ in AR_PAIRS)
 (R / 'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
 _bots = ['OAI-SearchBot', 'ChatGPT-User', 'GPTBot', 'Claude-SearchBot', 'Claude-User', 'ClaudeBot', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'meta-externalagent', 'DeepSeekBot', 'CCBot']
 (R / 'robots.txt').write_text('# Search engines and AI assistants are welcome to read and cite this site.\nUser-agent: *\nAllow: /\n\n' + ''.join(f'User-agent: {b}\nAllow: /\n\n' for b in _bots) + f'Sitemap: {DOMAIN}sitemap.xml\n')
