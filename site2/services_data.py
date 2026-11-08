@@ -138,7 +138,7 @@ SERVICES = [
        ('Micro influencers or big names?','For most businesses, several micro and mid tier creators with a local audience bring better engagement and lower cost per lead than one big name. We often mix both for launches.'),
        ('How do you measure results?','Each creator gets their own tracking link or code, and paid amplification is measured in Meta and TikTok Ads Manager. You get a report showing reach, clicks, leads and sales by creator.'),
        ('Can we reuse the creator content in our ads?','Yes, when usage rights are agreed in the booking. We arrange usage rights upfront so the best content can run as ads on your own accounts.')],
-  related=['ugc-content-dubai','digital-marketing-dubai','content-creation-dubai']),
+  related=['micro-influencer-agency-dubai','ugc-content-dubai','digital-marketing-dubai','content-creation-dubai']),
 
  dict(slug='ugc-content-dubai', nav='UGC content', short='UGC content',
   title="UGC Content Creation in Dubai & UAE | UGC Video Ads for TikTok, Instagram & Meta | Ads n' Codes",
@@ -185,7 +185,7 @@ SERVICES = [
   faq=[('Do you shoot product photos for Amazon and Noon?','Yes. We shoot to marketplace requirements, including white background images, and provide lifestyle shots for your store and ads.'),
        ('Do you cover locations outside Dubai?','Yes. We shoot across the UAE, including Abu Dhabi, Sharjah and the Northern Emirates.'),
        ('How fast do we get the photos?','Edited images are usually delivered within three to five working days, faster for urgent campaigns.')],
-  related=['real-estate-photography-dubai','product-photography-dubai','corporate-photography-dubai','video-production-dubai']),
+  related=['real-estate-photography-dubai','product-photography-dubai','corporate-photography-dubai','food-photography-dubai','video-production-dubai']),
 
  dict(slug='video-production-dubai', nav='Video production', short='Video production',
   title="Video Production Company in Dubai & UAE | Video Ads, Brand Films & Real Estate Walkthroughs | Ads n' Codes",
@@ -207,7 +207,7 @@ SERVICES = [
   faq=[('How much does a video cost in Dubai?','It depends on length, locations, crew and editing. A short social video costs far less than a brand film. We quote after a short call about what you need.'),
        ('Do you shoot real estate walkthroughs?','Yes, for apartments, villas and commercial properties, including edits for listings, social media and ads.'),
        ('Can you deliver vertical and horizontal versions?','Yes. Every project is delivered in the ratios you need, from 9:16 reels to 16:9 YouTube.')],
-  related=['photography-dubai','content-creation-dubai','real-estate-marketing-agency-dubai']),
+  related=['corporate-video-production-dubai','photography-dubai','content-creation-dubai','real-estate-marketing-agency-dubai']),
 
  dict(slug='event-photography-videography-dubai', nav='Events', short='Event coverage and marketing',
   title="Event Photography, Videography & Event Marketing in Dubai & UAE | Ads n' Codes",
@@ -513,6 +513,11 @@ from city_services import CITY_SERVICES
 SERVICES.extend(CITY_SERVICES)
 from extra_services import EXTRA_SERVICES
 SERVICES.extend(EXTRA_SERVICES)
+# Scheduled pages: 'publish' is a Dubai date; until then the page is not built, linked or listed.
+import datetime as _dt, os as _os, zoneinfo as _zi
+TODAY = _os.environ.get('BUILD_DATE') or _dt.datetime.now(_zi.ZoneInfo('Asia/Dubai')).date().isoformat()
+SCHEDULED = [x for x in SERVICES if x.get('publish', '') > TODAY]
+SERVICES[:] = [x for x in SERVICES if x.get('publish', '') <= TODAY]
 
 # Extra FAQs (Nov 2026): cover related searches people use for these services
 _EXTRA_SVC_FAQ = {

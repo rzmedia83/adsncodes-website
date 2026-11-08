@@ -94,6 +94,9 @@ BYSLUG['whatsapp-ai-agent-uae'] = dict(short='WhatsApp AI agents')
 from industries_data import INDUSTRIES as _IND
 seo_boost.apply(_IND)
 for _x in _IND: BYSLUG[_x['slug']] = dict(short=_x['short'])
+# drop links to pages that are scheduled but not live yet
+for _x in list(SERVICES) + list(_IND):
+    if 'related' in _x: _x['related'] = [r for r in _x['related'] if r in BYSLUG]
 AREAS = '<p class="areas" style="margin-top:26px"><a href="index.html">Dubai</a><a href="digital-marketing-agency-abu-dhabi.html">Abu Dhabi</a><a href="digital-marketing-agency-sharjah.html">Sharjah</a><a href="digital-marketing-agency-ajman.html">Ajman</a><a href="digital-marketing-agency-ras-al-khaimah.html">Ras Al Khaimah</a><a href="digital-marketing-agency-ras-al-khaimah.html">Fujairah</a><a href="digital-marketing-agency-ras-al-khaimah.html">Umm Al Quwain</a></p>'
 ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 
@@ -287,6 +290,16 @@ exec(open(R / 'insights_build.py').read(), globals())
 exec(open(R / 'case_build.py').read(), globals())
 exec(open(R / 'ar_build.py').read(), globals())
 exec(open(R / 'industries_build.py').read(), globals())
+# llms.txt lines for scheduled pages, added the day they go live
+from extra_services import LLMS_LINES
+_ANCH = {'food-photography-dubai': 'corporate-photography-dubai.html', 'corporate-video-production-dubai': 'video-production-dubai.html',
+         'micro-influencer-agency-dubai': 'influencer-marketing-dubai.html', 'insights-how-to-use-whatsapp-business-web': 'insights-whatsapp-business-multiple-users-uae.html'}
+_lp = R / 'llms.txt'; _ll = _lp.read_text().split('\n')
+for _slug, _line in LLMS_LINES.items():
+    if _slug in built and _line not in _ll:
+        _i = next((i for i, l in enumerate(_ll) if _ANCH[_slug] in l), len(_ll) - 1)
+        _ll.insert(_i + 1, _line)
+_lp.write_text('\n'.join(_ll))
 # sitemap + robots
 import datetime as _dt
 _today = _dt.date.today().isoformat()

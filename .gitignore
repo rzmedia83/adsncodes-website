@@ -4,3 +4,4 @@ prod/
 hkeys.sh
 *.key
 .DS_Store
+prod_release/

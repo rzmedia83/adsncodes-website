@@ -1,6 +1,9 @@
 # ---------- insights ----------
 e = __import__("html").escape
 from articles_data import ARTICLES
+from services_data import TODAY as _TODAY
+ARTICLES[:] = [a for a in ARTICLES if a.get('publish', '') <= _TODAY]
+for a in ARTICLES: a['related'] = [r for r in a['related'] if r in BYSLUG]
 BYSLUG['whatsapp-ai-agent-uae'] = dict(short='WhatsApp automation')
 BIOS = {
   'Razal Mohammed': "is the founder of Ads n' Codes and leads its AI automation and WhatsApp agent work.",
