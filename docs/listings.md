@@ -32,9 +32,9 @@ Standard details used everywhere:
 | LinkedIn company page | Razal's LinkedIn | Live, founded 2024 | linkedin.com/company/adsncodes | Yes |
 | Microsoft Clarity | Razal's account | Live | clarity.microsoft.com | n/a |
 | UptimeRobot | Razal's account | Live, 5 minute checks | uptimerobot.com | n/a |
-| townin.com | pending (email OTP login) | Not started | townin.com | Yes |
-| Foursquare for Business | pending | Not started | business.foursquare.com | Yes |
-| Urbi (2GIS) | pending | Not started | Urbi app | Yes |
+| townin.com | razal@adsncodes.com (email code login) | Free Starter plan (1 year) form filled with logo, banner and 3 photos; Razal to tick captcha and submit | townin.com | Yes |
+| Foursquare for Business | adsncodesofficial@gmail.com | Account profile step pending (Razal), then list the business | business.foursquare.com | Yes |
+| Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS calls to verify within 3 working days | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
 
 Not available to us:
 - HiDubai: now redirects to Invest in Dubai, which lists Dubai licensed companies only (we hold an Ajman free zone licence).
