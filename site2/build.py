@@ -293,7 +293,7 @@ exec(open(R / 'industries_build.py').read(), globals())
 # llms.txt lines for scheduled pages, added the day they go live
 from extra_services import LLMS_LINES
 _ANCH = {'food-photography-dubai': 'corporate-photography-dubai.html', 'corporate-video-production-dubai': 'video-production-dubai.html',
-         'micro-influencer-agency-dubai': 'influencer-marketing-dubai.html', 'insights-how-to-use-whatsapp-business-web': 'insights-whatsapp-business-multiple-users-uae.html'}
+         'micro-influencer-agency-dubai': 'influencer-marketing-dubai.html', 'insights-how-to-use-whatsapp-business-web': 'insights-whatsapp-business-multiple-users-uae.html', 'insights-best-advertising-agencies-dubai': 'insights-best-digital-marketing-agencies-dubai'}
 _lp = R / 'llms.txt'; _ll = _lp.read_text().split('\n')
 for _slug, _line in LLMS_LINES.items():
     if _slug in built and _line not in _ll:

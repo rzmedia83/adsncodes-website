@@ -283,5 +283,6 @@ LLMS_LINES = {
  'food-photography-dubai': "- [Food photography](https://adsncodes.com/food-photography-dubai.html): menu, Talabat, Deliveroo and Noon Food photos, food styling and packaged food shots",
  'corporate-video-production-dubai': "- [Corporate video production](https://adsncodes.com/corporate-video-production-dubai.html): company profile films, leadership interviews, testimonials, training and recruitment videos",
  'micro-influencer-agency-dubai': "- [Micro influencer marketing](https://adsncodes.com/micro-influencer-agency-dubai.html): local UAE creators chosen by data, permit checked and tracked to sales",
+ 'insights-best-advertising-agencies-dubai': "- [Top advertising agencies in Dubai](https://adsncodes.com/insights-best-advertising-agencies-dubai.html): networks, independents and a hands on team, who each suits and what to ask",
  'insights-how-to-use-whatsapp-business-web': "- [How to use WhatsApp Business Web](https://adsncodes.com/insights-how-to-use-whatsapp-business-web.html): logging in on a computer, the desktop app, what works on web and the limits for teams",
 }
