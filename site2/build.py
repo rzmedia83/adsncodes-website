@@ -114,6 +114,25 @@ READS_MAP = {'influencer-marketing-dubai':[('influencer-campaign-uae-how-it-work
  'content-creation-dubai':[('choose-content-creation-agency-dubai','How to choose a content creation agency in Dubai'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
  'social-media-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media management agency in Dubai'),('best-social-media-agencies-dubai','The best social media marketing companies in Dubai')],
  'instagram-marketing-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media management agency in Dubai')]}
+READS_MORE = {
+ 'ai-seo-agency-dubai':[('get-recommended-by-chatgpt-uae','How to get recommended by ChatGPT in the UAE'),('google-business-profile-dubai','A Google Business Profile checklist for Dubai'),('how-long-does-seo-take-dubai','How long does SEO take in Dubai?')],
+ 'arabic-ai-chatbot-uae':[('whatsapp-chatbot-vs-ai-agent-uae','WhatsApp chatbot or AI agent?'),('verify-whatsapp-business-account-uae','How to verify a WhatsApp Business account in the UAE'),('whatsapp-ai-agent-industries-uae','Which UAE businesses gain most from a WhatsApp AI agent')],
+ 'content-creation-dubai':[('choose-content-creation-agency-dubai','How to choose a content creation agency in Dubai'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
+ 'social-media-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media agency in Dubai'),('best-social-media-agencies-dubai','Top social media agencies in Dubai')],
+ 'social-media-agency-abu-dhabi':[('choose-social-media-agency-dubai','How to choose a social media agency')],
+ 'instagram-marketing-agency-dubai':[('choose-social-media-agency-dubai','How to choose a social media agency in Dubai'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
+ 'digital-marketing-dubai':[('best-digital-marketing-agencies-dubai','Top digital marketing agencies in Dubai'),('best-advertising-agencies-dubai','Top advertising agencies in Dubai'),('get-recommended-by-chatgpt-uae','How to get recommended by ChatGPT in the UAE')],
+ 'marketing-agency-uae':[('best-digital-marketing-agencies-dubai','Top digital marketing agencies in Dubai and the UAE'),('best-advertising-agencies-dubai','Top advertising agencies in Dubai')],
+ 'digital-marketing-consultant-dubai':[('best-digital-marketing-agencies-dubai','Top digital marketing agencies in Dubai')],
+ 'micro-influencer-agency-dubai':[('influencer-campaign-uae-how-it-works','How an influencer campaign works in the UAE'),('uae-advertiser-permit-brands','The UAE Advertiser Permit explained'),('influencer-vs-ugc-uae','Influencer marketing or UGC?')],
+ 'facebook-meta-ads-agency-dubai':[('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('real-estate-lead-generation-dubai','Real estate lead generation in Dubai')],
+ 'web-development-dubai':[('get-recommended-by-chatgpt-uae','How to get recommended by ChatGPT in the UAE'),('google-business-profile-dubai','A Google Business Profile checklist for Dubai')],
+ 'email-marketing-agency-dubai':[('whatsapp-business-multiple-users-uae','Can a team share one WhatsApp Business number?')],
+}
+for _k, _v in READS_MORE.items():
+    _have = {a for a, _ in READS_MAP.get(_k, [])}
+    READS_MAP.setdefault(_k, []).extend(x for x in _v if x[0] not in _have)
+
 def SRCSET(a):
     return ''
 
@@ -327,3 +346,13 @@ for _f in R.glob('*.html'):
     _t = _f.read_text(encoding='utf-8')
     if '<base href="/">' in _t and 'class="skip"' in _t:
         _f.write_text(_t.replace('<a class="skip" href="#top">Skip to content</a>\n', ''))
+
+# Trim long meta descriptions (meta, og and twitter tags, and anywhere else the same text appears)
+from desc_fix import DESC_FIX
+for _slug, _new in DESC_FIX.items():
+    _f = R / f'{_slug}.html'
+    if not _f.exists(): continue
+    _t = _f.read_text(encoding='utf-8')
+    _m = re.search(r'<meta name="description" content="([^"]*)"', _t)
+    if _m and _m.group(1) != H.escape(_new):
+        _f.write_text(_t.replace(_m.group(1), H.escape(_new)), encoding='utf-8')

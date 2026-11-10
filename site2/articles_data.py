@@ -1055,7 +1055,7 @@ for _a in ARTICLES:
 
 # Scheduled 7 Dec. advertising company in dubai 1900/KD10, advertising agencies in dubai 1900/29, best advertising agency in dubai 390/20,
 # top advertising agencies in dubai 390/18, top 10 advertising agencies in dubai 140/19
-ARTICLES.insert(0, dict(slug='best-advertising-agencies-dubai', date='2026-12-07', publish='2026-12-07', read='7 min',
+ARTICLES.insert(0, dict(slug='best-advertising-agencies-dubai', date='2026-11-10', publish='2026-11-10', read='7 min',
   kicker='Advertising',
   title="Top Advertising Agencies in Dubai, and Who Each One Suits | Ads n' Codes",
   desc="The top advertising agencies and companies in Dubai: award winning networks, independents and a hands on team, who each one suits, and what to ask before you choose.",

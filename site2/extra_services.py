@@ -188,9 +188,9 @@ EXTRA_SERVICES.append(dict(
        ("How soon will we see results from email?","Automated flows such as abandoned cart and welcome emails usually start bringing sales within the first month. Campaign results grow as the list grows and we learn what your customers respond to.")],
   related=['ecommerce-marketing-agency-dubai','digital-marketing-dubai','whatsapp-ai-agent-uae']))
 
-# Scheduled releases (one a week). 'publish' is the Dubai date the page goes live; build.py leaves it out until then.
+# Released early on 10 Nov 2026 at Boss request (were weekly). 'publish' is the Dubai date the page goes live; build.py leaves it out until then.
 # food photographer dubai 260/KD8, food photography for restaurants, menu photography
-EXTRA_SERVICES.append(dict(PH, publish='2026-11-16',
+EXTRA_SERVICES.append(dict(PH, publish='2026-11-10',
   slug='food-photography-dubai', nav='Food photography', short='Food photography', stype='Food photography',
   title="Food Photographer in Dubai | Menu & Delivery App Photography | Ads n' Codes",
   desc="Food photography in Dubai for restaurants, cafes and food brands: menu photos, Talabat, Deliveroo and Noon Food listings, social media content and packaging shots, styled and retouched.",
@@ -219,7 +219,7 @@ EXTRA_SERVICES.append(dict(PH, publish='2026-11-16',
   related=['photography-dubai','restaurant-marketing-agency-dubai','product-photography-dubai']))
 
 # corporate video production dubai 260/KD40, corporate video production companies in dubai 90/33, dubai corporate video 90/15, corporate video dubai 70/8
-EXTRA_SERVICES.append(dict(sub=True, crumb='Video production', crumb_url='video-production-dubai.html', publish='2026-11-23',
+EXTRA_SERVICES.append(dict(sub=True, crumb='Video production', crumb_url='video-production-dubai.html', publish='2026-11-10',
   slug='corporate-video-production-dubai', nav='Corporate video production', short='Corporate video', stype='Corporate video production',
   title="Corporate Video Production in Dubai | Company Profile Videos | Ads n' Codes",
   desc="Corporate video production in Dubai: company profile films, leadership interviews, testimonials, training and recruitment videos, scripted, filmed and edited for UAE businesses.",
@@ -250,7 +250,7 @@ EXTRA_SERVICES.append(dict(sub=True, crumb='Video production', crumb_url='video-
   related=['video-production-dubai','corporate-photography-dubai','event-photography-videography-dubai']))
 
 # micro influencer agency dubai 320/KD24, micro influencers dubai 30/9, influencer management dubai 260/12
-EXTRA_SERVICES.append(dict(sub=True, crumb='Influencer marketing', crumb_url='influencer-marketing-dubai.html', publish='2026-11-30',
+EXTRA_SERVICES.append(dict(sub=True, crumb='Influencer marketing', crumb_url='influencer-marketing-dubai.html', publish='2026-11-10',
   slug='micro-influencer-agency-dubai', nav='Micro influencer marketing', short='Micro influencers', stype='Micro influencer marketing',
   title="Micro Influencer Agency in Dubai | Campaigns That Sell | Ads n' Codes",
   desc="Micro influencer marketing in Dubai and the UAE: creators with engaged local audiences, chosen by data, briefed, permit checked and tracked to bookings and sales.",
