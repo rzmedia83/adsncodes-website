@@ -201,7 +201,7 @@ SERVICES = [
         ('Walkthrough videos','Walkthroughs of offices, clinics, showrooms and retail spaces.'),
         ('Real estate walkthrough videos','Apartments, villas and commercial properties filmed to drive viewings and enquiries.'),
         ('Motion and AI assisted video','Animated explainers and AI assisted edits for faster turnaround.')],
-  work=[('assets/video/bts-cut1-hd.mp4','On set, brand shoot'),('assets/video/ad-clinic-hd.mp4','Clinic growth video ad'),('assets/video/ad-social-hd.mp4','Social media package video ad')],
+  work=[('assets/video/bts-interview-hd.mp4','On set, interview shoot'),('assets/video/ad-clinic-hd.mp4','Clinic growth video ad'),('assets/video/ad-social-hd.mp4','Social media package video ad')],
   
   results=False,
   faq=[('How much does a video cost in Dubai?','It depends on length, locations, crew and editing. A short social video costs far less than a brand film. We quote after a short call about what you need.'),
