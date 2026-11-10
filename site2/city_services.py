@@ -41,7 +41,7 @@ dict(AD, slug='ppc-agency-abu-dhabi', nav='PPC in Abu Dhabi', short='PPC in Abu 
 ),
 
 dict(AD, slug='seo-agency-abu-dhabi', nav='SEO in Abu Dhabi', short='SEO in Abu Dhabi', stype='Search engine optimisation',
-  title="SEO Company & SEO Agency in Abu Dhabi | Ads n' Codes",
+  title="SEO Services & SEO Company in Abu Dhabi | Ads n' Codes",
   desc="SEO company for Abu Dhabi businesses: local SEO, Google Business Profile, Arabic and English pages, technical fixes and content that ranks in the capital.",
   h1=['SEO company', 'in Abu Dhabi'], img='assets/img/seo-agency-abu-dhabi-hero.webp', img_pos='100% 50%',
   alt='A Google map result showing a business at the top for an Abu Dhabi search',

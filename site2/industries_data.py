@@ -3,7 +3,7 @@ IND_COMMON = dict(cur=None, crumb='Industries', crumb_url='industries.html', res
 
 INDUSTRIES = [
  dict(slug='real-estate-marketing-agency-dubai', nav='Real estate', short='Real estate marketing', ind='Real estate',
-  title="Real Estate Marketing Agency in Dubai & UAE | Ads n' Codes",
+  title="Real Estate Digital Marketing Agency in Dubai & UAE | Ads n' Codes",
   desc="Real estate marketing in Dubai for developers and brokerages: property video and photography, lead campaigns, CRM sync and a WhatsApp AI agent you can try live.",
   h1=['Real estate marketing', 'agency in Dubai'], img='assets/img/villa.webp', alt='Modern villa with a pool in Dubai',
   lede="For developers, brokerages and agents across the UAE. Property films that sell the lifestyle, campaigns that bring in real buyers, and fast follow up so serious buyers never wait for a reply.",

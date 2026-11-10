@@ -37,7 +37,7 @@ dict(PH, slug='real-estate-photography-dubai', nav='Real estate photography', sh
 
 # ecommerce photography dubai 590/KD8, product photography dubai 210/9, product photography studio dubai 170/9, product photographer dubai 70/15, food photographer dubai 260/8, fashion photography dubai 260/8
 dict(PH, slug='product-photography-dubai', nav='Product photography', short='Product photography', stype='Product photography',
-  title="Product & Ecommerce Photography in Dubai | Amazon, Noon & Food | Ads n' Codes",
+  title="Product & Ecommerce Photography in Dubai | Amazon & Noon | Ads n' Codes",
   desc="Product photography in Dubai for ecommerce: white background images for Amazon.ae and Noon, styled lifestyle shots, food and fashion photography, retouched and sized for your store and ads.",
   h1=['Product and ecommerce', 'photography in Dubai'], img='assets/img/fragrance.webp', img_pos='50% 50%',
   alt='Glass perfume bottle on a dark surface covered in water drops',
