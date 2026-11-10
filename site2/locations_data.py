@@ -17,7 +17,7 @@ dict(slug='marketing-agency-uae', city='UAE', short='Marketing agency in the UAE
        ("Can you run one campaign across several emirates?", "Yes. We usually split it by emirate so each area gets its own budget, creative and reporting, which keeps cost per lead under control."),
        ("Where is your office?", "Our office is at B Hive, Level 3, BurJuman Business Tower, Dubai.")]),
 
-dict(slug='digital-marketing-agency-abu-dhabi', city='Abu Dhabi', short='Marketing agency in Abu Dhabi', region='AE-AZ', hero_img='assets/img/abudhabi.webp',
+dict(slug='digital-marketing-agency-abu-dhabi', city='Abu Dhabi', short='Marketing agency in Abu Dhabi', region='AE-AZ', hero_img='assets/img/ad-corniche.webp', hero_alt='Abu Dhabi skyline at night from the Corniche',
   title="Digital Marketing Agency in Abu Dhabi | Social Media, SEO & Ads | Ads n' Codes",
   desc="Digital marketing agency for Abu Dhabi businesses: social media marketing, Meta and Google ads, SEO, branding, photography, video, websites and AI automation.",
   h1=['Digital marketing agency', 'in Abu Dhabi'],
@@ -53,7 +53,7 @@ dict(slug='digital-marketing-agency-sharjah', city='Sharjah', short='Marketing a
        ("Do you create content in Arabic?", "Yes. We plan content for the language mix of your audience and produce Arabic and English versions where it helps."),
        ("Is Sharjah advertising different from Dubai?", "Often, yes. Audiences, creative style and content guidelines differ, so we build Sharjah campaigns separately rather than reusing Dubai ones.")]),
 
-dict(slug='digital-marketing-agency-ajman', city='Ajman', short='Marketing agency in Ajman', region='AE-AJ', hero_img='assets/img/ajman.webp', hero_alt='Sunset over the beach in Ajman',
+dict(slug='digital-marketing-agency-ajman', city='Ajman', short='Marketing agency in Ajman', region='AE-AJ', hero_img='assets/img/ajman-night.webp', hero_alt='Waterfront towers lit up at night',
   title="Digital Marketing Agency in Ajman | Social Media, SEO & Websites | Ads n' Codes",
   desc="Digital marketing agency for Ajman businesses: social media, paid ads, local SEO, branding, websites, e-commerce and AI automation for SMEs and free zone companies.",
   h1=['Digital marketing agency', 'in Ajman'],
@@ -70,7 +70,7 @@ dict(slug='digital-marketing-agency-ajman', city='Ajman', short='Marketing agenc
        ("Is SEO easier in Ajman than in Dubai?", "Usually. Fewer businesses compete for local searches, so a well optimised profile and website can rank sooner."),
        ("Can we start small?", "Yes. You can begin with a single project, like a website or a launch campaign, and move to a monthly plan later.")]),
 
-dict(slug='digital-marketing-agency-ras-al-khaimah', city='Ras Al Khaimah', short='Marketing agency in Ras Al Khaimah', region='AE-RK', hero_img='assets/img/rak.webp', hero_alt='The road through the Jebel Jais mountains in Ras Al Khaimah',
+dict(slug='digital-marketing-agency-ras-al-khaimah', city='Ras Al Khaimah', short='Marketing agency in Ras Al Khaimah', region='AE-RK', hero_img='assets/img/rak-night.webp', hero_alt='City lights below the mountains of Ras Al Khaimah at night',
   title="Digital Marketing Agency in Ras Al Khaimah | Social Media, SEO & Video | Ads n' Codes",
   desc="Digital marketing for Ras Al Khaimah, Fujairah and Umm Al Quwain businesses: social media, paid ads, SEO, hospitality and real estate content, websites and AI.",
   h1=['Digital marketing agency', 'in Ras Al Khaimah'],

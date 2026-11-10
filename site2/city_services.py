@@ -27,7 +27,7 @@ dict(AD, slug='ppc-agency-abu-dhabi', nav='PPC in Abu Dhabi', short='PPC in Abu 
         ('Conversion tracking','GA4, call tracking and click to WhatsApp events, so Google learns from real enquiries, not page views.'),
         ('Landing pages for Abu Dhabi','Fast bilingual pages for each campaign, with the trust signals a careful Abu Dhabi buyer looks for.'),
         ('Remarketing','Ads that bring back people who visited and compared, across Google, YouTube and Meta.')],
-  work=[('assets/proof/gads-full.webp','Google Ads results for a UAE retail brand'),('assets/video/ad-clinic-hd.mp4','Clinic video ad for YouTube and Meta'),('assets/work/laryklean-store.webp','LaryKlean, online store and paid ads')],
+  work=[('assets/proof/gads-full.webp','Google Ads results for a UAE retail brand'),('assets/video/ad-clinic-hd.mp4','Clinic video ad, script to edit'),('assets/work/laryklean-store.webp','LaryKlean, online store and paid ads')],
   results=True,
   process=[('Audit','We review your market in Abu Dhabi, your competitors and any past campaigns, and set up tracking before spending anything.'),('Build','Campaigns by area and language, keywords, negative keywords, ads and landing pages, approved by you before launch.'),('Optimise','Weekly search term reviews, bid and budget changes between areas, and new ad tests.'),('Report','A monthly report on leads, cost per lead and sales for each area, with the plan for next month.')],
   area_h='PPC for every part of Abu Dhabi',
