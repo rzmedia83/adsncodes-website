@@ -237,7 +237,7 @@ EXTRA_SERVICES.append(dict(sub=True, crumb='Video production', crumb_url='video-
         ('Training and onboarding videos','Clear, reusable videos for staff training, safety and processes.'),
         ('Recruitment and culture films','Your team and workplace shown honestly, for careers pages and LinkedIn.'),
         ('Event and conference films','Highlight reels and full session recordings from your events across the UAE.')],
-  work=[('assets/video/bts-interview-hd.mp4','On set, interview shoot'),('assets/video/event-tech-expo-hd.mp4','Tech expo event film'),('assets/video/ad-clinic-hd.mp4','Doctor led video for a clinic')],
+  work=[('assets/video/bts-cut1-hd.mp4','On set, brand shoot'),('assets/video/event-tech-expo-hd.mp4','Tech expo event film'),('assets/video/ad-clinic-hd.mp4','Doctor led video for a clinic')],
   results=False,
   process=[('Brief','The goal, the audience and where the video will be used, agreed in writing.'),('Script','Script or interview questions, shot list and schedule, approved before filming.'),('Film','Crew, camera, lights and sound at your office, site or our set.'),('Edit','Edited film plus short cuts and subtitles in English and Arabic, with two rounds of changes.')],
   area_h='Corporate video production across the UAE',
