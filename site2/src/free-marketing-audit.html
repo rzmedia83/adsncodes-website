@@ -39,10 +39,10 @@
           <div class="field"><label for="a-name">Your name <span class="req">(required)</span></label><input id="a-name" name="name" autocomplete="name" required maxlength="100"></div>
           <div class="field"><label for="a-biz">Business name <span class="req">(required)</span></label><input id="a-biz" name="biz" autocomplete="organization" required maxlength="150"></div>
         </div>
-        <div class="field"><label for="a-web">Website or Instagram</label><input id="a-web" name="web" placeholder="yourbusiness.ae or @yourbusiness" maxlength="300"></div>
+        <div class="field"><label for="a-web">Website or Instagram</label><input id="a-web" name="web" autocomplete="url" spellcheck="false" autocapitalize="off" placeholder="yourbusiness.ae or @yourbusiness" maxlength="300"></div>
         <div class="pair">
           <div class="field"><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+971" maxlength="40"></div>
-          <div class="field"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" maxlength="150"></div>
+          <div class="field"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" spellcheck="false" maxlength="150"></div>
         </div>
         <div class="pair">
           <div class="field"><label for="a-ind">Industry</label><select id="a-ind" name="industry"><option value="">Choose one</option><option>Clinic or healthcare</option><option>Real estate</option><option>Restaurant or café</option><option>Retail or e-commerce</option><option>Education or training</option><option>Hotel or tourism</option><option>Automotive</option><option>Beauty or wellness</option><option>Contracting or home services</option><option>B2B or professional services</option><option>Other</option></select></div>
@@ -57,7 +57,7 @@
             <label><input type="checkbox" name="areas[]" value="WhatsApp and lead response" checked>WhatsApp and lead response</label>
           </div>
         </fieldset>
-        <div class="field"><label for="a-goal">What is the main thing you want to improve?</label><textarea id="a-goal" name="goal" maxlength="2000" placeholder="More enquiries, better quality leads, more bookings, a stronger brand..."></textarea></div>
+        <div class="field"><label for="a-goal">What is the main thing you want to improve?</label><textarea id="a-goal" name="goal" maxlength="2000" placeholder="More enquiries, better quality leads, more bookings, a stronger brand…"></textarea></div>
         <div class="hp" aria-hidden="true"><label for="a-site">Leave this empty</label><input id="a-site" name="company_site" tabindex="-1" autocomplete="off"></div>
         <input type="hidden" name="t" id="a-t" value="">
         <p class="au-err" id="auErr" role="alert">Something went wrong. Please try again, or send us a message on <a href="https://wa.me/971565440310?text=Hi%2C%20I%27d%20like%20a%20free%20marketing%20audit">WhatsApp</a>.</p>

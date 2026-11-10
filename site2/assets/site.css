@@ -1012,3 +1012,6 @@ h1,h2,h3{overflow-wrap:break-word}
 .gsteps span,.icard span,.sg-h span,.re-steps li::before,.legal li::marker{color:var(--brass-ink)!important}
 .lands .lk,.stories span{color:var(--brass-ink-dark)!important}
 .art-fig{margin:36px 0 40px}.art-fig img{display:block;width:100%;height:auto;border-radius:14px}.art-fig figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:#77767a}
+
+.skip{position:fixed;left:12px;top:-60px;z-index:1000;background:var(--paper,#fff);color:var(--ink,#111);padding:10px 16px;border-radius:10px;font-size:14px;text-decoration:none;transition:top .2s}.skip:focus{top:12px}
+main{scroll-margin-top:80px}

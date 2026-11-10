@@ -26,5 +26,5 @@ h=re.sub(r'<meta name="description"[^>]*>','<meta name="description" content="Th
 h=re.sub(r'<meta name="robots"[^>]*>','',h); h=re.sub(r'<link rel="(canonical|alternate)"[^>]*>','',h)
 h=re.sub(r'<script type="application/ld\+json">.*?</script>','',h,flags=re.S); h=re.sub(r'<meta property="og:[^>]*>','',h)
 h=h.replace('<head>','<head>\n<base href="/">\n<meta name="robots" content="noindex">',1)
-b=s[he:]; open('404.html','w',encoding='utf-8').write(h+b[:b.index('<main')]+main404+b[b.index('</main>')+7:])
+b=s[he:]; open('404.html','w',encoding='utf-8').write(h+b[:b.index('<main')].replace('<a class="skip" href="#top">Skip to content</a>\n','')+main404+b[b.index('</main>')+7:])
 print(cv,jv)

@@ -320,3 +320,9 @@ if AR_LIVE: urls += ''.join(f'<url><loc>{DOMAIN}{p}</loc><lastmod>{_today}</last
 _bots = ['OAI-SearchBot', 'ChatGPT-User', 'GPTBot', 'Claude-SearchBot', 'Claude-User', 'ClaudeBot', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'meta-externalagent', 'DeepSeekBot', 'CCBot']
 (R / 'robots.txt').write_text('# Search engines and AI assistants are welcome to read and cite this site.\nUser-agent: *\nAllow: /\n\n' + ''.join(f'User-agent: {b}\nAllow: /\n\n' for b in _bots) + f'Sitemap: {DOMAIN}sitemap.xml\n')
 print(len(built), 'pages:', ', '.join(built))
+
+# Pages with <base href="/"> (404) would send "#top" to the home page, so drop the skip link there
+for _f in R.glob('*.html'):
+    _t = _f.read_text(encoding='utf-8')
+    if '<base href="/">' in _t and 'class="skip"' in _t:
+        _f.write_text(_t.replace('<a class="skip" href="#top">Skip to content</a>\n', ''))

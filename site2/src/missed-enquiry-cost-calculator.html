@@ -39,9 +39,9 @@
     <form class="calc-in" id="calc" onsubmit="return false" aria-label="Missed enquiry calculator">
       <div class="cf"><label for="c-n">Enquiries per month <output id="o-n" for="c-n">300</output></label><input type="range" id="c-n" min="0" max="100" step="1" value="54"><small>WhatsApp messages, calls, Instagram DMs and website forms from new customers.</small></div>
       <div class="cf"><label for="c-rt">How fast you usually reply</label>
-        <select id="c-rt"><option value="1">Within 5 minutes</option><option value=".85">5 to 30 minutes</option><option value=".7" selected>30 to 60 minutes</option><option value=".55">1 to 3 hours</option><option value=".45">Later the same day</option><option value=".35">Next day</option></select></div>
+        <select id="c-rt" name="reply_time"><option value="1">Within 5 minutes</option><option value=".85">5 to 30 minutes</option><option value=".7" selected>30 to 60 minutes</option><option value=".55">1 to 3 hours</option><option value=".45">Later the same day</option><option value=".35">Next day</option></select></div>
       <div class="cf"><label for="c-ah">Enquiries outside working hours <output id="o-ah" for="c-ah">35%</output></label><input type="range" id="c-ah" min="0" max="80" step="5" value="35"><small>Evenings, Fridays, weekends and holidays.</small></div>
-      <div class="cf"><label class="tog"><input type="checkbox" id="c-247"> We already reply fast at night and on weekends</label></div>
+      <div class="cf"><label class="tog"><input type="checkbox" id="c-247" name="always_on"> We already reply fast at night and on weekends</label></div>
       <div class="cf"><label for="c-cv">Enquiries that become customers today <output id="o-cv" for="c-cv">15%</output></label><input type="range" id="c-cv" min="1" max="60" step="1" value="15"></div>
       <div class="cf"><label for="c-v">Average value of a customer <output id="o-v" for="c-v">AED 850</output></label><input type="range" id="c-v" min="0" max="100" step="1" value="41"><small>What a new customer is usually worth to you, over their first purchase or booking.</small></div>
     </form>

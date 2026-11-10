@@ -1,0 +1,270 @@
+<title>Asterisk 3D Preview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Outfit:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: the site's own system. Four stacked bands, each a faithful slice of the real page with the live 3D piece in place. Single dark look by choice, matching adsncodes.com. */
+:root{
+  --ink:#414042; --ink-deep:#353436; --paper:#FFFFFF; --stone:#F2F1EF;
+  --paper-70:rgba(255,255,255,.72); --paper-45:rgba(255,255,255,.45); --paper-14:rgba(255,255,255,.14);
+  --wa:#25D366;
+  --display:'Bricolage Grotesque','Outfit',system-ui,sans-serif;
+  --body:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --gl:max(16px,env(safe-area-inset-left,0px)); --gr:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:dark;
+}
+html{background:var(--ink)}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;letter-spacing:-.035em;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1300px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+.top{padding-block:48px 28px;border-bottom:1px solid var(--paper-14)}
+.top .wrap{display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-end;justify-content:space-between}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--paper-70);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor;opacity:.7}
+.top h1{font-size:clamp(34px,5vw,60px);line-height:1;margin-top:14px}
+.top p.lede{max-width:56ch;color:var(--paper-70);font-size:16px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;border:1px solid var(--paper-14);font-size:13px;color:var(--paper-70)}
+.pill i{width:7px;height:7px;border-radius:50%;background:#e8a33d;display:inline-block}
+nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+nav.jump a{font-size:14px;text-decoration:none;padding:8px 14px;border-radius:99px;background:var(--paper-14);transition:background .2s}
+nav.jump a:hover,nav.jump a:focus-visible{background:rgba(255,255,255,.26);outline:none}
+
+.band{padding-block:64px 72px;border-bottom:1px solid var(--paper-14)}
+.band-head{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:baseline;margin-bottom:26px}
+.band-head .n{font-family:var(--display);font-size:15px;color:var(--paper-45);font-variant-numeric:tabular-nums}
+.band-head h2{font-size:clamp(24px,3vw,34px);line-height:1.1}
+.band-head p{grid-column:2;color:var(--paper-70);font-size:15px;max-width:70ch;min-width:0}
+.band-head p b{font-weight:500;color:var(--paper)}
+
+/* A: hero handle on the real hero screenshot */
+.shot{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35);aspect-ratio:1440/900;max-width:100%;background:#2f2e30;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize}
+.shot img.bg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.knob3{position:absolute;left:57.64%;top:50%;width:5.6%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#58575a,#3a393c 70%);box-shadow:0 10px 26px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.14)}
+.knob3 canvas{position:absolute;inset:-14%;width:128%;height:128%}
+.shot.flat .knob3{display:none}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px;font-size:14px;color:var(--paper-70)}
+button.tg{font:500 14px var(--body);color:var(--paper);background:var(--paper-14);border:1px solid transparent;border-radius:99px;padding:9px 16px;cursor:pointer;transition:background .2s,border-color .2s}
+button.tg:hover{background:rgba(255,255,255,.24)}
+button.tg:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
+button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.zoom{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px}
+.zoom figure{margin:0;display:grid;gap:8px;justify-items:center;font-size:13px;color:var(--paper-70)}
+.zoom .z{width:124px;height:124px;position:relative;border-radius:50%;background:radial-gradient(circle at 35% 30%,#58575a,#3a393c 70%);box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.zoom .z canvas{position:absolute;inset:-14%;width:128%;height:128%}
+.zoom .z.old{display:grid;place-items:center}
+.zoom .z.old img{width:46%}
+.zoom .onlight{background:var(--stone);border-radius:16px;padding:16px;display:grid;place-items:center}
+
+/* B: homepage AI section */
+.ai{background:radial-gradient(900px 600px at 80% 10%,#4c4b4e,var(--ink) 70%);border-radius:18px;overflow:hidden;padding-block:56px;position:relative}
+.ai .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.ai h3{font-size:clamp(30px,3.6vw,52px);line-height:1.02}
+.ai .lede{color:var(--paper-70);margin-top:20px;font-size:17px;max-width:46ch}
+.rows{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--paper-14)}
+.rows li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--paper-14);font-size:15px}
+.rows b{font-weight:500}
+.rows span{color:var(--paper-70)}
+.stage3{position:relative;aspect-ratio:1/1.02;max-width:100%}
+.stage3 canvas.gl{position:absolute;left:0;top:-14%;width:100%;height:100%}
+.stage3 canvas.net{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.phones{position:absolute;inset:auto 0 0 0;display:flex;gap:7%;justify-content:center;align-items:flex-end}
+.phones img{width:39%;height:auto;border-radius:16%/7.6%;box-shadow:0 30px 60px rgba(0,0,0,.45);display:block}
+.phones img:first-child{transform:translateY(-4%)}
+
+/* C: AI & Automation hero */
+.aih{background:radial-gradient(700px 520px at 76% 40%,#555457,var(--ink) 72%);border-radius:18px;overflow:hidden;padding-block:72px;position:relative}
+.aih .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:center}
+.crumb{font-size:14px;color:var(--paper-70)}
+.aih h3{font-size:clamp(44px,6.4vw,92px);line-height:.95;letter-spacing:-.05em;margin-top:18px}
+.aih .lede{color:var(--paper-70);margin-top:24px;max-width:44ch;font-size:18px}
+.cta{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;font:500 15px var(--body);padding:13px 24px;border-radius:99px;text-decoration:none}
+.btn-wa{background:var(--wa);color:#08311a}
+.btn-w{background:var(--paper);color:var(--ink)}
+.btn-g{background:rgba(255,255,255,.08);color:var(--paper);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.tlink{font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+.orb{position:relative;aspect-ratio:1;max-width:100%}
+.orb canvas.gl{position:absolute;inset:0;width:100%;height:100%}
+.orb canvas.net{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.orb .floor{position:absolute;left:22%;right:22%;bottom:2%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.42),transparent);filter:blur(4px)}
+
+/* D: 404 */
+.nf{background:var(--ink);border-radius:18px;overflow:hidden;padding-block:72px;border:1px solid var(--paper-14)}
+.nf .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:32px;align-items:center}
+.nf .k{font-size:13px;letter-spacing:.22em;color:var(--paper-70)}
+.nf h3{font-size:clamp(40px,5.6vw,76px);line-height:1;letter-spacing:-.05em;margin-top:16px}
+.nf .lede{color:var(--paper-70);margin-top:18px;font-size:17px;max-width:48ch}
+.spin{position:relative;aspect-ratio:1;max-width:100%;cursor:grab;touch-action:pan-y}
+.spin:active{cursor:grabbing}
+.spin canvas{position:absolute;inset:0;width:100%;height:100%}
+.spin .floor{position:absolute;left:24%;right:24%;bottom:3%;height:8%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent);filter:blur(4px)}
+.spin .hint{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);font-size:13px;color:var(--paper-45);white-space:nowrap}
+
+.notes{padding-block:56px 80px}
+.notes .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.notes h4{font:500 15px var(--body);margin:0 0 8px}
+.notes p{color:var(--paper-70);font-size:15px}
+.fallback{position:absolute;inset:0;display:grid;place-items:center}
+.fallback img{width:60%;opacity:.9}
+
+@media (max-width:860px){
+  .ai .grid,.aih .grid,.nf .grid{grid-template-columns:1fr}
+  .notes .cols{grid-template-columns:1fr}
+  .band-head p{grid-column:1/-1}
+  .knob3{width:8%}
+  .stage3{max-width:460px;margin:0 auto;width:100%}
+  .orb,.spin{max-width:380px;margin:0 auto;width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div style="min-width:0">
+      <div class="eyebrow">Ads n' Codes · private preview</div>
+      <h1>The asterisk, in 3D</h1>
+      <nav class="jump" aria-label="Placements">
+        <a href="#hero">Homepage hero handle</a><a href="#ai">Homepage AI section</a><a href="#aia">AI &amp; Automation hero</a><a href="#nf">404 page</a>
+      </nav>
+    </div>
+    <div style="display:grid;gap:14px;justify-items:start;min-width:0">
+      <span class="pill"><i></i>Not live. Waiting for your approval</span>
+      <p class="lede">One real 3D asterisk, cut from the exact shape of the logo mark, used in four places. It is drawn by our own small script (about 3 KB), so it adds almost nothing to page weight. Move your mouse or drag on each one.</p>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="hero">
+  <div class="wrap">
+    <div class="band-head"><span class="n">A</span><h2>Homepage hero: the drag handle</h2>
+      <p>The flat knob becomes a small silver asterisk that turns slowly. When someone drags the compare line it spins with the drag, so the one interaction on the hero now feels physical. <b>Drag across the picture</b> to try it. Here only the knob reacts; on the live page it also moves the line, exactly as today.</p></div>
+    <div class="shot" id="shotA"><img class="bg" alt="Homepage hero as it looks today" src="data:image/webp;base64,{{hero}}"><div class="knob3"><canvas id="cvA" aria-hidden="true"></canvas></div></div>
+    <div class="ctrl"><button class="tg" id="flatA" type="button" aria-pressed="false">Show today's flat knob</button><span>Toggle to compare before and after.</span></div>
+    <div class="zoom" aria-label="Close up">
+      <figure><div class="z old"><img alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 247 214'%3E%3Cpolygon fill='%23fff' points='24.1,30.5 11.1,51.8 2.8,69.5 35.5,86.9 82.4,108.2 4.0,148.1 10.1,161.4 24.4,185.0 103.4,139.6 100.1,213.9 144.4,213.9 141.4,141.5 213.2,183.6 214.5,182.8 228.6,160.1 234.4,146.2 159.8,109.2 236.5,70.2 228.8,52.2 215.6,30.9 185.8,48.1 141.8,75.9 143.6,6.2 127.5,4.1 100.9,5.8 100.1,20.5 103.2,76.5 102.2,78.9'/%3E%3C/svg%3E"></div><figcaption>Today, close up</figcaption></figure>
+      <figure><div class="z"><canvas id="cvZ" aria-hidden="true"></canvas></div><figcaption>Proposed, close up</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="ai">
+  <div class="wrap">
+    <div class="band-head"><span class="n">B</span><h2>Homepage AI section: the network asterisk</h2>
+      <p>A larger asterisk sits behind the two demo phones, and each of its six arms sends a quiet line out to a node, like enquiries being routed. Small pulses travel along the lines. It sits in the background so the phone demo stays the hero of this section.</p></div>
+    <div class="ai"><div class="wrap grid">
+      <div style="min-width:0">
+        <h3>More enquiries than you can answer? We make sure every one gets a reply.</h3>
+        <p class="lede">Messages arrive from Google, Instagram, referrals, regular customers and ads, usually while you are busy running the business. Our WhatsApp AI agents answer in seconds, qualify the enquiry and book the next step.</p>
+        <ul class="rows">
+          <li><b>AI agents</b><span>Answer questions on WhatsApp and your website.</span></li>
+          <li><b>WhatsApp systems</b><span>Bookings, orders and lead qualification.</span></li>
+          <li><b>Automation</b><span>Follow ups, reminders and lead routing.</span></li>
+          <li><b>Integrations</b><span>CRMs, booking software and POS.</span></li>
+        </ul>
+      </div>
+      <div class="stage3" id="stB"><canvas class="net" id="netB" aria-hidden="true"></canvas><canvas class="gl" id="cvB" aria-hidden="true"></canvas>
+        <div class="phones"><img alt="WhatsApp conversation demo" src="data:image/webp;base64,{{p1}}"><img alt="WhatsApp property brief demo" src="data:image/webp;base64,{{p2}}"></div></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="band" id="aia">
+  <div class="wrap">
+    <div class="band-head"><span class="n">C</span><h2>AI &amp; Automation page: hero centrepiece</h2>
+      <p>Today the right half of this hero is empty. The asterisk fills it, leans toward the cursor and keeps the network lines, so the page that sells AI is the one that looks most like technology.</p></div>
+    <div class="aih" id="stC"><div class="wrap grid">
+      <div style="min-width:0">
+        <p class="crumb">Home / AI and Automation</p>
+        <h3>AI that knows your business</h3>
+        <p class="lede">AI agents and WhatsApp systems for any business that lives on enquiries: real estate, clinics, restaurants, retail, automotive, education and more.</p>
+        <div class="cta"><span class="btn btn-wa">Book a free demo</span><span class="tlink">Try the live demos</span></div>
+      </div>
+      <div class="orb"><div class="floor"></div><canvas class="net" id="netC" aria-hidden="true"></canvas><canvas class="gl" id="cvC" aria-hidden="true"></canvas></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="band" id="nf">
+  <div class="wrap">
+    <div class="band-head"><span class="n">D</span><h2>404 page: something to play with</h2>
+      <p>A lost visitor gets a moment of delight before the links home. <b>Grab the asterisk and flick it.</b> It spins with your throw and slowly settles back.</p></div>
+    <div class="nf"><div class="wrap grid">
+      <div style="min-width:0">
+        <p class="k">ERROR 404</p>
+        <h3>This page has moved.</h3>
+        <p class="lede">Our site was rebuilt, so some old links point nowhere now. Everything we do is still here.</p>
+        <div class="cta"><span class="btn btn-w">Back to home</span><span class="btn btn-g">See services</span><span class="btn btn-g">Contact us</span></div>
+      </div>
+      <div class="spin" id="stD"><div class="floor"></div><canvas id="cvD" aria-hidden="true"></canvas><span class="hint">Drag to spin</span></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="notes">
+  <div class="wrap cols">
+    <div><h4>Speed and SEO</h4><p>About 3 KB of script, no library, no images. It loads after the page and draws only while it is on screen, so text, headings and links that Google reads stay exactly as they are.</p></div>
+    <div><h4>Phones</h4><p>It runs on phones too, at a lighter resolution to save battery. If a phone cannot draw 3D, or the visitor has asked for less motion, it shows a still asterisk instead.</p></div>
+    <div><h4>What happens next</h4><p>Tell me which of the four you want. Only the ones you approve go live, and I will check every page again after they do.</p></div>
+  </div>
+</section>
+
+<script>{{engine}}</script>
+<script>
+(function(){
+  var FALL='<div class="fallback"><img alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 247 214%27%3E%3Cpolygon fill=%27%23e8e6e3%27 points=%2724.1,30.5 11.1,51.8 2.8,69.5 35.5,86.9 82.4,108.2 4.0,148.1 10.1,161.4 24.4,185.0 103.4,139.6 100.1,213.9 144.4,213.9 141.4,141.5 213.2,183.6 228.6,160.1 234.4,146.2 159.8,109.2 236.5,70.2 228.8,52.2 215.6,30.9 185.8,48.1 141.8,75.9 143.6,6.2 127.5,4.1 100.9,5.8 100.1,20.5 103.2,76.5%27/%3E%3C/svg%3E"></div>';
+  function mount(id,o){var c=document.getElementById(id),r=A3D.mount(c,o);if(!r){c.insertAdjacentHTML('afterend',FALL);}return r;}
+  function pointerTilt(el,ctl,k){if(!ctl)return;el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();ctl.tilt(((e.clientX-r.left)/r.width-.5)*k,((e.clientY-r.top)/r.height-.5)*k);});el.addEventListener('pointerleave',function(){ctl.tilt(0,0);});}
+  function dragSpin(el,ctl,gain){if(!ctl)return;var down=false,lx=0,lt=0;
+    el.addEventListener('pointerdown',function(e){down=true;lx=e.clientX;lt=performance.now();});
+    window.addEventListener('pointermove',function(e){if(!down)return;var t=performance.now(),dx=e.clientX-lx,dt=Math.max(8,t-lt);ctl.kick(dx/dt*gain);lx=e.clientX;lt=t;});
+    window.addEventListener('pointerup',function(){down=false;});window.addEventListener('pointercancel',function(){down=false;});}
+
+  /* network overlay: lines from each arm tip to a drifting node, with travelling pulses */
+  function network(canvasId,ctl,glCanvas,opt){
+    if(!ctl)return null; var cv=document.getElementById(canvasId),cx=cv.getContext('2d'),dpr=Math.min(window.devicePixelRatio||1,2);
+    var nodes=ctl.tips.map(function(t,i){var a=Math.atan2(t[1],t[0]);return{a:a,r:opt.reach+(i%2)*.12,ph:i*1.7,p:Math.random()};});
+    var reduce=ctl.reduce;
+    return function(project,S){
+      var b=cv.getBoundingClientRect(),g=glCanvas.getBoundingClientRect();
+      if(cv.width!==Math.round(b.width*dpr)){cv.width=Math.round(b.width*dpr);cv.height=Math.round(b.height*dpr);}
+      cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,b.width,b.height);
+      var ox=g.left-b.left,oy=g.top-b.top,t=performance.now()/1000,cxm=ox+g.width/2,cym=oy+g.height/2,sc=g.width*.34;
+      nodes.forEach(function(n,i){
+        var tip=project(ctl.tips[i][0],ctl.tips[i][1],0),x1=tip[0]+ox,y1=tip[1]+oy;
+        var ang=n.a+Math.sin(t*.25+n.ph)*.08,rr=n.r+Math.sin(t*.6+n.ph)*.03;
+        var x2=cxm+Math.cos(ang)*sc*rr*1.9,y2=cym-Math.sin(ang)*sc*rr*1.9;
+        var gr=cx.createLinearGradient(x1,y1,x2,y2);gr.addColorStop(0,'rgba(255,255,255,'+opt.line+')');gr.addColorStop(1,'rgba(255,255,255,0.03)');
+        cx.strokeStyle=gr;cx.lineWidth=1;cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke();
+        cx.fillStyle='rgba(255,255,255,'+(opt.line*1.6)+')';cx.beginPath();cx.arc(x2,y2,2.6,0,7);cx.fill();
+        cx.strokeStyle='rgba(255,255,255,'+(opt.line*.8)+')';cx.beginPath();cx.arc(x2,y2,6+Math.sin(t*1.6+n.ph)*1.5,0,7);cx.stroke();
+        if(!reduce){var p=((t*.35+n.p)%1);var px=x2+(x1-x2)*p,py=y2+(y1-y2)*p;cx.fillStyle='rgba(37,211,102,'+(0.9*Math.sin(p*Math.PI))+')';cx.beginPath();cx.arc(px,py,2.2,0,7);cx.fill();}
+      });
+    };
+  }
+
+  /* A: hero knob */
+  var kA=mount('cvA',{color:'#f1efec',metal:.55,light:1.45,spin:.5,dist:7.4,pitch:.18,yaw:-.4});
+  var kZ=mount('cvZ',{color:'#f1efec',metal:.55,light:1.45,spin:.5,dist:7.4,pitch:.18,yaw:.8});
+  var shot=document.getElementById('shotA');
+  dragSpin(shot,kA,.9); pointerTilt(shot,kA,.9); dragSpin(document.querySelector('.zoom'),kZ,.9); pointerTilt(document.querySelector('.zoom .z:not(.old)'),kZ,1.2);
+  var fb=document.getElementById('flatA');fb.addEventListener('click',function(){var on=fb.getAttribute('aria-pressed')!=='true';fb.setAttribute('aria-pressed',on);shot.classList.toggle('flat',on);fb.textContent=on?'Show the 3D knob':"Show today's flat knob";});
+
+  /* B: AI section */
+  var glB=document.getElementById('cvB'),kB;
+  kB=mount('cvB',{color:'#b4b2b6',metal:.7,light:1.2,spin:.18,dist:5.4,pitch:.28,yaw:-.7,roll:.15,onframe:function(p,S){netB&&netB(p,S);}});
+  var netB=network('netB',kB,glB,{reach:1.05,line:.32});
+  pointerTilt(document.getElementById('stB'),kB,.5);
+
+  /* C: AI & Automation hero */
+  var glC=document.getElementById('cvC'),kC;
+  kC=mount('cvC',{color:'#ecebe8',metal:.65,light:1.35,spin:.28,dist:5.2,pitch:.22,yaw:-.9,onframe:function(p,S){netC&&netC(p,S);}});
+  var netC=network('netC',kC,glC,{reach:.92,line:.3});
+  pointerTilt(document.getElementById('stC'),kC,.8);
+
+  /* D: 404 */
+  var kD=mount('cvD',{color:'#ecebe8',metal:.65,light:1.35,spin:.4,dist:4.6,pitch:.2,yaw:.5});
+  var stD=document.getElementById('stD');dragSpin(stD,kD,2.2);pointerTilt(stD,kD,.6);
+})();
+</script>
