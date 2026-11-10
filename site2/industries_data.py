@@ -165,7 +165,7 @@ INDUSTRIES = [
         ('Influencer seeding','Creators chosen for style and real audience, with permit checks.'),
         ('Online stores','Shopify stores with clear sizing, lookbooks and smooth checkout.'),
         ('Retail and launch campaigns','Store openings, drops and seasonal sales across the UAE.')],
-  work=[('assets/video/portrait-film-hd.mp4','Fashion film, concept to edit'),('assets/work/laryklean-store.webp','LaryKlean, streetwear online store'),('assets/work/cloants-bag.webp','Cloants, apparel brand identity')],
+  work=[('assets/video/portrait-film-hd.mp4','Fashion film, concept to edit'),('assets/work/laryklean-store.webp','LaryKlean, streetwear online store'),('assets/work/ramz-kandora.webp','Ramz Kandora, seasonal offer creative')],
   process=[('Brand','Who the collection is for and how it should feel.'),('Shoot','Lookbook, campaign and film in one planned production.'),('Launch','Drops, creators and ads timed together.'),('Sell','Store and campaigns tuned to what sells.')],
   faq=[('Do you direct fashion shoots?','Yes. We handle concept, styling, models, location and direction, then edit stills and film.'),
        ('Can you build our online store?','Yes. We design and build Shopify stores for fashion brands, with lookbooks, sizing and fast checkout.'),

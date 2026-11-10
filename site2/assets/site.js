@@ -415,7 +415,8 @@
 /* load the film only when it comes near the screen */
 (function(){
   var vs = document.querySelectorAll('video[data-src]:not(.sr-v)'); if (!vs.length) return;
-  function go(v){ if (v.src) return; v.src = v.dataset.src; v.load(); var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+  var small = matchMedia('(max-width: 700px)').matches;
+  function go(v){ if (v.src) return; var s = v.dataset.src; if (small && /-hd\.mp4$/.test(s)) { s = s.replace(/-hd\.mp4$/, '.mp4'); v.addEventListener('error', function(){ v.src = v.dataset.src; }, { once: true }); } v.src = s; v.load(); var p = v.play(); if (p && p.catch) p.catch(function(){}); }
   if (!('IntersectionObserver' in window)) { vs.forEach(go); return; }
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { go(e.target); io.unobserve(e.target); } }); }, { rootMargin: '150px 0px' });
   vs.forEach(function(v){ io.observe(v); });
@@ -424,6 +425,7 @@
 /* hero stages: one frame per side, cycling through real work in sync */
 (function(){
   var stages = Array.prototype.slice.call(document.querySelectorAll('.stage')); if (!stages.length) return;
+  if (matchMedia('(max-width: 900px)').matches) Array.prototype.forEach.call(document.querySelectorAll('.stage video[data-vsrc-m]'), function(v){ if (!v.src) v.dataset.vsrc = v.dataset.vsrcM; });
   /* phones open on the people behind the work: BTS first, then the tech expo film */
   if (window.matchMedia('(max-width: 900px)').matches) {
     var ast = document.querySelector('.ads-layer .stage');

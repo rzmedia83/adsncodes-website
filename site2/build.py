@@ -150,14 +150,17 @@ def service_page(s):
     else:
         media = '<div class="ph-img">' + PIC(s["img"], f'<img src="{s["img"]}" fetchpriority="high" alt="{e(s["alt"])}"' + ((' style="object-position:' + s["img_pos"] + '"') if s.get("img_pos") else '') + '>') + '</div>'
     subs = ''.join(f'<li><h3>{e(a)}</h3><p>{e(b)}</p></li>' for a, b in s['subs'])
+    SILENT = ('assets/video/pb-film-hd.mp4',)
     def _fig(a, b):
         if a.endswith('.mp4'):
             poster = a[:-4] + '.jpg'
             wide = ' wide' if ('ragam-event' in a or 'event-tech-expo' in a) else ''
+            if a in SILENT:
+                return f'<figure><div class="media reel-media{wide}"><div class="reel{wide}"><video data-src="{a}" poster="{poster}" muted loop playsinline preload="none" aria-label="{e(b)}"></video></div></div><figcaption>{e(b)}</figcaption></figure>'
             return f'<figure><div class="media reel-media{wide}"><div class="reel{wide}"><video data-src="{a}" poster="{poster}" muted loop playsinline preload="none" aria-label="{e(b)}"></video><button type="button" class="reel-sound" aria-label="Turn sound on" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="w1" d="M16.5 8.5a5 5 0 0 1 0 7"/><path class="x1" d="M16 9l5 6M21 9l-5 6"/></svg></button></div></div><figcaption>{e(b)}</figcaption></figure>'
         illus = (a.startswith('assets/img/') and not a.startswith('assets/img/demo-')) or a == 'assets/video/reel-poster.jpg'
         tag = ''
-        post = ' post' if any(k in a for k in ('foundation-day',)) else ''
+        post = ' post' if any(k in a for k in ('foundation-day',)) else (' post tall' if 'ramz-kandora' in a else '')
         return f'<figure><div class="media{post}"><img src="{a}" alt="{e(b)}" loading="lazy"></div><figcaption>{e(b)}{tag}</figcaption></figure>'
     STEPS = ''.join(f'<li><h3>{e(t)}</h3><p>{e(d)}</p></li>' for t, d in s.get('process') or PROCESS.get(s['slug'], [('Look','We review where you are today.'),('Plan','A written plan with scope and timeline.'),('Make','We produce and build with you.'),('Improve','We measure and refine every month.')]))
     strip = ''.join(_fig(a, b) for a, b in s['work'])
