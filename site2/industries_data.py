@@ -123,7 +123,7 @@ INDUSTRIES = [
         ('UGC and performance creatives','Phone first ads that feel native on TikTok and Instagram.'),
         ('Meta, TikTok and Google ads','Campaigns tracked to purchases, with clear numbers every month.'),
         ('WhatsApp order support','Answers on sizes, delivery and returns before the customer gives up.')],
-  work=[('assets/work/laryklean-store.webp','LaryKlean, streetwear online store'),('assets/work/app-ui-2.webp','Shopping app interface'),('assets/img/ecom-delivery.webp','E-commerce delivery')],
+  work=[('assets/work/laryklean-store.webp','LaryKlean, streetwear online store'),('assets/work/app-ui-2.webp','Shopping app interface'),('assets/img/ecom-handover.webp','Order handed to a customer')],
   process=[('Audit','Store speed, product pages, tracking and ad accounts.'),('Fix','Conversion fixes before spending more on traffic.'),('Create','Product, lifestyle and UGC content in batches.'),('Scale','Campaigns grown on what sells, reported monthly.')],
   faq=[('Do you build Shopify stores?','Yes. We design and build Shopify stores, and improve existing ones for speed, product pages and checkout.'),
        ('Can you manage Amazon.ae and Noon?','Yes. Listings, images, content, pricing support and marketplace ads on both.'),
