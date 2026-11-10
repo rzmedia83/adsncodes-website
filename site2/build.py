@@ -82,6 +82,7 @@ def page(name, cur, title, desc, ftitle, body, extra_ld=(), region=('AE-DU','Dub
 
 RESULTS = (R / 'src' / '_results.html').read_text()
 VOICES = (R / 'src' / '_voices.html').read_text()
+from proof_data import proof as PROOF
 LANDING = (R / 'src' / '_landing.html').read_text()
 AGENTSHOW = (R / 'src' / '_agentshow.html').read_text()
 from seo_data import SEO
@@ -168,7 +169,7 @@ def service_page(s):
   <div class="strip">{strip}</div>{note}
   <p style="margin-top:36px"><a class="tlink" href="work.html" style="color:var(--ink)">See all work {ARROW}</a></p>
 </div></section>
-{CUSTOM_AFTER.get(s['slug'],'')}{RESULTS if s.get('results') else ''}
+{CUSTOM_AFTER.get(s['slug'],'')}{RESULTS if s.get('results') else ''}{PROOF(s['slug'], e)}
 <section class="sec"><div class="wrap">
   <div class="row-head"><span class="lab">Process</span><h2 class="big">How we work</h2></div>
   <ol class="steps" style="margin:0;padding:0;list-style:none">{STEPS}</ol>
