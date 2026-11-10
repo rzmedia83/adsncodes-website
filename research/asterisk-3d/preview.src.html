@@ -96,7 +96,7 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
 .nf .k{font-size:13px;letter-spacing:.22em;color:var(--paper-70)}
 .nf h3{font-size:clamp(40px,5.6vw,76px);line-height:1;letter-spacing:-.05em;margin-top:16px}
 .nf .lede{color:var(--paper-70);margin-top:18px;font-size:17px;max-width:48ch}
-.spin{position:relative;aspect-ratio:1;max-width:100%;cursor:grab;touch-action:pan-y}
+.spin{position:relative;aspect-ratio:1;max-width:340px;width:100%;justify-self:center;cursor:grab;touch-action:pan-y}
 .spin:active{cursor:grabbing}
 .spin canvas{position:absolute;inset:0;width:100%;height:100%}
 .spin .floor{position:absolute;left:24%;right:24%;bottom:3%;height:8%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent);filter:blur(4px)}
@@ -126,12 +126,12 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
       <div class="eyebrow">Ads n' Codes · private preview</div>
       <h1>The asterisk, in 3D</h1>
       <nav class="jump" aria-label="Placements">
-        <a href="#hero">Homepage hero handle</a><a href="#ai">Homepage AI section</a><a href="#aia">AI &amp; Automation hero</a><a href="#nf">404 page</a>
+        <a href="#hero">Homepage hero handle</a><a href="#aia">AI &amp; Automation hero</a><a href="#nf">404 page</a>
       </nav>
     </div>
     <div style="display:grid;gap:14px;justify-items:start;min-width:0">
       <span class="pill"><i></i>Not live. Waiting for your approval</span>
-      <p class="lede">One real 3D asterisk, cut from the exact shape of the logo mark, used in four places. It is drawn by our own small script (about 3 KB), so it adds almost nothing to page weight. Move your mouse or drag on each one.</p>
+      <p class="lede">One real 3D asterisk, cut from the exact shape of the logo mark, used in three places, each in its own style. It is drawn by our own small script (about 3 KB), so it adds almost nothing to page weight. Move your mouse or drag on each one.</p>
     </div>
   </div>
 </header>
@@ -151,28 +151,14 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
 
 <section class="band" id="ai">
   <div class="wrap">
-    <div class="band-head"><span class="n">B</span><h2>Homepage AI section: the network asterisk</h2>
-      <p>A larger asterisk sits behind the two demo phones, and each of its six arms sends a quiet line out to a node, like enquiries being routed. Small pulses travel along the lines. It sits in the background so the phone demo stays the hero of this section.</p></div>
-    <div class="ai"><div class="wrap grid">
-      <div style="min-width:0">
-        <h3>More enquiries than you can answer? We make sure every one gets a reply.</h3>
-        <p class="lede">Messages arrive from Google, Instagram, referrals, regular customers and ads, usually while you are busy running the business. Our WhatsApp AI agents answer in seconds, qualify the enquiry and book the next step.</p>
-        <ul class="rows">
-          <li><b>AI agents</b><span>Answer questions on WhatsApp and your website.</span></li>
-          <li><b>WhatsApp systems</b><span>Bookings, orders and lead qualification.</span></li>
-          <li><b>Automation</b><span>Follow ups, reminders and lead routing.</span></li>
-          <li><b>Integrations</b><span>CRMs, booking software and POS.</span></li>
-        </ul>
-      </div>
-      <div class="stage3" id="stB"><canvas class="net" id="netB" aria-hidden="true"></canvas><canvas class="gl" id="cvB" aria-hidden="true"></canvas>
-        <div class="phones"><img alt="WhatsApp conversation demo" src="data:image/webp;base64,{{p1}}"><img alt="WhatsApp property brief demo" src="data:image/webp;base64,{{p2}}"></div></div>
-    </div></div>
+    <div class="band-head"><span class="n">–</span><h2>Homepage AI section: dropped</h2>
+      <p>I tried a large asterisk behind the two demo phones and took it out. The phones are already the most detailed thing on the homepage, and a big shape behind them reads as clutter. That section stays exactly as it is on the live site today. <b>The homepage gets one 3D moment, the hero handle.</b> The big version is kept for the AI &amp; Automation page.</p></div>
   </div>
 </section>
 
 <section class="band" id="aia">
   <div class="wrap">
-    <div class="band-head"><span class="n">C</span><h2>AI &amp; Automation page: hero centrepiece</h2>
+    <div class="band-head"><span class="n">B</span><h2>AI &amp; Automation page: hero centrepiece</h2>
       <p>Today the right half of this hero is empty. The asterisk fills it, leans toward the cursor and keeps the network lines, so the page that sells AI is the one that looks most like technology.</p></div>
     <div class="aih" id="stC"><div class="wrap grid">
       <div style="min-width:0">
@@ -188,8 +174,8 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
 
 <section class="band" id="nf">
   <div class="wrap">
-    <div class="band-head"><span class="n">D</span><h2>404 page: something to play with</h2>
-      <p>A lost visitor gets a moment of delight before the links home. <b>Grab the asterisk and flick it.</b> It spins with your throw and slowly settles back.</p></div>
+    <div class="band-head"><span class="n">C</span><h2>404 page: the wireframe</h2>
+      <p>A different treatment so it never repeats the AI page: the asterisk drawn as a thin wireframe, like a page that was never built. It is smaller and quieter. <b>Grab it and flick it.</b> It spins with your throw and settles back.</p></div>
     <div class="nf"><div class="wrap grid">
       <div style="min-width:0">
         <p class="k">ERROR 404</p>
@@ -197,7 +183,7 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
         <p class="lede">Our site was rebuilt, so some old links point nowhere now. Everything we do is still here.</p>
         <div class="cta"><span class="btn btn-w">Back to home</span><span class="btn btn-g">See services</span><span class="btn btn-g">Contact us</span></div>
       </div>
-      <div class="spin" id="stD"><div class="floor"></div><canvas id="cvD" aria-hidden="true"></canvas><span class="hint">Drag to spin</span></div>
+      <div class="spin" id="stD"><canvas id="cvD" aria-hidden="true"></canvas><span class="hint">Drag to spin</span></div>
     </div></div>
   </div>
 </section>
@@ -206,7 +192,7 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
   <div class="wrap cols">
     <div><h4>Speed and SEO</h4><p>About 3 KB of script, no library, no images. It loads after the page and draws only while it is on screen, so text, headings and links that Google reads stay exactly as they are.</p></div>
     <div><h4>Phones</h4><p>It runs on phones too, at a lighter resolution to save battery. If a phone cannot draw 3D, or the visitor has asked for less motion, it shows a still asterisk instead.</p></div>
-    <div><h4>What happens next</h4><p>Tell me which of the four you want. Only the ones you approve go live, and I will check every page again after they do.</p></div>
+    <div><h4>What happens next</h4><p>Tell me which of the three you want. Only the ones you approve go live, and I will check every page again after they do.</p></div>
   </div>
 </section>
 
@@ -251,12 +237,6 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
   dragSpin(shot,kA,.9); pointerTilt(shot,kA,.9); dragSpin(document.querySelector('.zoom'),kZ,.9); pointerTilt(document.querySelector('.zoom .z:not(.old)'),kZ,1.2);
   var fb=document.getElementById('flatA');fb.addEventListener('click',function(){var on=fb.getAttribute('aria-pressed')!=='true';fb.setAttribute('aria-pressed',on);shot.classList.toggle('flat',on);fb.textContent=on?'Show the 3D knob':"Show today's flat knob";});
 
-  /* B: AI section */
-  var glB=document.getElementById('cvB'),kB;
-  kB=mount('cvB',{color:'#b4b2b6',metal:.7,light:1.2,spin:.18,dist:5.4,pitch:.28,yaw:-.7,roll:.15,onframe:function(p,S){netB&&netB(p,S);}});
-  var netB=network('netB',kB,glB,{reach:1.05,line:.32});
-  pointerTilt(document.getElementById('stB'),kB,.5);
-
   /* C: AI & Automation hero */
   var glC=document.getElementById('cvC'),kC;
   kC=mount('cvC',{color:'#ecebe8',metal:.65,light:1.35,spin:.28,dist:5.2,pitch:.22,yaw:-.9,onframe:function(p,S){netC&&netC(p,S);}});
@@ -264,7 +244,7 @@ button.tg[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
   pointerTilt(document.getElementById('stC'),kC,.8);
 
   /* D: 404 */
-  var kD=mount('cvD',{color:'#ecebe8',metal:.65,light:1.35,spin:.4,dist:4.6,pitch:.2,yaw:.5});
+  var kD=mount('cvD',{wire:true,color:'#ffffff',light:.95,spin:0,home:6,dist:4.4,pitch:.22,yaw:.35,depth:.16});
   var stD=document.getElementById('stD');dragSpin(stD,kD,2.2);pointerTilt(stD,kD,.6);
 })();
 </script>

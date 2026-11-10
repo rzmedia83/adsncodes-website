@@ -62,9 +62,17 @@
     }
     return { v: new Float32Array(v), n: new Float32Array(nm) };
   }
+  function wire(d) {
+    var O = shape(), n = O.length, v = [], i, j, k;
+    for (k = 0; k < 3; k++) { var z = [d, -d, 0][k]; if (k === 2) continue;
+      for (i = 0; i < n; i++) { j = (i+1)%n; v.push(O[i][0], O[i][1], z, O[j][0], O[j][1], z); } }
+    for (i = 0; i < n; i++) { var p = O[(i+n-1)%n], c = O[i], q = O[(i+1)%n];
+      if ((c[0]-p[0])*(q[1]-c[1]) - (c[1]-p[1])*(q[0]-c[0]) > 0) v.push(c[0], c[1], d, c[0], c[1], -d); }
+    return { v: new Float32Array(v), n: new Float32Array(v.length) };
+  }
   var VS = 'attribute vec3 p;attribute vec3 q;uniform mat4 M;uniform mat4 R;varying vec3 N;varying vec3 X;void main(){vec4 w=R*vec4(p,1.);N=mat3(R)*q;X=w.xyz;gl_Position=M*w;}';
-  var FS = 'precision mediump float;varying vec3 N;varying vec3 X;uniform vec3 C;uniform float K;uniform float A;uniform float L;' +
-    'void main(){vec3 n=normalize(N);if(!gl_FrontFacing)n=-n;vec3 v=normalize(-X);vec3 r=reflect(-v,n);' +
+  var FS = 'precision mediump float;varying vec3 N;varying vec3 X;uniform vec3 C;uniform float K;uniform float A;uniform float L;uniform float F;' +
+    'void main(){if(F>.5){float k=.35+.65*smoothstep(-5.6,-3.8,X.z);gl_FragColor=vec4(C*L*k*A,k*A);return;}vec3 n=normalize(N);if(!gl_FrontFacing)n=-n;vec3 v=normalize(-X);vec3 r=reflect(-v,n);' +
     'vec3 l1=normalize(vec3(-.5,.8,.9)),l2=normalize(vec3(.9,-.2,.5));' +
     'float d=max(dot(n,l1),0.)*.75+max(dot(n,l2),0.)*.25;' +
     'float s=pow(max(dot(n,normalize(l1+v)),0.),70.)*1.1+pow(max(dot(n,normalize(l2+v)),0.),30.)*.35;' +
@@ -94,11 +102,11 @@
     var pr = gl.createProgram(); gl.attachShader(pr, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(pr);
     if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) return null;
     gl.useProgram(pr);
-    var m = mesh(o.depth || .12, o.bevel || .03);
+    var m = o.wire ? wire(o.depth || .12) : mesh(o.depth || .12, o.bevel || .03), mode = o.wire ? gl.LINES : gl.TRIANGLES;
     function buf(data, name) { var b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW); var l = gl.getAttribLocation(pr, name); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l, 3, gl.FLOAT, false, 0, 0); }
     buf(m.v, 'p'); buf(m.n, 'q');
     var uM = gl.getUniformLocation(pr, 'M'), uR = gl.getUniformLocation(pr, 'R'), uC = gl.getUniformLocation(pr, 'C'), uK = gl.getUniformLocation(pr, 'K'), uA = gl.getUniformLocation(pr, 'A'), uL = gl.getUniformLocation(pr, 'L');
-    gl.uniform3fv(uC, hex(o.color || '#e8e6e3')); gl.uniform1f(uK, o.metal == null ? .6 : o.metal); gl.uniform1f(uL, o.light || 1);
+    gl.uniform3fv(uC, hex(o.color || '#e8e6e3')); gl.uniform1f(uK, o.metal == null ? .6 : o.metal); gl.uniform1f(uL, o.light || 1); gl.uniform1f(gl.getUniformLocation(pr, 'F'), o.wire ? 1 : 0); if (o.wire) { gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); }
     gl.enable(gl.DEPTH_TEST); gl.clearColor(0, 0, 0, 0);
     var S = { yaw: o.yaw || -.5, vy: 0, auto: o.spin == null ? .35 : o.spin, tx: 0, ty: 0, px: 0, py: 0, roll: o.roll || 0, a: 0, vis: true, last: 0, raf: 0, onframe: o.onframe };
     var dprCap = coarse ? 1.5 : 2, w = 0, h = 0, R, MP;
@@ -113,7 +121,7 @@
       R = rot(S.yaw, S.py + (o.pitch || 0), S.roll + S.px * .15, -(o.dist || 4.4));
       gl.uniformMatrix4fv(uR, false, R); gl.uniform1f(uA, S.a);
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-      gl.drawArrays(gl.TRIANGLES, 0, m.v.length / 3);
+      if (o.wire) gl.clear(gl.DEPTH_BUFFER_BIT), gl.disable(gl.DEPTH_TEST); gl.drawArrays(mode, 0, m.v.length / 3);
       if (S.onframe) S.onframe(project, S);
     }
     function project(x, y, z) { // object space -> css px within canvas
@@ -123,7 +131,7 @@
     }
     function tick(t) {
       S.raf = 0; var dt = Math.min(.05, (t - (S.last || t)) / 1000); S.last = t;
-      S.vy *= Math.pow(.04, dt); S.yaw += (S.auto + S.vy) * dt;
+      S.vy *= Math.pow(.04, dt); if (o.home) S.vy -= Math.sin(2 * S.yaw) * o.home * dt; S.yaw += (S.auto + S.vy) * dt;
       S.px += (S.tx - S.px) * Math.min(1, dt * 5); S.py += (S.ty - S.py) * Math.min(1, dt * 5);
       S.a = Math.min(1, S.a + dt * 2.2);
       draw();
