@@ -840,7 +840,7 @@ ul{margin:0;padding:0;list-style:none}
 .wa-scr:has(.wa-sheet.open) .lp-head{filter:brightness(.6)}
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .ag-tabs button{opacity:1;color:#5e5d60}.sec:not(.light):not(.stone) .ag-tabs button{color:rgba(255,255,255,.78)}.ag-tabs button[aria-selected="true"]{color:inherit}
-.demos .wk-cap span{color:#5e5d60}
+.demos .wk-cap span{color:#6b6a6d;opacity:1}
 .sub button[data-copy]{min-width:44px;min-height:28px;padding:4px 10px}
 @media (max-width:760px){.phero.photo .ph-img img[src*="content-hero"]{object-position:88% center!important;opacity:.7}}
 .how-steps{list-style:none;padding:0;margin-top:28px}
@@ -1015,3 +1015,15 @@ h1,h2,h3{overflow-wrap:break-word}
 
 .skip{position:fixed;left:12px;top:-60px;z-index:1000;background:var(--paper,#fff);color:var(--ink,#111);padding:10px 16px;border-radius:10px;font-size:14px;text-decoration:none;transition:top .2s}.skip:focus{top:12px}
 main{scroll-margin-top:80px}
+
+/* 3D asterisk (assets/a3d.js) */
+.knob canvas.gl{position:absolute;inset:-14%;width:128%;height:128%;pointer-events:none;display:none}
+.knob.a3d-on canvas.gl{display:block}.knob.a3d-on img{display:none}
+.a3d-hero{position:absolute;right:max(4vw,24px);top:50%;transform:translateY(-42%);width:clamp(360px,36vw,580px);aspect-ratio:1;pointer-events:none;opacity:0;transition:opacity 1s}
+.a3d-hero.a3d-on{opacity:1}
+.a3d-hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.a3d-hero .fl{position:absolute;left:24%;right:24%;bottom:3%;height:8%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.4),transparent);filter:blur(4px)}
+@media (max-width:1099px){.a3d-hero{display:none}}
+.nf-wire{position:relative;width:clamp(200px,26vw,340px);aspect-ratio:1;flex:none;cursor:grab;touch-action:pan-y;opacity:0;transition:opacity 1s}
+.nf-wire.a3d-on{opacity:1}.nf-wire:active{cursor:grabbing}
+.nf-wire canvas{position:absolute;inset:0;width:100%;height:100%}

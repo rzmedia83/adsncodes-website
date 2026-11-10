@@ -1,13 +1,12 @@
 import re,glob,hashlib,os,shutil,subprocess
 os.chdir('/tmp/claude-0/-home-claude/35c3f5ad-aa3e-5285-ae81-3a4fa777bc81/scratchpad')
-keep404=open('prod/404.html',encoding='utf-8').read()
-main404=keep404[keep404.index('<main'):keep404.index('</main>')+7]
+main404=open('site2/src/_404main.html',encoding='utf-8').read().strip()
 for f in glob.glob('site2/*.html'):
     if os.path.basename(f).startswith('_'): continue
     shutil.copy(f,'prod/'+os.path.basename(f))
 os.makedirs('prod/ar',exist_ok=True)
 for f in glob.glob('site2/ar/*.html'): shutil.copy(f,'prod/ar/'+os.path.basename(f))
-for a in ['assets/site.js','assets/site.css','sitemap.xml','llms.txt','robots.txt']: shutil.copy('site2/'+a,'prod/'+a)
+for a in ['assets/site.js','assets/site.css','assets/a3d.js','sitemap.xml','llms.txt','robots.txt']: shutil.copy('site2/'+a,'prod/'+a)
 os.chdir('prod')
 cv=hashlib.md5(open('assets/site.css','rb').read()).hexdigest()[:8]; jv=hashlib.md5(open('assets/site.js','rb').read()).hexdigest()[:8]
 for f in glob.glob('*.html')+glob.glob('ar/*.html'):

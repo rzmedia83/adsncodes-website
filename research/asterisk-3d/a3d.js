@@ -151,3 +151,58 @@
   }
   W.A3D = { mount: mount };
 })(window);
+/* Auto setup for the three site placements: [data-a3d="knob|hero|wire"] */
+(function (W, D) {
+  function tilt(el, c, k) { el.addEventListener('pointermove', function (e) { var r = el.getBoundingClientRect(); c.tilt(((e.clientX - r.left) / r.width - .5) * k, ((e.clientY - r.top) / r.height - .5) * k); }); el.addEventListener('pointerleave', function () { c.tilt(0, 0); }); }
+  function net(cv, ctl, gcv) {
+    var x = cv.getContext('2d'), dpr = Math.min(W.devicePixelRatio || 1, 2);
+    var nodes = ctl.tips.map(function (t, i) { return { a: Math.atan2(t[1], t[0]), r: .92 + (i % 2) * .12, ph: i * 1.7, p: (i * .37) % 1 }; });
+    return function (project) {
+      var b = cv.getBoundingClientRect(), g = gcv.getBoundingClientRect();
+      if (cv.width !== Math.round(b.width * dpr)) { cv.width = Math.round(b.width * dpr); cv.height = Math.round(b.height * dpr); }
+      x.setTransform(dpr, 0, 0, dpr, 0, 0); x.clearRect(0, 0, b.width, b.height);
+      var ox = g.left - b.left, oy = g.top - b.top, t = performance.now() / 1000, cx = ox + g.width / 2, cy = oy + g.height / 2, sc = g.width * .34;
+      nodes.forEach(function (n, i) {
+        var tp = project(ctl.tips[i][0], ctl.tips[i][1], 0), x1 = tp[0] + ox, y1 = tp[1] + oy;
+        var an = n.a + Math.sin(t * .25 + n.ph) * .08, rr = (n.r + Math.sin(t * .6 + n.ph) * .03) * 1.9;
+        var x2 = cx + Math.cos(an) * sc * rr, y2 = cy - Math.sin(an) * sc * rr;
+        var gr = x.createLinearGradient(x1, y1, x2, y2); gr.addColorStop(0, 'rgba(255,255,255,.3)'); gr.addColorStop(1, 'rgba(255,255,255,.03)');
+        x.strokeStyle = gr; x.lineWidth = 1; x.beginPath(); x.moveTo(x1, y1); x.lineTo(x2, y2); x.stroke();
+        x.fillStyle = 'rgba(255,255,255,.48)'; x.beginPath(); x.arc(x2, y2, 2.6, 0, 7); x.fill();
+        x.strokeStyle = 'rgba(255,255,255,.24)'; x.beginPath(); x.arc(x2, y2, 6 + Math.sin(t * 1.6 + n.ph) * 1.5, 0, 7); x.stroke();
+        if (!ctl.reduce) { var p = (t * .35 + n.p) % 1; x.fillStyle = 'rgba(37,211,102,' + (.9 * Math.sin(p * Math.PI)) + ')'; x.beginPath(); x.arc(x2 + (x1 - x2) * p, y2 + (y1 - y2) * p, 2.2, 0, 7); x.fill(); }
+      });
+    };
+  }
+  function init() {
+    Array.prototype.forEach.call(D.querySelectorAll('[data-a3d]'), function (el) {
+      var k = el.getAttribute('data-a3d'), cv = el.querySelector('canvas.gl');
+      if (!cv || getComputedStyle(el).display === 'none') return;
+      if (k === 'knob') {
+        var c = A3D.mount(cv, { color: '#f1efec', metal: .55, light: 1.45, spin: .5, dist: 7.4, pitch: .18, yaw: -.4 });
+        if (!c) return; el.classList.add('a3d-on');
+        var h = el.closest('[aria-valuenow]'), last = h ? +h.getAttribute('aria-valuenow') : 0;
+        if (h && W.MutationObserver) new MutationObserver(function () { var v = +h.getAttribute('aria-valuenow'); c.kick((v - last) * .35); last = v; }).observe(h, { attributes: true, attributeFilter: ['aria-valuenow'] });
+      } else if (k === 'hero') {
+        var nc = el.querySelector('canvas.net'), draw = null;
+        var c2 = A3D.mount(cv, { color: '#ecebe8', metal: .65, light: 1.35, spin: .28, dist: 5.2, pitch: .22, yaw: -.9, onframe: function (p) { if (draw) draw(p); } });
+        if (!c2) { el.style.display = 'none'; return; }
+        if (nc) draw = net(nc, c2, cv);
+        tilt(el.closest('section') || el, c2, .8); el.classList.add('a3d-on');
+      } else if (k === 'wire') {
+        var c3 = A3D.mount(cv, { wire: true, color: '#ffffff', light: .95, spin: 0, home: 6, dist: 4.4, pitch: .22, yaw: .35, depth: .16 });
+        if (!c3) { el.style.display = 'none'; return; }
+        var down = false, lx = 0, lt = 0;
+        el.addEventListener('pointerdown', function (e) { down = true; lx = e.clientX; lt = performance.now(); });
+        W.addEventListener('pointermove', function (e) { if (!down) return; var t = performance.now(); c3.kick((e.clientX - lx) / Math.max(8, t - lt) * 2.2); lx = e.clientX; lt = t; });
+        W.addEventListener('pointerup', function () { down = false; });
+        tilt(el, c3, .6); el.classList.add('a3d-on');
+      }
+    });
+  }
+  // Start on the first sign of a real visitor (or after 8s) so the 3D never competes with page load
+  var done = false, ev = ['pointermove', 'pointerdown', 'touchstart', 'scroll', 'keydown', 'wheel'];
+  function go() { if (done) return; done = true; ev.forEach(function (e) { W.removeEventListener(e, go, true); }); init(); }
+  ev.forEach(function (e) { W.addEventListener(e, go, { capture: true, passive: true }); });
+  setTimeout(go, 8000);
+})(window, document);
