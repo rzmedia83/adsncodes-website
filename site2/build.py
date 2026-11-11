@@ -37,6 +37,8 @@ SCRIPTS = '''<script defer src="assets/site.js"></script>'''
 
 def head(title, desc, path, extra_ld=(), region=('AE-DU','Dubai')):
     url = DOMAIN + ('' if path == 'index' else path + '.html')
+    _suf = " | Ads n' Codes"
+    if len(title) > 65 and title.endswith(_suf): title = title[:-len(_suf)]  # Google shows the site name on its own line
     lds = [ORG] + list(extra_ld)
     ld = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>\n' for x in lds)
     return f'''<title>{H.escape(title)}</title>

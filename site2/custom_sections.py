@@ -14,7 +14,7 @@ _CLIPS = [
     ('assets/video/event-tech-expo-hd.mp4', 'Tech expo', 'Event film for an exhibitor', False, 0),
     ('assets/video/portrait-film-hd.mp4', 'Fashion film', 'Concept, styling, shoot and edit', True, 12),
     ('assets/video/ad-clinic-hd.mp4', 'Clinic video ad', 'Script, shoot and edit', True, 0),
-    ('assets/video/ad-social-hd.mp4', 'Social media ad', 'Presenter led video ad', True, 0),
+    ('assets/video/social-package-hd.mp4', 'Social media ad', 'Presenter led video ad', True, 0),
 ]
 
 SHOWREEL = ('<section class="sec reel-sec"><div class="wrap">'

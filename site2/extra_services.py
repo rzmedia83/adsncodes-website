@@ -268,7 +268,7 @@ EXTRA_SERVICES.append(dict(sub=True, crumb='Influencer marketing', crumb_url='in
         ('Gifting and seeding programmes','Product seeding to many small creators at once for launches and new branches.'),
         ('Whitelisting and creator ads','The best performing creator content run as paid ads from the creator\'s handle.'),
         ('Tracking and reporting','Codes, links and WhatsApp tracking that show which creators brought enquiries and sales.')],
-  work=[('assets/video/ad-social-hd.mp4','Presenter led social video'),('assets/img/influencer-shoot.webp','Creator content shoot'),('assets/video/portrait-film-hd.mp4','Portrait film, concept to edit')],
+  work=[('assets/video/social-package-hd.mp4','Presenter led social video'),('assets/img/influencer-shoot.webp','Creator content shoot'),('assets/video/portrait-film-hd.mp4','Portrait film, concept to edit')],
   results=False,
   process=[('Plan','Goal, budget, audience and the kind of creators that fit, agreed up front.'),('Shortlist','Creators selected by audience data, then permit and contract checked.'),('Run','Briefs, approvals, posting schedule and tracked links for every creator.'),('Measure','Results by creator, and the best content turned into ads.')],
   area_h='Micro influencer campaigns across the UAE',
