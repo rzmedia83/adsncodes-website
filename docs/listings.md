@@ -36,6 +36,8 @@ Standard details used everywhere:
 | Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
 | Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS calls to verify within 3 working days | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
 | LinkCentre | razal@adsncodes.com | Submitted Nov 11 2026, free review queue (about 4 days); paid Fast Track AED 149 declined | secure.linkcentre.com/status/1740072 | No (country UAE) |
+| ProvenExpert | razal@adsncodes.com | Live Nov 11 2026 (published; 30 day trial of paid features, then free plan; nothing paid). Public email hello@, logo, website, LinkedIn, Instagram, Facebook added | provenexpert.com/ads-n-codes | Yes (ZIP entered as 00000) |
+| SuperbCompanies | razal@adsncodes.com | Submitted Nov 11 2026, in moderation (5 to 10 business days). Services: Digital Marketing 40, Creative 25, Advertising 20, Software Development 15 | vendors.superbcompanies.com | Yes (Dubai, BurJuman Business Tower) |
 | Mapbox (feeds ChatGPT maps, per reports) | no account (Contribute form at labs.mapbox.com/contribute, status emails to razal@adsncodes.com) | Business submitted Nov 8 2026, in Mapbox review | labs.mapbox.com/contribute | Yes (pin in BurJuman Business Tower, 25.2515, 55.3016) |
 
 Not available to us:
@@ -44,7 +46,5 @@ Not available to us:
 - Semrush Agency Partners: needs a paid plan.
 - YallaPages: yallapages.ae now redirects to an unrelated domain (checked Nov 11 2026).
 - Zolmi: zolmi.ae is salon booking software, not a business directory (checked Nov 11 2026).
-
-Pending: ProvenExpert (account created with razal@adsncodes.com Nov 11 2026, waiting for the email confirmation click), SuperbCompanies (account not created yet).
 
 Also update on an address change: website footer, contact page, schema, llms.txt, Arabic pages, social profiles, WhatsApp Business profile, Meta and Google Ads business details, email signature, portfolio, brand book and document templates.
