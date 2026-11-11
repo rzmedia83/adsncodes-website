@@ -33,10 +33,10 @@ After the trial, track real results in Google Search Console and Bing Webmaster 
 | mobile app development company | 1,000 | 16 | app-development-dubai |
 | digital marketing agency ajman | 720 | 10 | digital-marketing-agency-ajman |
 | real estate digital marketing agency | 720 | 19 | real-estate-marketing-agency-dubai (retitled 10 Nov) |
-| ecommerce seo services | 720 | 8 | NEW PAGE: ecommerce-seo-dubai |
+| ecommerce seo services | 720 | 8 | ecommerce-seo-dubai (live 11 Nov) |
 | logo design dubai | 720 | 22 | NEW PAGE: logo-design-dubai (confirm service) |
 | ppc company dubai | 720 | 15 | ppc-google-ads-agency-dubai |
-| b2b digital marketing agency | 590 | 11 | NEW PAGE: b2b-marketing-agency-dubai |
+| b2b digital marketing agency | 590 | 11 | b2b-marketing-agency-dubai (live 11 Nov) |
 | ecommerce photography dubai | 590 | 8 | product-photography-dubai (retitled 10 Nov) |
 | copywriting services dubai | 480 | 10 | NEW PAGE: copywriting-services-dubai (confirm service) |
 | healthcare marketing agency dubai | 480 | 17 | healthcare-marketing-agency-dubai |
@@ -44,10 +44,10 @@ After the trial, track real results in Google Search Console and Bing Webmaster 
 | google ads management agency | 320 | 15 | ppc-google-ads-agency-dubai |
 | graphic design company dubai | 320 | 19 | NEW PAGE: graphic-design-dubai (confirm service) |
 | influencer marketing services | 320 | 12 | influencer-marketing-dubai |
-| local seo dubai | 260 | 16 | NEW PAGE: local-seo-dubai |
+| local seo dubai | 260 | 16 | local-seo-dubai (live 11 Nov) |
 | fashion photography dubai | 260 | 8 | possible NEW PAGE: fashion-photography-dubai |
 | influencer marketing agency dubai | 260 | 9 | influencer-marketing-dubai |
-| content marketing agency dubai | 210 | 18 | NEW PAGE: content-marketing-agency-dubai |
+| content marketing agency dubai | 210 | 18 | content-marketing-agency-dubai (live 11 Nov) |
 | car photography dubai | 210 | 19 | possible NEW PAGE: car-photography-dubai |
 | agentic ai uae implementation | 170 | 17 | possible insight article |
 | product photography studio dubai | 170 | 9 | product-photography-dubai |

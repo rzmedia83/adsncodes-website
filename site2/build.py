@@ -128,6 +128,10 @@ READS_MORE = {
  'facebook-meta-ads-agency-dubai':[('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp'),('real-estate-lead-generation-dubai','Real estate lead generation in Dubai')],
  'web-development-dubai':[('get-recommended-by-chatgpt-uae','How to get recommended by ChatGPT in the UAE'),('google-business-profile-dubai','A Google Business Profile checklist for Dubai')],
  'email-marketing-agency-dubai':[('whatsapp-business-multiple-users-uae','Can a team share one WhatsApp Business number?')],
+ 'ecommerce-seo-dubai':[('how-long-does-seo-take-dubai','How long does SEO take in Dubai?'),('get-recommended-by-chatgpt-uae','How to get recommended by ChatGPT in the UAE')],
+ 'local-seo-dubai':[('google-business-profile-dubai','A Google Business Profile checklist for Dubai'),('how-long-does-seo-take-dubai','How long does SEO take in Dubai?')],
+ 'b2b-marketing-agency-dubai':[('best-digital-marketing-agencies-dubai','Top digital marketing agencies in Dubai'),('whatsapp-lead-response-uae','Why UAE businesses lose leads on WhatsApp')],
+ 'content-marketing-agency-dubai':[('choose-content-creation-agency-dubai','How to choose a content creation agency in Dubai'),('get-recommended-by-chatgpt-uae','How to get recommended by ChatGPT in the UAE')],
 }
 for _k, _v in READS_MORE.items():
     _have = {a for a, _ in READS_MAP.get(_k, [])}
@@ -315,7 +319,7 @@ exec(open(R / 'ar_build.py').read(), globals())
 exec(open(R / 'industries_build.py').read(), globals())
 # llms.txt lines for scheduled pages, added the day they go live
 from extra_services import LLMS_LINES
-_ANCH = {'food-photography-dubai': 'corporate-photography-dubai.html', 'corporate-video-production-dubai': 'video-production-dubai.html',
+_ANCH = {'ecommerce-seo-dubai': 'seo-agency-dubai.html', 'local-seo-dubai': 'seo-agency-dubai.html', 'b2b-marketing-agency-dubai': 'lead-generation-agency-dubai.html', 'content-marketing-agency-dubai': 'content-creation-dubai.html', 'food-photography-dubai': 'corporate-photography-dubai.html', 'corporate-video-production-dubai': 'video-production-dubai.html',
          'micro-influencer-agency-dubai': 'influencer-marketing-dubai.html', 'insights-how-to-use-whatsapp-business-web': 'insights-whatsapp-business-multiple-users-uae.html', 'insights-best-advertising-agencies-dubai': 'insights-best-digital-marketing-agencies-dubai'}
 _lp = R / 'llms.txt'; _ll = _lp.read_text().split('\n')
 for _slug, _line in LLMS_LINES.items():

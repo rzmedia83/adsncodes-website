@@ -21,4 +21,6 @@ DESC_FIX = {
  'real-estate-photography-dubai': "Real estate photography in Dubai: apartments, villas, off plan show units and commercial property, with twilight exteriors and walkthrough video.",
  'social-media-agency-dubai': "Social media marketing agency in Dubai serving the UAE: monthly management, content, reels, community replies and paid social on Instagram and TikTok.",
  'whatsapp-ai-agent-dental-clinics-dubai': "A WhatsApp AI agent for UAE dental clinics that books cleanings, check ups and consultations by live availability and sends reminders and recalls.",
+ 'b2b-marketing-agency-dubai': "B2B marketing agency in Dubai: LinkedIn, Google Ads, SEO, content and email that bring qualified leads and meetings for UAE companies selling to businesses.",
+ 'content-marketing-agency-dubai': "Content marketing agency in Dubai: strategy, articles, guides and video in English and Arabic, built to rank, get cited by AI and bring enquiries.",
 }
