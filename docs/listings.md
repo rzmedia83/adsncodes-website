@@ -41,5 +41,9 @@ Not available to us:
 - HiDubai: now redirects to Invest in Dubai, which lists Dubai licensed companies only (we hold an Ajman free zone licence).
 - Connect.ae: does not exist.
 - Semrush Agency Partners: needs a paid plan.
+- YallaPages: yallapages.ae now redirects to an unrelated domain (checked Nov 11 2026).
+- Zolmi: zolmi.ae is salon booking software, not a business directory (checked Nov 11 2026).
+
+Pending, need an account created by Razal first (free): ProvenExpert, LinkCentre, SuperbCompanies.
 
 Also update on an address change: website footer, contact page, schema, llms.txt, Arabic pages, social profiles, WhatsApp Business profile, Meta and Google Ads business details, email signature, portfolio, brand book and document templates.
