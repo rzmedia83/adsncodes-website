@@ -265,7 +265,7 @@ def location_page(L):
   <p class="dim" style="margin-top:30px">Areas we cover{'' if L['city'] == 'UAE' else ' in and around ' + e(L['city'])}: {e(', '.join(LOC_AREAS.get(L["slug"], [])))}.</p></div></div>
 </div></section>
 {RESULTS}
-<section class="sec stone"><div class="wrap">{localnav}
+{PROOF(L['slug'], e)}<section class="sec stone"><div class="wrap">{localnav}
   <div class="row-head"><span class="lab">All services</span><div><h2 class="mid" style="max-width:20ch">Everything you need to grow, from one team</h2><nav class="related" aria-label="Services" style="margin-top:28px">{svc}</nav></div></div>
 </div></section>
 <section class="sec light"><div class="wrap">
