@@ -161,7 +161,7 @@ def service_page(s):
     else:
         media = '<div class="ph-img">' + PIC(s["img"], f'<img src="{s["img"]}" fetchpriority="high" alt="{e(s["alt"])}"' + ((' style="object-position:' + s["img_pos"] + '"') if s.get("img_pos") else '') + '>') + '</div>'
     subs = ''.join(f'<li><h3>{e(a)}</h3><p>{e(b)}</p></li>' for a, b in s['subs'])
-    SILENT = ('assets/video/pb-film-hd.mp4',)
+    SILENT = ('assets/video/pb-film-hd.mp4', 'assets/video/founder-bts-hd.mp4')  # no usable audio in the source
     def _fig(a, b):
         if a.endswith('.mp4'):
             poster = a[:-4] + '.jpg'

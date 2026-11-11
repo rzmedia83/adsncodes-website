@@ -1056,3 +1056,8 @@ main{scroll-margin-top:80px}
   .qa button{font-size:17px;padding:20px 0;line-height:1.38}
   .foot{padding-top:84px}
 }
+
+/* about On set: three shoots */
+.onset:has(>figure:nth-child(3)){grid-template-columns:repeat(3,minmax(0,1fr))}
+.onset:has(>figure:nth-child(3)) .reel-media{aspect-ratio:4/5}
+@media (max-width:760px){.onset:has(>figure:nth-child(3)){grid-template-columns:repeat(2,minmax(0,1fr))!important}.onset figure:first-child:nth-last-child(3){grid-column:1/-1}.onset figure:first-child:nth-last-child(3) .reel-media{aspect-ratio:4/5}}
