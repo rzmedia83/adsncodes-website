@@ -35,6 +35,7 @@ Standard details used everywhere:
 | townin.com | razal@adsncodes.com (email code login) | Submitted Nov 8 2026 (free Starter plan), awaiting Townin approval; public email hello@ | townin.com/Dubai/advertising-media-promotions | Yes |
 | Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
 | Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS calls to verify within 3 working days | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
+| LinkCentre | razal@adsncodes.com | Submitted Nov 11 2026, free review queue (about 4 days); paid Fast Track AED 149 declined | secure.linkcentre.com/status/1740072 | No (country UAE) |
 | Mapbox (feeds ChatGPT maps, per reports) | no account (Contribute form at labs.mapbox.com/contribute, status emails to razal@adsncodes.com) | Business submitted Nov 8 2026, in Mapbox review | labs.mapbox.com/contribute | Yes (pin in BurJuman Business Tower, 25.2515, 55.3016) |
 
 Not available to us:
@@ -44,6 +45,6 @@ Not available to us:
 - YallaPages: yallapages.ae now redirects to an unrelated domain (checked Nov 11 2026).
 - Zolmi: zolmi.ae is salon booking software, not a business directory (checked Nov 11 2026).
 
-Pending, need an account created by Razal first (free): ProvenExpert, LinkCentre, SuperbCompanies.
+Pending: ProvenExpert (account created with razal@adsncodes.com Nov 11 2026, waiting for the email confirmation click), SuperbCompanies (account not created yet).
 
 Also update on an address change: website footer, contact page, schema, llms.txt, Arabic pages, social profiles, WhatsApp Business profile, Meta and Google Ads business details, email signature, portfolio, brand book and document templates.
