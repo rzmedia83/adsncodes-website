@@ -44,7 +44,7 @@ INDUSTRIES = [
   faq=[('Do you only work with luxury brands?','No. We work with luxury showrooms, mainstream dealers, used car businesses, rentals and car care brands. The content style changes, the system stays the same.'),
        ('Can you shoot cars on location in Dubai?','Yes, in showrooms, studios and on location around Dubai and the UAE, with the permissions each location needs.'),
        ('How does the WhatsApp test drive booking work?','Buyers message your showroom number, the agent answers questions about models, prices and finance, and offers available slots. Your team gets the booking with all the details.')],
-  related=['photography-dubai','video-production-dubai','digital-marketing-dubai']),
+  related=['car-photography-dubai','video-production-dubai','digital-marketing-dubai']),
 
  dict(slug='healthcare-marketing-agency-dubai', nav='Clinics and healthcare', short='Healthcare marketing', ind='Clinics and healthcare',
   title="Healthcare & Clinic Marketing Agency in Dubai | Ads n' Codes",
@@ -170,5 +170,5 @@ INDUSTRIES = [
   faq=[('Do you direct fashion shoots?','Yes. We handle concept, styling, models, location and direction, then edit stills and film.'),
        ('Can you build our online store?','Yes. We design and build Shopify stores for fashion brands, with lookbooks, sizing and fast checkout.'),
        ('Do you work with small or new labels?','Yes. We often start with brand identity and a first collection shoot, then grow into campaigns and a store.')],
-  related=['branding-agency-dubai','photography-dubai','web-development-dubai']),
+  related=['fashion-photography-dubai','branding-agency-dubai','web-development-dubai']),
 ]

@@ -45,15 +45,15 @@ After the trial, track real results in Google Search Console and Bing Webmaster 
 | graphic design company dubai | 320 | 19 | graphic-design-dubai (live 11 Nov) |
 | influencer marketing services | 320 | 12 | influencer-marketing-dubai |
 | local seo dubai | 260 | 16 | local-seo-dubai (live 11 Nov) |
-| fashion photography dubai | 260 | 8 | possible NEW PAGE: fashion-photography-dubai |
+| fashion photography dubai | 260 | 8 | fashion-photography-dubai (live 11 Nov) |
 | influencer marketing agency dubai | 260 | 9 | influencer-marketing-dubai |
 | content marketing agency dubai | 210 | 18 | content-marketing-agency-dubai (live 11 Nov) |
-| car photography dubai | 210 | 19 | possible NEW PAGE: car-photography-dubai |
+| car photography dubai | 210 | 19 | car-photography-dubai (live 11 Nov) |
 | agentic ai uae implementation | 170 | 17 | possible insight article |
 | product photography studio dubai | 170 | 9 | product-photography-dubai |
 | real estate photography dubai | 140 | 14 | real-estate-photography-dubai |
 | corporate photography dubai | 110 | 10 | corporate-photography-dubai |
-| wordpress website design dubai | 110 | 8 | possible NEW PAGE |
+| wordpress website design dubai | 110 | 8 | wordpress-website-design-dubai (live 11 Nov) |
 | website design cost in dubai | 110 | 9 | insight article (no prices on site: explain cost factors) |
 
 ## Hard head terms (6 to 12 months, need reviews and links)

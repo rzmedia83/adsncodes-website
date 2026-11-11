@@ -1,5 +1,8 @@
 """Meta descriptions trimmed to fit Google's snippet (about 155 characters). Applied to the built html."""
 DESC_FIX = {
+ 'fashion-photography-dubai': "Fashion photography in Dubai: lookbooks, campaign shoots, ecommerce on model and flat lay photos, abaya and modest wear, plus reels for social media.",
+ 'car-photography-dubai': "Car photography in Dubai for dealerships, rentals, garages and car care brands: stock photos, lifestyle and rolling shots, detail sets and reels.",
+ 'wordpress-website-design-dubai': "WordPress website design in Dubai: custom sites in English and Arabic, fast, secure and easy to edit, with SEO, WhatsApp and lead forms built in.",
  'arabic-ai-chatbot-uae': "Arabic AI chatbots for UAE businesses that understand Gulf Arabic and English, answer from your prices, take bookings and hand over on WhatsApp and web.",
  'corporate-photography-dubai': "Corporate photography in Dubai: headshots, team and leadership portraits, office and workplace photos and event coverage, at your office or in studio.",
  'corporate-video-production-dubai': "Corporate video production in Dubai: company profile films, leadership interviews, testimonials, training and recruitment videos, scripted and edited.",

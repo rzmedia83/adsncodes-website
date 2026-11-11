@@ -185,7 +185,7 @@ SERVICES = [
   faq=[('Do you shoot product photos for Amazon and Noon?','Yes. We shoot to marketplace requirements, including white background images, and provide lifestyle shots for your store and ads.'),
        ('Do you cover locations outside Dubai?','Yes. We shoot across the UAE, including Abu Dhabi, Sharjah and the Northern Emirates.'),
        ('How fast do we get the photos?','Edited images are usually delivered within three to five working days, faster for urgent campaigns.')],
-  related=['real-estate-photography-dubai','product-photography-dubai','corporate-photography-dubai','food-photography-dubai','video-production-dubai']),
+  related=['real-estate-photography-dubai','product-photography-dubai','corporate-photography-dubai','food-photography-dubai','fashion-photography-dubai','car-photography-dubai','video-production-dubai']),
 
  dict(slug='video-production-dubai', nav='Video production', short='Video production',
   title="Video Production Company in Dubai & UAE | Video Ads, Brand Films & Real Estate Walkthroughs | Ads n' Codes",
@@ -250,7 +250,7 @@ SERVICES = [
   faq=[('How long does a website take?','A company website usually takes three to six weeks. E-commerce stores take longer depending on the number of products and integrations.'),
        ('Do you manage Amazon and Noon stores?','Yes. We set up and manage marketplace stores, optimise listings and keep your catalogue updated.'),
        ('Will our website be SEO friendly?','Yes. Every site is built with clean structure, fast loading, proper metadata and schema, ready for SEO work.')],
-  related=['ecommerce-website-development-dubai','seo-agency-dubai','app-development-dubai','branding-agency-dubai']),
+  related=['ecommerce-website-development-dubai','wordpress-website-design-dubai','seo-agency-dubai','app-development-dubai','branding-agency-dubai']),
 
  dict(slug='workflow-automation-dubai', nav='Workflow automation', short='Workflow automation',
   title="Workflow Automation Agency in Dubai & UAE | Ads n' Codes",
