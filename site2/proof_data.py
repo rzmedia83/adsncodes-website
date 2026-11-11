@@ -27,7 +27,6 @@ STAR = '<svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path
 PREVIEW = set(filter(None, os.environ.get('PROOF_PREVIEW', '').split(',')))
 
 def proof(slug, e):
-    if slug not in PREVIEW: return ''
     q, r = 'lk', 'setup'
     for k, a, b in MAP:
         if k in slug: q, r = a, b; break
@@ -45,7 +44,7 @@ def proof(slug, e):
     </div>
   </div>
   <ul class="pf-facts">
-    <li><b>You deal with the founder</b><span>No account managers in between. The person you brief is the person doing the work.</span></li>
+    <li><b>One senior team on your account</b><span>No layers in between. The people you brief are the people doing the work.</span></li>
     <li><b>Marketing and tech in one place</b><span>Ads, content, websites and AI from one team, so nothing gets lost between agencies.</span></li>
     {third}
   </ul>
