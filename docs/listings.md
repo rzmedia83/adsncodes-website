@@ -17,7 +17,7 @@ Standard details used everywhere:
 
 | Platform | Login account | Status (Nov 2026) | Profile / admin URL | Address shown |
 |---|---|---|---|---|
-| Google Business Profile | adsncodesofficial@gmail.com | Live | business.google.com | Yes |
+| Google Business Profile | adsncodesofficial@gmail.com | Live. Categories (12 Nov 2026): Marketing agency (primary), Branding agency, Software company, Web Designer, Advertising agency, E-commerce service, Photography service, Internet marketing service, Video production service. Automation company removed (Google treats it as industrial, showed us as a manufacturer) | business.google.com | Yes |
 | Google Search Console | adsncodesofficial@gmail.com | Verified, sitemap 85 URLs | search.google.com/search-console (domain property) | n/a |
 | Bing Webmaster Tools | signed in in Chrome | Verified, sitemap and 85 URLs submitted | bing.com/webmasters | n/a |
 | Bing Places | adsncodesofficial@gmail.com (Google sign in) | Verified, synced with Google Business Profile, publishing in 7 to 12 days | bing.com/forbusiness | Yes (synced from Google) |
@@ -47,6 +47,8 @@ Not available to us:
 - Connect.ae: does not exist.
 - Semrush Agency Partners: needs a paid plan.
 - YallaPages: yallapages.ae now redirects to an unrelated domain (checked Nov 11 2026).
+- Digital Agency Network: paid membership only (from USD 580 a year), no free listing (checked Nov 12 2026).
+- The Org: needs a new account to add a company; not created (account creation needs Razal).
 - Zolmi: zolmi.ae is salon booking software, not a business directory (checked Nov 11 2026).
 
 Also update on an address change: website footer, contact page, schema, llms.txt, Arabic pages, social profiles, WhatsApp Business profile, Meta and Google Ads business details, email signature, portfolio, brand book and document templates.
