@@ -127,7 +127,7 @@ dict(sub=True, crumb='Web development', crumb_url='web-development-dubai.html',
 # arabic chatbot 2400/KD19, chatbot arabic 2400/17, conversational ai chatbot 210/19, whatsapp chatbot 210/36
 dict(sub=True, crumb='AI and automation', crumb_url='ai-automation.html', cur='ai',
   slug='arabic-ai-chatbot-uae', nav='Arabic AI chatbot', short='Arabic AI chatbot', stype='Arabic AI chatbot development',
-  title="Arabic AI Chatbot for Business in the UAE | WhatsApp & Website | Ads n' Codes",
+  title="Arabic Chatbot for UAE Businesses | Arabic AI on WhatsApp & Web",
   desc="Arabic AI chatbots for UAE businesses: assistants that understand Gulf Arabic and English, answer from your own prices and services, take bookings and hand over to your team, on WhatsApp and your website.",
   h1=['Arabic AI chatbot', 'for UAE businesses'], img='assets/img/phone-typing.webp', img_pos='50% 50%',
   alt='Hands typing a message on a phone',
@@ -595,5 +595,7 @@ LLMS_LINES = {
  'corporate-video-production-dubai': "- [Corporate video production](https://adsncodes.com/corporate-video-production-dubai.html): company profile films, leadership interviews, testimonials, training and recruitment videos",
  'micro-influencer-agency-dubai': "- [Micro influencer marketing](https://adsncodes.com/micro-influencer-agency-dubai.html): local UAE creators chosen by data, permit checked and tracked to sales",
  'insights-best-advertising-agencies-dubai': "- [Top advertising agencies in Dubai](https://adsncodes.com/insights-best-advertising-agencies-dubai.html): networks, independents and a hands on team, who each suits and what to ask",
+ 'insights-website-design-cost-dubai': "- [Website design cost in Dubai](https://adsncodes.com/insights-website-design-cost-dubai.html): what drives the price of a website, ecommerce store or bilingual site, and how to compare quotes",
+ 'insights-agentic-ai-uae-business': "- [Agentic AI in the UAE](https://adsncodes.com/insights-agentic-ai-uae-business.html): what AI agents are, where they pay off first for UAE businesses, implementation steps and data rules",
  'insights-how-to-use-whatsapp-business-web': "- [How to use WhatsApp Business Web](https://adsncodes.com/insights-how-to-use-whatsapp-business-web.html): logging in on a computer, the desktop app, what works on web and the limits for teams",
 }
