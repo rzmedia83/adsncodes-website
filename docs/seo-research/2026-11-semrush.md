@@ -56,6 +56,38 @@ After the trial, track real results in Google Search Console and Bing Webmaster 
 | wordpress website design dubai | 110 | 8 | wordpress-website-design-dubai (live 11 Nov) |
 | website design cost in dubai | 110 | 9 | insight article (no prices on site: explain cost factors) |
 
+## Extra pull, 12 Nov 2026 (last API units used up after this)
+
+New easy terms and where they go:
+
+| Keyword | Volume | KD | Action |
+|---|---|---|---|
+| arabic chatbot / chatbot arabic | 2,400 each | 17 to 19 | arabic-ai-chatbot-uae: make sure title and H1 say "Arabic chatbot". Page 1 is all SaaS bot vendors, no agencies |
+| conversational ai chatbot | 210 | 19 | arabic-ai-chatbot-uae / whatsapp-ai-agent-uae copy |
+| ecommerce website development company dubai | 1,600 | 24 | ecommerce-website-development-dubai (title) |
+| ecommerce solutions dubai | 720 | 19 | ecommerce-website-development-dubai (H2) |
+| ecommerce app development dubai | 480 | 19 | section on app-development-dubai or ecommerce dev page |
+| website development services dubai | 320 | 19 | web-development-dubai copy |
+| ecommerce website price in dubai | 210 | 10 | cost article (no prices: explain cost factors) |
+| best ecommerce development company in dubai | 140 | 9 | ecommerce dev page |
+| top digital agencies in dubai | 390 | 12 | insights-best-digital-marketing-agencies-dubai |
+| best / top advertising agencies in dubai | 390 each | 18 to 20 | insights-best-advertising-agencies-dubai |
+| content creation agency dubai | 1,000 | 13 | content-creation-dubai |
+| search engine marketing agency dubai | 260 | 11 | ppc-google-ads-agency-dubai copy |
+| email marketing agency dubai | 210 | 9 | email-marketing-agency-dubai |
+| inbound marketing agency dubai | 170 | 9 | possible section or page |
+| event videography dubai | 170 | 8 | event-photography-videography-dubai |
+| real estate marketing dubai | 260 | 20 | real-estate-marketing-agency-dubai |
+| restaurant marketing agency dubai | 50 | 5 | restaurant-marketing-agency-dubai |
+| agentic ai uae implementation | 170 | 17 | AI agents insight article |
+
+Notes:
+- Generic "AI agent" terms are hard (KD 68 to 84). UAE phrasing ("agentic ai uae implementation") is the realistic target.
+- "website design cost in dubai": every page 1 result (element8, wearetenet, lucidly, thewebmakers and others) lists price ranges. Our no prices rule makes this harder to win; the article must beat them on depth (what drives cost, how quotes are built, red flags).
+- Page 1 for "website design company in dubai": redberries.ae, globalmediainsight.com, clutch.co list, webcastle.ae, bluebeetle.ae, pgsuae.com, musemind and wearetenet list posts, apptunix.ae, aundigital.ae.
+- redberries.ae links include designrush.com (21), goodfirms.co (14), crunchbase.com, gulfnews.com, opencart.com and guest post sites. Confirms DesignRush and GoodFirms (both submitted) are worth chasing to approval.
+- No Semrush projects were set up (position tracking and site audit need a paid plan to keep). Search Console and Bing Webmaster Tools cover tracking from here.
+
 ## Hard head terms (6 to 12 months, need reviews and links)
 
 | Keyword | Volume | KD |
