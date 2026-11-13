@@ -96,7 +96,7 @@ SERVICES = [
  dict(slug='content-creation-dubai', nav='Content and creative', short='Content creation',
   title="Content Creation Agency in Dubai & UAE | Ad Creatives, Motion & Copywriting | Ads n' Codes",
   desc="Content creation in Dubai: social media content, advertising creatives, graphic design, motion graphics, copywriting, and AI video and image creation.",
-  h1=['Content creation', 'in Dubai'], img='assets/img/bts-interview-set.webp', img_pos='68% center', alt='Our studio set with softbox lights during an interview shoot in Dubai',
+  h1=['Content creation', 'agency in Dubai'], img='assets/img/bts-interview-set.webp', img_pos='68% center', alt='Our studio set with softbox lights during an interview shoot in Dubai',
   lede="The visuals, motion and words that carry your campaigns and keep your feed alive, made for the UAE audience.",
   intro_h="Content that stops the scroll and says one thing clearly.",
   intro=["Good content starts with knowing what your audience cares about this week. We plan around your offers, seasons like Ramadan, Eid and the Dubai Shopping Festival, and the formats each platform rewards.",
