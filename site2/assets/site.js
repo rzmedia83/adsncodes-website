@@ -383,8 +383,14 @@
       });
     }
     var gi = $('.giant img');
-    if (gi) gsap.fromTo(gi, { yPercent: 18, scale: .94 }, { yPercent: 0, scale: 1, ease: 'none', scrollTrigger: { trigger: '.giant', start: 'top bottom', end: 'bottom bottom', scrub: true } });
+    if (gi) gsap.fromTo(gi, { yPercent: 18, scale: .94 }, { yPercent: 0, scale: 1, ease: 'none', scrollTrigger: { trigger: '.giant', start: 'top bottom', end: 'top 55%', scrub: true } });
     ScrollTrigger.refresh();
+    // Page height changes after init (lazy media, fonts, accordions), which left trigger positions stale.
+    var stT, lastH = document.documentElement.scrollHeight;
+    var reST = function(){ clearTimeout(stT); stT = setTimeout(function(){ var h = document.documentElement.scrollHeight; if (Math.abs(h - lastH) > 2) { lastH = h; ScrollTrigger.refresh(); } }, 200); };
+    if (window.ResizeObserver) new ResizeObserver(reST).observe(document.body);
+    window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
   }
   if (!reduce) {
     var gsapStarted = false;
