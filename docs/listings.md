@@ -11,14 +11,14 @@ Standard details used everywhere:
 - Founded: 2024 (May 2024), founder Razal Mohammed
 - Hours: Mon to Fri 9:00 to 18:00, Sat 9:00 to 14:00, Sun closed
 - Employee count on listings: 10+ band
-- Label: marketing and technology agency in Dubai
+- Label: marketing and technology company in Dubai (changed from "agency" on 16 Nov 2026). Use "company" in every listing description; keep agency style categories (Marketing agency, Advertising agency) where a platform only offers categories. Older listings still say "agency": update each one when it is next touched.
 - Profile picture / logo everywhere: the original white wordmark (site2/assets/logo-white-lg.png) centred on brand charcoal #414042, logo about 58% of the width, square (same as apple-touch-icon.png). Never a near black or other background.
 - Free listings only. Never pay for a listing, claim fee, upgrade or fast track (Razal, Nov 15 2026).
 - Client size on forms that ask: 100% small businesses (under $10M revenue)
 
 | Platform | Login account | Status (Nov 2026) | Profile / admin URL | Address shown |
 |---|---|---|---|---|
-| Google Business Profile | adsncodesofficial@gmail.com | Live. Categories (12 Nov 2026): Marketing agency (primary), Branding agency, Software company, Web Designer, Advertising agency, E-commerce service, Photography service, Internet marketing service, Video production service. Automation company removed (Google treats it as industrial, showed us as a manufacturer) | business.google.com | Yes |
+| Google Business Profile | adsncodesofficial@gmail.com | Live. Description switched to "marketing and technology company" on 16 Nov 2026 (pending Google review at the time). Categories (12 Nov 2026): Marketing agency (primary), Branding agency, Software company, Web Designer, Advertising agency, E-commerce service, Photography service, Internet marketing service, Video production service. Automation company removed (Google treats it as industrial, showed us as a manufacturer) | business.google.com | Yes |
 | Google Search Console | adsncodesofficial@gmail.com | Verified, sitemap 85 URLs | search.google.com/search-console (domain property) | n/a |
 | Bing Webmaster Tools | signed in in Chrome | Verified, sitemap and 85 URLs submitted | bing.com/webmasters | n/a |
 | Bing Places | adsncodesofficial@gmail.com (Google sign in) | Verified, synced with Google Business Profile, publishing in 7 to 12 days | bing.com/forbusiness | Yes (synced from Google) |
