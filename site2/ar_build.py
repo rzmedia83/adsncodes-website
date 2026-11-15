@@ -69,7 +69,7 @@ AR_FOOT = """<footer class="foot">
     <nav class="fareas" aria-label="صفحات أبوظبي"><span>أبوظبي</span><a href="ar/abu-dhabi.html">وكالة تسويق في أبوظبي</a><a href="ar/ppc-abu-dhabi.html">إعلانات جوجل</a><a href="ar/seo-abu-dhabi.html">تحسين محركات البحث</a><a href="ar/web-design-abu-dhabi.html">تصميم المواقع</a><a href="ar/app-development-abu-dhabi.html">تطوير التطبيقات</a></nav>
     <div class="giant"><img src="assets/logo-white-lg.png" alt="" width="1400" height="823" loading="lazy"></div>
     <div class="foot-bar">
-      <span>© Ads n' Codes FZE LLC. وكالة تسويق وتقنية في دبي، نخدم أبوظبي والشارقة وعجمان وجميع إمارات الدولة.</span>
+      <span>© Ads n' Codes FZE LLC. شركة تسويق وتقنية في دبي، نخدم أبوظبي والشارقة وعجمان وجميع إمارات الدولة.</span>
       <nav aria-label="روابط"><a href="ar/">الرئيسية</a><a href="contact.html">تواصل معنا</a><a href="privacy.html" lang="en">Privacy</a></nav>
     </div>
   </div>
@@ -308,7 +308,7 @@ def ar_home():
              ('فريق واحد وجهة تواصل واحدة','الاستراتيجية والمحتوى والإعلانات والتقنية تُدار معاً، مع شخص واحد مسؤول عن حسابك.'),
              ('ردود سريعة','نرد على الرسائل في يوم العمل نفسه عبر واتساب أو الهاتف أو البريد.')]
     fl = ''.join(f'<li><h3>{_ae(a)}</h3><p>{_ae(b)}</p></li>' for a, b in facts)
-    faq = [("ما الذي تقدمه Ads n' Codes؟","نحن وكالة تسويق وتقنية في دبي. نقدم إدارة التواصل الاجتماعي، وإعلانات ميتا وجوجل، وتحسين محركات البحث، والهوية التجارية، والتصوير والفيديو، والمواقع والتطبيقات، ووكلاء واتساب بالذكاء الاصطناعي، لشركات في جميع إمارات الدولة."),
+    faq = [("ما الذي تقدمه Ads n' Codes؟","نحن شركة تسويق وتقنية في دبي. نقدم إدارة التواصل الاجتماعي، وإعلانات ميتا وجوجل، وتحسين محركات البحث، والهوية التجارية، والتصوير والفيديو، والمواقع والتطبيقات، ووكلاء واتساب بالذكاء الاصطناعي، لشركات في جميع إمارات الدولة."),
            ("هل تعملون مع شركات خارج دبي؟","نعم. نعمل مع شركات في أبوظبي والشارقة وعجمان وباقي الإمارات. الاجتماعات والتقارير عبر الإنترنت، والتصوير وورش العمل في موقعك."),
            ("ما هو وكيل واتساب بالذكاء الاصطناعي؟","هو مساعد على رقم واتساب الخاص بشركتك يفهم ما يكتبه العميل بالعربية أو الإنجليزية، ويجيب عن الأسعار والمواعيد والخدمات، ويحجز الموعد أو يأخذ الطلب، ثم يحوّل المحادثة إلى فريقك عند الحاجة."),
            ("هل نملك الحسابات الإعلانية والموقع؟","نعم. كل الحسابات والنطاقات والملفات باسمك، ونعمل عليها بصلاحيات يمكنك إلغاؤها في أي وقت.")]
@@ -316,7 +316,7 @@ def ar_home():
   <canvas class="silk" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div>
   <div class="wrap">
     <p class="crumb">Ads n' Codes · دبي، الإمارات</p>
-    <h1 class="hl"><span class="ln"><span>وكالة تسويق وتقنية</span></span><span class="ln"><span>في دبي والإمارات</span></span></h1>
+    <h1 class="hl"><span class="ln"><span>شركة تسويق وتقنية</span></span><span class="ln"><span>في دبي والإمارات</span></span></h1>
     <p class="lede">نساعد الشركات في الإمارات على النمو: محتوى يلفت الانتباه، وإعلانات تجلب عملاء حقيقيين، ومواقع وتطبيقات سريعة، ووكلاء واتساب بالذكاء الاصطناعي يردون على كل استفسار خلال ثوانٍ.</p>
     <div class="acts" style="margin-top:36px"><a class="btn btn-w mag" href="https://wa.me/971565440310">احصل على عرض</a><a class="tlink" href="case-studies.html">شاهد أعمالنا</a></div>
   </div>
@@ -346,7 +346,7 @@ def ar_home():
 <section class="sec light"><div class="wrap">
   <div class="row-head"><span class="lab">أسئلة شائعة</span><div class="faq faq-list">{ar_faq(faq)}</div></div>
 </div></section>"""
-    site = {"@context": "https://schema.org", "@type": "WebPage", "name": "Ads n' Codes | وكالة تسويق وتقنية في دبي", "url": DOMAIN + 'ar/', "inLanguage": "ar-AE", "publisher": {"@id": DOMAIN + "#org"}}
+    site = {"@context": "https://schema.org", "@type": "WebPage", "name": "Ads n' Codes | شركة تسويق وتقنية في دبي", "url": DOMAIN + 'ar/', "inLanguage": "ar-AE", "publisher": {"@id": DOMAIN + "#org"}}
     return ar_page('index', 'index', "Ads n' Codes | وكالة تسويق وتقنية في دبي والإمارات",
                    "وكالة تسويق رقمي وتقنية في دبي: إدارة التواصل الاجتماعي، وإعلانات ميتا وجوجل، وتحسين محركات البحث، والهوية التجارية، والتصوير، والمواقع، ووكلاء واتساب بالذكاء الاصطناعي.",
                    'ما الذي يبطئ نمو شركتك؟ لنتحدث.', body, [site, faq_ld(faq)])

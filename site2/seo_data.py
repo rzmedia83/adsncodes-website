@@ -1,7 +1,7 @@
 # Search titles (keyword first, under ~60 characters) and meta descriptions (under ~158 characters), one primary topic per page.
 SEO = {
  'index': ("Ads n' Codes | Marketing & Advertising Agency in Dubai",
-           "Ads n' Codes is a marketing and technology agency in Dubai: marketing, ads, SEO and AI search, branding, video, websites and WhatsApp AI agents for UAE brands."),
+           "Ads n' Codes is a marketing and technology company in Dubai: marketing, ads, SEO and AI search, branding, video, websites and WhatsApp AI agents for UAE brands."),
  'services': ("Marketing, Branding & Tech Services in Dubai | Ads n' Codes",
               "Every service in one place: digital marketing, SEO, branding, influencer and UGC content, photo, video, events, websites, apps and AI automation in Dubai."),
  'ai-automation': ("AI Agents & Automation in Dubai, UAE | Ads n' Codes",
@@ -11,7 +11,7 @@ SEO = {
  'work': ("Our Work: Branding, Campaigns & Apps | Ads n' Codes",
           "Recent work by Ads n' Codes: brand identities, packaging, social campaigns, video ads, e-commerce stores and WhatsApp AI agents for UAE businesses."),
  'about': ("About Us: Our Story and Team | Ads n' Codes",
-           "Ads n' Codes is a Dubai marketing and technology agency at B Hive, BurJuman, combining creative work with websites, apps and AI for UAE businesses."),
+           "Ads n' Codes is a Dubai marketing and technology company at B Hive, BurJuman, combining creative work with websites, apps and AI for UAE businesses."),
  'contact': ("Contact Us: WhatsApp, Call or Visit | Ads n' Codes",
              "Talk to Ads n' Codes in Dubai. Call or WhatsApp +971 56 544 0310, email bd@adsncodes.com or visit us at B Hive, Level 3, BurJuman."),
  'digital-marketing-dubai': ("Digital Marketing Agency in Dubai, UAE | Ads n' Codes",

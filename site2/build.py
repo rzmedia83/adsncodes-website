@@ -18,7 +18,7 @@ socials_html = '<div class="socials">' + ''.join(f'<a href="{u}" aria-label="{n}
 ORG = {
   "@context": "https://schema.org", "@type": ["ProfessionalService", "LocalBusiness"], "@id": DOMAIN + "#org",
   "name": "Ads n' Codes", "alternateName": ["Ads n Codes", "AdsnCodes", "Ads and Codes", "Ads Codes", "Ads N Codes FZE LLC"], "legalName": "Ads N Codes FZE LLC", "url": DOMAIN, "logo": DOMAIN + "assets/logo-ink.png", "image": DOMAIN + "assets/logo-ink.png",
-  "description": "Marketing and technology agency in Dubai offering digital marketing, social media marketing, paid ads, SEO, branding, photography, video production, web and app development, and AI automation across the UAE.",
+  "description": "Marketing and technology company in Dubai offering digital marketing, social media marketing, paid ads, SEO, branding, photography, video production, web and app development, and AI automation across the UAE.",
   "telephone": "+971565440310", "email": "hello@adsncodes.com", "priceRange": "AED",
   "address": {"@type": "PostalAddress", "streetAddress": "B Hive, Level 3, BurJuman Business Tower", "addressLocality": "Dubai", "addressRegion": "Dubai", "addressCountry": "AE"},
   "areaServed": [{"@type": "Country", "name": "United Arab Emirates"}] + [{"@type": "City", "name": c} for c in ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"]],
@@ -283,11 +283,11 @@ def location_page(L):
                 [lb, faq_ld(L['faq']), crumbs_ld([("Home", ""), (L['short'], L['slug'] + '.html')])], (L['region'], L['city']))
 
 STATIC = [
-  ('index', None, "Ads n' Codes | Digital Marketing & Technology Agency in Dubai, UAE", "Digital marketing and technology agency in Dubai. Social media, paid ads, SEO, branding, photography, video, websites, apps and AI automation for businesses across the UAE.", "Tell us what's slowing your growth."),
+  ('index', None, "Ads n' Codes | Marketing & Technology Company in Dubai, UAE", "Marketing and technology company in Dubai. Social media, paid ads, SEO, branding, photography, video, websites, apps and AI automation for businesses across the UAE.", "Tell us what's slowing your growth."),
   ('services', 'services', "Marketing, Branding & Tech Services in Dubai | Ads n' Codes", "All Ads n' Codes services in Dubai: digital marketing, SEO, branding, content, photography, video production, websites, e-commerce, apps, software and AI automation.", 'Pick a service. Or let us run all of it.'),
   ('ai-automation', 'ai', "AI Automation, WhatsApp Automation & AI Agents in Dubai | Ads n' Codes", "AI agents, WhatsApp automation, WhatsApp Business API setup, lead qualification, CRM automation and business process automation for businesses in Dubai and the UAE.", 'Show us the work your team repeats.'),
   ('work', 'work', "Our Work | Branding, Campaigns & AI Systems | Ads n' Codes Dubai", "Selected branding, packaging, campaign and AI automation work by Ads n' Codes, a digital marketing agency in Dubai.", 'Your brand could be the next one here.'),
-  ('about', 'about', "About Ads n' Codes | Marketing & Technology Agency in Dubai", "The story behind Ads n' Codes, a marketing and technology agency based at B Hive, BurJuman, Dubai, working with businesses across the UAE.", "Let's build something people remember."),
+  ('about', 'about', "About Ads n' Codes | Marketing & Technology Company in Dubai", "The story behind Ads n' Codes, a marketing and technology company based at B Hive, BurJuman, Dubai, working with businesses across the UAE.", "Let's build something people remember."),
   ('whatsapp-ai-agent-uae', 'ai', "WhatsApp Automation & AI Agent in Dubai, UAE | Lead Response | Ads n' Codes", "WhatsApp automation and AI agents on the official WhatsApp Business API for UAE businesses. Reply to every lead in seconds, qualify enquiries, take bookings and orders, and sync with your CRM or POS, 24/7.", 'Stop losing customers to slow replies.'),
   ('missed-enquiry-cost-calculator', 'ai', "Missed Enquiry Cost Calculator (UAE) | Ads n' Codes", "Free calculator for UAE businesses: see what slow WhatsApp and phone replies cost you each month, from your enquiries, reply time and customer value.", 'Want every enquiry answered in seconds? Talk to us.'),
   ('free-marketing-audit', None, "Free Marketing Audit for UAE Businesses | Ads n' Codes", "A free marketing audit for UAE businesses: social media, ads, Google and SEO, your website and WhatsApp reply speed, with the three fixes that matter most.", 'Prefer to talk it through? Message us.'),
