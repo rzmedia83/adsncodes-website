@@ -41,6 +41,7 @@ Standard details used everywhere:
 | LinkCentre | razal@adsncodes.com | Submitted Nov 11 2026, free review queue (about 4 days); paid Fast Track AED 149 declined | secure.linkcentre.com/status/1740072 | No (country UAE) |
 | ProvenExpert | razal@adsncodes.com | Live Nov 11 2026 (published; 30 day trial of paid features, then free plan; nothing paid). Public email hello@, logo, website, LinkedIn, Instagram, Facebook added; logo fixed to charcoal #414042 Nov 11 | provenexpert.com/ads-n-codes | Yes (ZIP entered as 00000) |
 | SuperbCompanies | razal@adsncodes.com | Submitted Nov 11 2026, in moderation (5 to 10 business days). Services: Digital Marketing 40, Creative 25, Advertising 20, Software Development 15. Logo fixed to charcoal #414042 Nov 11 | vendors.superbcompanies.com | Yes (Dubai, BurJuman Business Tower) |
+| The Org | Razal's account; joined as Founder via bd@adsncodes.com work email (Nov 15 2026) | Live (page existed from LinkedIn). Updated Nov 15: description (marketing and technology agency label), industries Marketing, Advertising, Software, employees 11-50, Bootstrap, LinkedIn and Facebook links, charcoal logo. Unverified badge (verification is a paid upsell, not taken) | theorg.com/org/ads-n-codes | City only (Dubai) |
 | Mapbox (feeds ChatGPT maps, per reports) | no account (Contribute form at labs.mapbox.com/contribute, status emails to razal@adsncodes.com) | Business submitted Nov 8 2026, in Mapbox review | labs.mapbox.com/contribute | Yes (pin in BurJuman Business Tower, 25.2515, 55.3016) |
 
 Not available to us:
@@ -49,7 +50,6 @@ Not available to us:
 - Semrush Agency Partners: needs a paid plan.
 - YallaPages: yallapages.ae now redirects to an unrelated domain (checked Nov 11 2026).
 - Digital Agency Network: paid membership only (from USD 580 a year), no free listing (checked Nov 12 2026).
-- The Org: needs a new account to add a company; not created (account creation needs Razal).
 - Zolmi: zolmi.ae is salon booking software, not a business directory (checked Nov 11 2026).
 
 Also update on an address change: website footer, contact page, schema, llms.txt, Arabic pages, social profiles, WhatsApp Business profile, Meta and Google Ads business details, email signature, portfolio, brand book and document templates.
