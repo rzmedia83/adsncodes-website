@@ -13,6 +13,7 @@ Standard details used everywhere:
 - Employee count on listings: 10+ band
 - Label: marketing and technology agency in Dubai
 - Profile picture / logo everywhere: the original white wordmark (site2/assets/logo-white-lg.png) centred on brand charcoal #414042, logo about 58% of the width, square (same as apple-touch-icon.png). Never a near black or other background.
+- Free listings only. Never pay for a listing, claim fee, upgrade or fast track (Razal, Nov 15 2026).
 - Client size on forms that ask: 100% small businesses (under $10M revenue)
 
 | Platform | Login account | Status (Nov 2026) | Profile / admin URL | Address shown |
@@ -35,8 +36,8 @@ Standard details used everywhere:
 | Microsoft Clarity | Razal's account | Live | clarity.microsoft.com | n/a |
 | UptimeRobot | Razal's account | Live, 5 minute checks | uptimerobot.com | n/a |
 | townin.com | razal@adsncodes.com (email code login) | Submitted Nov 8 2026 (free Starter plan), awaiting Townin approval; public email hello@ | townin.com/Dubai/advertising-media-promotions | Yes |
-| Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
-| Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS calls to verify within 3 working days | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
+| Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid and not planned (free listings only) | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
+| Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS said it would call to verify within 3 working days, no call received and not on 2gis.ae as of Nov 15; resubmit via the public Add company form if still missing by Nov 19 | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
 | LinkCentre | razal@adsncodes.com | Submitted Nov 11 2026, free review queue (about 4 days); paid Fast Track AED 149 declined | secure.linkcentre.com/status/1740072 | No (country UAE) |
 | ProvenExpert | razal@adsncodes.com | Live Nov 11 2026 (published; 30 day trial of paid features, then free plan; nothing paid). Public email hello@, logo, website, LinkedIn, Instagram, Facebook added; logo fixed to charcoal #414042 Nov 11 | provenexpert.com/ads-n-codes | Yes (ZIP entered as 00000) |
 | SuperbCompanies | razal@adsncodes.com | Submitted Nov 11 2026, in moderation (5 to 10 business days). Services: Digital Marketing 40, Creative 25, Advertising 20, Software Development 15. Logo fixed to charcoal #414042 Nov 11 | vendors.superbcompanies.com | Yes (Dubai, BurJuman Business Tower) |
