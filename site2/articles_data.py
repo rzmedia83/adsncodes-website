@@ -680,7 +680,7 @@ ARTICLES.insert(0, dict(slug='best-digital-marketing-agencies-dubai', date='2026
   lede="Dubai has hundreds of digital marketing companies. Here are five worth a call, each suited to a different kind of business, and the questions that will help you choose.",
   author='Razal Mohammed',
   body=[
-   ('p',"Search for the best digital marketing agency in Dubai and you get long lists that are hard to compare. This one is short on purpose: five companies with a clear profile, from a global network to a small hands on team, so you can match the agency to the size and stage of your business."),
+   ('p',"Search for the best digital marketing agency in Dubai, or the top digital agencies in Dubai, and you get long lists that are hard to compare. This one is short on purpose: five companies with a clear profile, from a global network to a small hands on team, so you can match the agency to the size and stage of your business."),
    ('p',"A note on fairness: we are a Dubai agency ourselves, so our own team is included at the end of the list and described as plainly as the others. Everything about the other agencies comes from what they and the regional trade press publish, listed under sources. Please check anything that matters to you directly with each agency."),
    ('h2',"Prism Digital"),
    ('p',"Best for hospitality, retail and e-commerce brands that want a full service digital agency with a long track record."),

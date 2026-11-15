@@ -105,7 +105,7 @@ dict(sub=True, crumb='Web development', crumb_url='web-development-dubai.html',
   intro_h="A store is judged on sales, not on looks.",
   intro=["Most UAE stores lose buyers in the same places: a slow product page on mobile, a checkout that does not offer the payment people expect, delivery costs that appear at the last step, or no Arabic. Each of those is a sale that went to Amazon, Noon or a competitor.",
          "We build stores around how UAE customers actually buy: fast on phones, clear prices with VAT shown the way you need, card, Apple Pay, tabby or tamara and cash on delivery where it fits, delivery zones by emirate, and WhatsApp support one tap away. Then we connect tracking, so every sale can be traced back to the ad or search that brought it."],
-  subs_h='Ecommerce development services',
+  subs_h='Ecommerce solutions in Dubai',
   subs=[('Shopify stores','Shopify builds and redesigns with themes customised to your brand, apps chosen carefully and nothing that slows the store down.'),
         ('WooCommerce stores','WordPress based stores when you need more control, custom product types or deeper integrations.'),
         ('UAE payments and delivery','Card, Apple Pay, buy now pay later and cash on delivery, plus courier integrations and delivery zones by emirate.'),
@@ -121,7 +121,8 @@ dict(sub=True, crumb='Web development', crumb_url='web-development-dubai.html',
        ("How long does an ecommerce website take?","A focused Shopify store is usually live in four to eight weeks. Larger stores with custom features, Arabic versions and integrations take eight to twelve weeks."),
        ("Can you connect the store to Amazon and Noon?","Yes. We can sync products and stock between your store and marketplaces, or manage your [Amazon and Noon listings](ecommerce-marketing-agency-dubai.html) alongside the store."),
        ("Do you help sell after launch?","Yes. We run [ecommerce marketing](ecommerce-marketing-agency-dubai.html), Meta and Google Shopping ads and [product photography](product-photography-dubai.html), so the store gets traffic and the traffic converts."),
-       ("Can you build a shopping app too?","Yes. When a brand has enough repeat buyers, we build [iOS and Android apps](app-development-dubai.html) connected to the same store.")],
+       ("Can you build a shopping app too?","Yes. When a brand has enough repeat buyers, we build [iOS and Android apps](app-development-dubai.html) connected to the same store."),
+       ("What ecommerce solutions do you offer in Dubai?","The full set a UAE store needs: the store itself on Shopify, WooCommerce or a custom build, UAE payment gateways and cash on delivery, courier and delivery zone setup, Arabic and English versions, marketplace and ERP integrations, and monthly management and growth after launch. You can take one piece or all of it.")],
   related=['web-development-dubai','ecommerce-marketing-agency-dubai','product-photography-dubai']),
 
 # arabic chatbot 2400/KD19, chatbot arabic 2400/17, conversational ai chatbot 210/19, whatsapp chatbot 210/36
@@ -396,6 +397,7 @@ EXTRA_SERVICES.append(dict(
        ("Does content marketing help SEO?","Yes. Useful pages and articles are how most sites earn rankings for the questions buyers ask, and they give other sites a reason to link to you. We plan content and [SEO](seo-agency-dubai.html) together."),
        ("Can you write content in Arabic?","Yes. We write native Arabic and English content, not word for word translations, so each version reads naturally to its audience."),
        ("How does content get recommended by ChatGPT and other AI tools?","AI assistants favour clear, specific, well structured answers from sources that are consistent across the web. We write for that as well as for Google. Read [how to get recommended by ChatGPT in the UAE](insights-get-recommended-by-chatgpt-uae.html)."),
+       ("Are you an inbound marketing agency?","Yes. Inbound marketing means buyers find you through useful content, search and social instead of being chased with cold ads. We plan the content, rank it, share it and connect it to [email marketing](email-marketing-agency-dubai.html) and WhatsApp follow up, so readers turn into enquiries."),
        ("How much content do we need each month?","Fewer, better pieces usually beat a busy calendar. Most clients start with two to four substantial pieces a month plus the social and email content cut from them, then adjust based on results.")],
   related=['content-creation-dubai','seo-agency-dubai','ai-seo-agency-dubai']))
 

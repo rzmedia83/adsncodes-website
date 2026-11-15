@@ -129,8 +129,8 @@ OVERRIDE = {
    subs_h='App development services'),
  'web-development-dubai': dict(
    h1=['Web design and', 'development in Dubai'],
-   lede="Fast company websites, e-commerce stores that sell, and day to day management of your online store and your Amazon and Noon listings.",
-   subs_h='Website and e-commerce services'),
+   lede="Website development services for UAE businesses: fast company websites, e-commerce stores that sell, and day to day management of your online store and your Amazon and Noon listings.",
+   subs_h='Website development services in Dubai'),
  'branding-agency-dubai': dict(subs_h='Branding services in Dubai'),
  'video-production-dubai': dict(subs_h='Video production services in Dubai'),
 }
