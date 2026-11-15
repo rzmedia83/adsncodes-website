@@ -53,3 +53,12 @@ Not available to us:
 - Zolmi: zolmi.ae is salon booking software, not a business directory (checked Nov 11 2026).
 
 Also update on an address change: website footer, contact page, schema, llms.txt, Arabic pages, social profiles, WhatsApp Business profile, Meta and Google Ads business details, email signature, portfolio, brand book and document templates.
+
+## Label switch to "company" (16 Nov 2026)
+
+Done: website (hero, About, footer, schema, llms.txt, Arabic), letterhead, Google Business Profile description (pending Google review), LinkedIn tagline and About, Facebook Page intro, YouTube description (was empty, added), Instagram (already said company).
+Submitted, not showing yet: TikTok bio (also replaced the old "Ads N Codes | Marketing Agency" emoji bio); recheck.
+Still say "agency", update when next logged in: The Org, ProvenExpert, Sortlist, Behance, GetListed UAE.
+Leave alone until approved (editing can restart review): Clutch, GoodFirms, DesignRush, Crunchbase, SuperbCompanies, LinkCentre, townin, Influencer Marketing Hub, Apple Business, Yellow Pages, 2GIS, Mapbox, Foursquare.
+Never change: name, address, phone, website, or category picks (Marketing agency etc.). Those carry the local SEO signal.
+Profile picture rule not met yet: LinkedIn and TikTok still show the charcoal wordmark on white; swap to white wordmark on #414042 (site2/apple-touch-icon.png style).
