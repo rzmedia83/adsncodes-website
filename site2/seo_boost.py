@@ -94,6 +94,8 @@ FAQ_ADD = {
  ],
  # marketing agency abu dhabi 880/KD41
  'digital-marketing-agency-abu-dhabi': [
+  ("Do you market clinics and healthcare providers in Abu Dhabi?",
+   "Yes. We run doctor led content, patient campaigns, Google reviews and a WhatsApp booking agent for clinics in Abu Dhabi and Al Ain. See [clinic marketing in Abu Dhabi](healthcare-marketing-agency-abu-dhabi.html) and the [WhatsApp AI agent for Abu Dhabi clinics](whatsapp-ai-agent-clinics-abu-dhabi.html)."),
   ("Do you work as a social media agency in Abu Dhabi?",
    "Yes. We plan, shoot and run Instagram, TikTok, Facebook and LinkedIn for Abu Dhabi brands, with content in English and Arabic, community replies and Meta ads aimed at Abu Dhabi and Al Ain separately."),
   ("Are you an advertising agency or a digital marketing agency?",

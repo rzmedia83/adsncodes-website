@@ -8,7 +8,7 @@ for _i in INDUSTRIES:
 for _i in INDUSTRIES:
     built.append(service_page(_i))
 
-_cards = ''.join(f'''<a class="indc" href="{i['slug']}.html"><span class="indc-m"><img src="{i['img']}" alt="{e(i['alt'])}" loading="lazy"></span><span class="indc-t"><b>{e(i['ind'])}</b><span>{e(i['lede'].split('. ')[0])}.</span><em>{e(i['short'])} {ARROW}</em></span></a>''' for i in INDUSTRIES)
+_cards = ''.join(f'''<a class="indc" href="{i['slug']}.html"><span class="indc-m"><img src="{i['img']}" alt="{e(i['alt'])}" loading="lazy"></span><span class="indc-t"><b>{e(i['ind'])}</b><span>{e(i['lede'].split('. ')[0])}.</span><em>{e(i['short'])} {ARROW}</em></span></a>''' for i in INDUSTRIES if i.get('hub', True))
 _body = f'''<style>
 .indgrid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(16px,2vw,26px)}}
 .indc{{display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:var(--rad);overflow:hidden;background:linear-gradient(180deg,#fff,#fbfaf8);box-shadow:0 5px 0 #e7e4de,0 22px 40px rgba(20,20,22,.07)}}
@@ -32,7 +32,7 @@ _body = f'''<style>
   <div class="indgrid">{_cards}</div>
   <p class="dim" style="margin-top:36px;max-width:62ch">Also construction and contracting, beauty and wellness, trading, B2B and professional services. If your customers search, scroll or message before they buy, <a href="contact.html">we can help</a>.</p>
 </div></section>'''
-_ild = {"@context": "https://schema.org", "@type": "ItemList", "name": "Industries we market in the UAE", "itemListElement": [{"@type": "ListItem", "position": n + 1, "url": DOMAIN + i['slug'] + '.html', "name": i['short']} for n, i in enumerate(INDUSTRIES)]}
+_ild = {"@context": "https://schema.org", "@type": "ItemList", "name": "Industries we market in the UAE", "itemListElement": [{"@type": "ListItem", "position": n + 1, "url": DOMAIN + i['slug'] + '.html', "name": i['short']} for n, i in enumerate([x for x in INDUSTRIES if x.get('hub', True)])]}
 built.append(page('industries', None, "Marketing Agency by Industry in Dubai & UAE | Ads n' Codes",
                   "Industry marketing in Dubai and the UAE for real estate, automotive, clinics, restaurants, hotels, e-commerce, education and fashion brands.",
                   "Tell us about your industry.", _body, [_ild, crumbs_ld([("Home", ""), ("Industries", "industries.html")])]))
