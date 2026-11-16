@@ -718,5 +718,6 @@
     else if(/\/\/(realestate|medicare|grillhouse|inventa|backtoroots)\.adsncodes\.com/.test(h)){ name='demo_click'; p.demo = h.split('//')[1].split('.')[0]; }
     if(!name) return; load(); p.transport_type='beacon';
     try{ gtag('event', name, p); }catch(_){}
+    try{ clarity('event', name); clarity('set', 'lead_action', name); }catch(_){}
   }, true);
 })();

@@ -108,6 +108,8 @@
       if(!j.ok) throw 0;
       f.style.display='none'; ok.style.display='block'; ok.focus();
       try{ window.gtag && gtag('event','generate_lead',{method:'audit_form',page_path:location.pathname}); }catch(_){}
+      try{ window.fbq && fbq('track','Lead',{content_name:'Free marketing audit',page:location.pathname}); }catch(_){}
+      try{ window.clarity && (clarity('event','generate_lead'), clarity('set','lead_action','audit_form')); }catch(_){}
     }).catch(function(){
       f.removeAttribute('aria-busy'); err.innerHTML='Something went wrong. Please try again, or send us a message on <a href="https://wa.me/971565440310?text=Hi%2C%20I%27d%20like%20a%20free%20marketing%20audit">WhatsApp</a>.'; err.style.display='block';
     });
