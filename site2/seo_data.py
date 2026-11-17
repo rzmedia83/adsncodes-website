@@ -24,7 +24,7 @@ SEO = {
                              "Personal branding in Dubai for founders, CEOs, doctors and experts: positioning, LinkedIn and Instagram content, founder videos and portraits."),
  'content-creation-dubai': ("Content Creation Agency in Dubai | Ads n' Codes",
                             "Content creation in Dubai: social media content, ad creatives, graphic design, motion graphics, copywriting and AI assisted video for UAE brands."),
- 'influencer-marketing-dubai': ("Influencer Marketing Agency in Dubai | Micro Influencers | Ads n' Codes",
+ 'influencer-marketing-dubai': ("Influencer Marketing Agency in Dubai & UAE | Micro Influencers | Ads n' Codes",
                                 "Influencer marketing in Dubai with vetted, permit holding UAE creators on Instagram, TikTok and Snapchat, each one tracked to the leads and sales they bring."),
  'ugc-content-dubai': ("UGC Content Creation in Dubai & UAE | Ads n' Codes",
                        "UGC video ads in Dubai: unboxings, reviews and testimonials by UAE creators, scripted and edited to perform on TikTok, Instagram Reels and Meta ads."),

@@ -53,7 +53,7 @@ def article_page(a):
   <div class="icards">{more}</div>
 </div></section>"""
     url = DOMAIN + 'insights-' + a['slug'] + '.html'
-    ld = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": a['h1'], "description": a['desc'], "datePublished": a['date'], "dateModified": a['date'],
+    ld = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": a['h1'], "description": a['desc'], "datePublished": a['date'], "dateModified": a.get('updated', a['date']),
           "author": dict({"@type": "Person", "name": a.get('author','Razal Mohammed')}, **({"url": DOMAIN + "about.html"} if a.get('author','Razal Mohammed') == 'Razal Mohammed' else {})), "publisher": {"@id": DOMAIN + "#org"},
           "mainEntityOfPage": url, "inLanguage": "en-AE", "image": DOMAIN + OGMAP.get("insights-" + a["slug"], "assets/og.jpg")}
     return page('insights-' + a['slug'], 'insights', a['title'], a['desc'], "Want this done for your business? Let's talk.", body,
