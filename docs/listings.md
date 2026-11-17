@@ -57,8 +57,8 @@ Also update on an address change: website footer, contact page, schema, llms.txt
 ## Label switch to "company" (16 Nov 2026)
 
 Done: website (hero, About, footer, schema, llms.txt, Arabic), letterhead, Google Business Profile description (pending Google review), LinkedIn tagline and About, Facebook Page intro, YouTube description (was empty, added), Instagram (already said company).
-Submitted, not showing yet: TikTok bio (also replaced the old "Ads N Codes | Marketing Agency" emoji bio); recheck.
-Still say "agency", update when next logged in: The Org, ProvenExpert, Sortlist, Behance, GetListed UAE.
+Done 17 Nov: TikTok bio now live ("Marketing & technology company in Dubai | Social, Ads, SEO, Video, Web & AI"), no edit needed. The Org description (agency to company, rest unchanged). Behance headline and About text (agency to company, rest unchanged).
+Still say "agency", Chrome session logged out on 17 Nov, update when Razal is signed in: ProvenExpert, Sortlist, GetListed UAE.
 Leave alone until approved (editing can restart review): Clutch, GoodFirms, DesignRush, Crunchbase, SuperbCompanies, LinkCentre, townin, Influencer Marketing Hub, Apple Business, Yellow Pages, 2GIS, Mapbox, Foursquare.
 Never change: name, address, phone, website, or category picks (Marketing agency etc.). Those carry the local SEO signal.
 Profile picture rule not met yet: LinkedIn and TikTok still show the charcoal wordmark on white; swap to white wordmark on #414042 (site2/apple-touch-icon.png style).
