@@ -62,5 +62,7 @@ Done 17 Nov (afternoon): Behance cover banner image now reads "Marketing and tec
 Done 17 Nov (after Razal signed in): ProvenExpert About text and Sortlist description (agency to company, rest unchanged). Sortlist opportunities are not free to apply: Apply starts a Sortlist+ trial that needs a credit card and then bills EUR 189 a month, so we do not apply (opportunity #2205943 left to expire on 17 Nov).
 Now live, update the description once it has settled for a week (around 24 Nov), title keeps "Agency" as a keyword: LinkCentre (live on 17 Nov), Clutch (public profile live, signed out), GoodFirms (public profile live).
 Leave alone until approved (editing can restart review): DesignRush (still 404 on 17 Nov), Crunchbase, SuperbCompanies, LinkCentre, townin, Influencer Marketing Hub, Apple Business, Yellow Pages, 2GIS, Mapbox, Foursquare.
+Done 19 Nov: Portfolio deck cover line and Brand Book (intro, positioning line, cover) now say "marketing and technology company"; the Brand Book records the rule that "agency" stays only on marketing service pages and search titles. Exported PDFs on Google Drive are older copies and need a fresh download.
+Still to check by Razal: WhatsApp Business profile About and description (on his phone).
 Never change: name, address, phone, website, or category picks (Marketing agency etc.). Those carry the local SEO signal.
 Profile picture rule not met yet: LinkedIn and TikTok still show the charcoal wordmark on white; swap to white wordmark on #414042 (site2/apple-touch-icon.png style).
