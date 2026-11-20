@@ -16,33 +16,35 @@ Standard details used everywhere:
 - Free listings only. Never pay for a listing, claim fee, upgrade or fast track (Razal, Nov 15 2026).
 - Client size on forms that ask: 100% small businesses (under $10M revenue)
 
+Last checked: 20 Nov 2026 (weekly directory approval check; bd@ and adsncodesofficial@gmail.com searched, razal@ mailbox not signed in so skipped).
+
 | Platform | Login account | Status (Nov 2026) | Profile / admin URL | Address shown |
 |---|---|---|---|---|
 | Google Business Profile | adsncodesofficial@gmail.com | Live. Description switched to "marketing and technology company" on 16 Nov 2026 (pending Google review at the time). Categories (12 Nov 2026): Marketing agency (primary), Branding agency, Software company, Web Designer, Advertising agency, E-commerce service, Photography service, Internet marketing service, Video production service. Automation company removed (Google treats it as industrial, showed us as a manufacturer). Products (16 Nov 2026): 10 products, no prices, each linked to its page, images in site2/assets/gbp/. Marketing: Social Media Management, Google & Meta Ads, SEO & AI Search (AEO, GEO), Branding & Logo Design, Photo & Video Production, Ecommerce & Marketplace Management. Technology: Websites & Ecommerce Stores, WhatsApp AI Agents, AI & Business Automation, App & Software Development | business.google.com | Yes |
 | Google Search Console | adsncodesofficial@gmail.com | Verified, sitemap 85 URLs | search.google.com/search-console (domain property) | n/a |
 | Bing Webmaster Tools | signed in in Chrome | Verified, sitemap and 85 URLs submitted | bing.com/webmasters | n/a |
 | Bing Places | adsncodesofficial@gmail.com (Google sign in) | Verified, synced with Google Business Profile, publishing in 7 to 12 days | bing.com/forbusiness | Yes (synced from Google) |
-| Apple Business (Maps) | Apple account of Ads N Codes FZE LLC | In review (location 1549660661071479646) | business.apple.com | Yes |
-| Clutch | razal@adsncodes.com | Public profile live (seen 17 Nov 2026), not yet reviewed | clutch.co | Yes |
-| GoodFirms | razal@adsncodes.com | Public profile live (seen 17 Nov 2026) | goodfirms.co | Yes |
-| DesignRush | razal@adsncodes.com | Submitted for review | designrush.com | Yes |
+| Apple Business (Maps) | Apple account of Ads N Codes FZE LLC | In review (location 1549660661071479646); not on Apple Maps search as of 20 Nov 2026, Apple Business signed out in Chrome | business.apple.com | Yes |
+| Clutch | razal@adsncodes.com | Public profile live (seen 17 and 20 Nov 2026), not yet reviewed; signed out in Chrome, so the description edit needs Razal to sign in | clutch.co | Yes |
+| GoodFirms | razal@adsncodes.com | Public profile live (seen 17 and 20 Nov 2026), tagline still "Marketing and technology agency in Dubai", name shown as "Ads n Codes" (no apostrophe); signed out in Chrome | goodfirms.co | Yes |
+| DesignRush | razal@adsncodes.com | Submitted for review; profile URL still 404 on 20 Nov 2026 | designrush.com | Yes |
 | Sortlist | adsncodesofficial@gmail.com | Live, free plan, starting price EUR 1,000 | app.sortlist.com/ads-n-codes | Yes (Khalid Bin Al Waleed Road) |
-| Crunchbase | razal@adsncodes.com | Submitted | crunchbase.com/organization/ads-n-codes | City only |
+| Crunchbase | razal@adsncodes.com | Live (CB Rank 6787908, seen 20 Nov 2026). Short and full description changed agency to company on 20 Nov (edit saved, may pass Crunchbase review). Shows 11-50 employees, left as is | crunchbase.com/organization/ads-n-codes | City only |
 | GetListed UAE | razal@adsncodes.com | Live, free plan (listing 775376) | getlisteduae.com | Yes |
-| Yellow Pages UAE | no account (form) | Free listing submitted | yellowpages-uae.com | Yes |
-| Influencer Marketing Hub | razal@adsncodes.com | Submitted | influencermarketinghub.com | City only |
+| Yellow Pages UAE | no account (form) | Free listing submitted; not in yellowpages-uae.com search on 20 Nov 2026 | yellowpages-uae.com | Yes |
+| Influencer Marketing Hub | razal@adsncodes.com | Submitted; /agency/ads-n-codes/ redirects to the home page on 20 Nov 2026 | influencermarketinghub.com | City only |
 | Behance | adsncodesofficial@gmail.com | Live | behance.net/adsncodes | City only |
 | LinkedIn company page | Razal's LinkedIn | Live, founded 2024 | linkedin.com/company/adsncodes | Yes |
 | Microsoft Clarity | Razal's account | Live | clarity.microsoft.com | n/a |
 | UptimeRobot | Razal's account | Live, 5 minute checks | uptimerobot.com | n/a |
-| townin.com | razal@adsncodes.com (email code login) | Submitted Nov 8 2026 (free Starter plan), awaiting Townin approval; public email hello@ | townin.com/Dubai/advertising-media-promotions | Yes |
-| Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid and not planned (free listings only) | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
-| Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS said it would call to verify within 3 working days, no call received and not on 2gis.ae as of Nov 15; still missing on Nov 19, so resubmitted the same day via the free public Add company form (same details, hours, hello@ in notes, status emails to razal@adsncodes.com; 2GIS replied "we will make changes after we verify"). Check again around Nov 26 | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
+| townin.com | razal@adsncodes.com (email code login) | Submitted Nov 8 2026 (free Starter plan), awaiting Townin approval (not on the category page on 20 Nov 2026); public email hello@ | townin.com/Dubai/advertising-media-promotions | Yes |
+| Foursquare for Business | adsncodesofficial@gmail.com | Place submitted Nov 8 2026 (place id 6af042531e9b717d223d76a0), unclaimed; claiming costs USD 20 one time, not paid and not planned (free listings only). Place page publicly visible on business.foursquare.com on 20 Nov 2026 (Advertising Agency, address, phone, website correct); nothing more to do for free | business.foursquare.com/places/6af042531e9b717d223d76a0 | Yes (pin at BurJuman, 25.2528, 55.3016) |
+| Urbi (2GIS) | no account (public form, status emails to razal@adsncodes.com) | Submitted Nov 8 2026; 2GIS said it would call to verify within 3 working days, no call received and not on 2gis.ae as of Nov 15; still missing on Nov 19, so resubmitted the same day via the free public Add company form (same details, hours, hello@ in notes, status emails to razal@adsncodes.com; 2GIS replied "we will make changes after we verify"). Still missing on 2gis.ae on 20 Nov 2026. Check again around Nov 26 | 2gis.ae/dubai | Yes (2GIS shows its own district label for the tower) |
 | LinkCentre | razal@adsncodes.com | Live (approved, seen 17 Nov 2026), page 3 of Digital Marketing Agency category; paid Fast Track AED 149 and Premium declined | secure.linkcentre.com/status/1740072 | No (country UAE) |
 | ProvenExpert | razal@adsncodes.com | Live Nov 11 2026 (published; 30 day trial of paid features, then free plan; nothing paid). Public email hello@, logo, website, LinkedIn, Instagram, Facebook added; logo fixed to charcoal #414042 Nov 11 | provenexpert.com/ads-n-codes | Yes (ZIP entered as 00000) |
-| SuperbCompanies | razal@adsncodes.com | Submitted Nov 11 2026, in moderation (5 to 10 business days). Services: Digital Marketing 40, Creative 25, Advertising 20, Software Development 15. Logo fixed to charcoal #414042 Nov 11 | vendors.superbcompanies.com | Yes (Dubai, BurJuman Business Tower) |
+| SuperbCompanies | razal@adsncodes.com | Submitted Nov 11 2026, in moderation (5 to 10 business days); public profile still 404 and vendor panel signed out on 20 Nov 2026. Services: Digital Marketing 40, Creative 25, Advertising 20, Software Development 15. Logo fixed to charcoal #414042 Nov 11 | vendors.superbcompanies.com | Yes (Dubai, BurJuman Business Tower) |
 | The Org | Razal's account; joined as Founder via bd@adsncodes.com work email (Nov 15 2026) | Live (page existed from LinkedIn). Updated Nov 15: description (marketing and technology agency label), industries Marketing, Advertising, Software, employees 11-50, Bootstrap, LinkedIn and Facebook links, charcoal logo. Unverified badge (verification is a paid upsell, not taken) | theorg.com/org/ads-n-codes | City only (Dubai) |
-| Mapbox (feeds ChatGPT maps, per reports) | no account (Contribute form at labs.mapbox.com/contribute, status emails to razal@adsncodes.com) | Business submitted Nov 8 2026, in Mapbox review | labs.mapbox.com/contribute | Yes (pin in BurJuman Business Tower, 25.2515, 55.3016) |
+| Mapbox (feeds ChatGPT maps, per reports) | no account (Contribute form at labs.mapbox.com/contribute, status emails to razal@adsncodes.com) | Business submitted Nov 8 2026, in Mapbox review (no status email by 20 Nov 2026) | labs.mapbox.com/contribute | Yes (pin in BurJuman Business Tower, 25.2515, 55.3016) |
 
 Not available to us:
 - HiDubai: now redirects to Invest in Dubai, which lists Dubai licensed companies only (we hold an Ajman free zone licence).
@@ -61,7 +63,8 @@ Done 17 Nov: TikTok bio now live ("Marketing & technology company in Dubai | Soc
 Done 17 Nov (afternoon): Behance cover banner image now reads "Marketing and technology company in Dubai" (file site2/assets/gbp/behance-cover.jpg). GetListed UAE description (agency to company; tags kept as search keywords).
 Done 17 Nov (after Razal signed in): ProvenExpert About text and Sortlist description (agency to company, rest unchanged). Sortlist opportunities are not free to apply: Apply starts a Sortlist+ trial that needs a credit card and then bills EUR 189 a month, so we do not apply (opportunity #2205943 left to expire on 17 Nov).
 Now live, update the description once it has settled for a week (around 24 Nov), title keeps "Agency" as a keyword: LinkCentre (live on 17 Nov), Clutch (public profile live, signed out), GoodFirms (public profile live).
-Leave alone until approved (editing can restart review): DesignRush (still 404 on 17 Nov), Crunchbase, SuperbCompanies, LinkCentre, townin, Influencer Marketing Hub, Apple Business, Yellow Pages, 2GIS, Mapbox, Foursquare.
+Done 20 Nov (weekly approval check): Crunchbase is live; short and full description changed agency to company, rest unchanged. Clutch and GoodFirms are still signed out in Chrome, so their description edit around 24 Nov needs Razal to sign in (or will be done on the next check if a session is open).
+Leave alone until approved (editing can restart review): DesignRush (still 404 on 20 Nov), SuperbCompanies, LinkCentre, townin, Influencer Marketing Hub, Apple Business, Yellow Pages, 2GIS, Mapbox, Foursquare.
 Done 19 Nov: Portfolio deck cover line and Brand Book (intro, positioning line, cover) now say "marketing and technology company"; the Brand Book records the rule that "agency" stays only on marketing service pages and search titles. Exported PDFs on Google Drive are older copies and need a fresh download.
 Still to check by Razal: WhatsApp Business profile About and description (on his phone).
 Never change: name, address, phone, website, or category picks (Marketing agency etc.). Those carry the local SEO signal.
