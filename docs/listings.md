@@ -45,6 +45,8 @@ Last checked: 20 Nov 2026 (weekly directory approval check; bd@ and adsncodesoff
 | SuperbCompanies | razal@adsncodes.com | Submitted Nov 11 2026, in moderation (5 to 10 business days); public profile still 404 and vendor panel signed out on 20 Nov 2026. Services: Digital Marketing 40, Creative 25, Advertising 20, Software Development 15. Logo fixed to charcoal #414042 Nov 11 | vendors.superbcompanies.com | Yes (Dubai, BurJuman Business Tower) |
 | The Org | Razal's account; joined as Founder via bd@adsncodes.com work email (Nov 15 2026) | Live (page existed from LinkedIn). Updated Nov 15: description (marketing and technology agency label), industries Marketing, Advertising, Software, employees 11-50, Bootstrap, LinkedIn and Facebook links, charcoal logo. Unverified badge (verification is a paid upsell, not taken) | theorg.com/org/ads-n-codes | City only (Dubai) |
 | Mapbox (feeds ChatGPT maps, per reports) | no account (Contribute form at labs.mapbox.com/contribute, status emails to razal@adsncodes.com) | Business submitted Nov 8 2026, in Mapbox review (no status email by 20 Nov 2026) | labs.mapbox.com/contribute | Yes (pin in BurJuman Business Tower, 25.2515, 55.3016) |
+| TechBehemoths | adsncodesofficial@gmail.com via Google sign-in | Submitted Nov 20 2026 on the FREE plan (CORE/PRO upsell declined), in review, live within about 24h. 10 services and 8 industries entered; free plan shows 5 services | techbehemoths.com (profile URL once approved) | Yes (B Hive, BurJuman Business Tower, head office) |
+| Featured.com | adsncodesofficial@gmail.com via Google sign-in | Free plan account created Nov 20 2026. Not a directory: used to answer journalist requests for quoted mentions with links | featured.com | n/a |
 
 Not available to us:
 - HiDubai: now redirects to Invest in Dubai, which lists Dubai licensed companies only (we hold an Ajman free zone licence).
@@ -52,6 +54,13 @@ Not available to us:
 - Semrush Agency Partners: needs a paid plan.
 - YallaPages: yallapages.ae now redirects to an unrelated domain (checked Nov 11 2026).
 - Digital Agency Network: paid membership only (from USD 580 a year), no free listing (checked Nov 12 2026).
+- UpCity: upcity.com fails to load (Nov 20 2026); the directory appears to have moved under Gartner. Retry later.
+- Cylex UAE: cylex-uae.com fails to load from our browser (Nov 20 2026). Retry later.
+- Hotfrog UAE: every page sits behind a bot check we do not solve. Razal can add the business himself in a normal browser.
+- Agency Spotter: free plan exists, but signup is email + password or LinkedIn only (no Google). Needs Razal to set the password.
+- Qwoted: free, but signup needs a password (no Google). Needs Razal to set the password.
+- Trustpilot business: business.trustpilot.com is blocked for the browser extension; needs Razal to allow the site or sign up himself (free plan).
+- Product Hunt, SaaSHub: software product directories; a services company does not qualify. Use them only when a product (e.g. the clinic AI agent) is launched.
 - Zolmi: zolmi.ae is salon booking software, not a business directory (checked Nov 11 2026).
 
 Also update on an address change: website footer, contact page, schema, llms.txt, Arabic pages, social profiles, WhatsApp Business profile, Meta and Google Ads business details, email signature, portfolio, brand book and document templates.
