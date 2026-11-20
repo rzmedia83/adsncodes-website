@@ -17,3 +17,9 @@ Rules: CLAUDE.md content rules, facts researched and cited in `sources`, no pric
 
 ## Done
 - 2026-11-20: upgraded insights-whatsapp-business-solution-provider-uae and insights-verify-whatsapp-business-account-uae (position 11 queries); hotel page title now leads with Tourism.
+
+## Indexing pending (Search Console page report, checked 20 Nov 2026)
+103 of 119 sitemap pages are in Google's indexed list (the report lags a few days). Not yet listed, request indexing in this order:
+free-marketing-audit, video-production-dubai, facebook-meta-ads-agency-dubai, corporate-video-production-dubai, insights-clinic-advertising-rules-uae, insights-ecommerce-website-price-dubai, whatsapp-ordering-restaurants-dubai, event-photography-videography-dubai, copywriting-services-dubai, web-design-abu-dhabi, app-development-abu-dhabi, digital-marketing-agency-ras-al-khaimah, ar/abu-dhabi, ar/web-design-abu-dhabi, ar/app-development-abu-dhabi.
+insights-best-ecommerce-development-companies-dubai is already on Google per URL inspection on 19 Nov.
+Old WordPress URLs still in the indexed list (projects-dark/, services/*, team/*, contact-dark/) all 301 to new pages; Google drops them over time.
