@@ -827,9 +827,9 @@ for _a in ARTICLES:
 
 # Nov 8 keyword push: WhatsApp questions UAE businesses search (Semrush ae).
 # how to verify whatsapp business account 1000/KD33, whatsapp business verification process 40/30
-ARTICLES.insert(0, dict(slug='verify-whatsapp-business-account-uae', date='2026-11-08', read='6 min',
+ARTICLES.insert(0, dict(slug='verify-whatsapp-business-account-uae', date='2026-11-08', updated='2026-11-20', read='7 min',
   kicker='WhatsApp for business',
-  title="How to Verify a WhatsApp Business Account (Blue Tick) in the UAE | Ads n' Codes",
+  title="WhatsApp Business Verification in Dubai & UAE: Blue Tick Process | Ads n' Codes",
   desc="How WhatsApp Business verification works for UAE businesses: Meta Verified on the app, the blue tick on the WhatsApp Business Platform, who qualifies, how to apply and what to do if you are refused.",
   h1='How to verify a WhatsApp Business account and get the blue tick',
   lede="A verified badge tells customers they are talking to the real business, not a scammer using your name. There are two routes to it, depending on whether you use the WhatsApp Business app or the WhatsApp Business Platform. Here is how each works.",
@@ -837,6 +837,14 @@ ARTICLES.insert(0, dict(slug='verify-whatsapp-business-account-uae', date='2026-
   body=[
    ('p',"Fake WhatsApp accounts using real company names and logos are common in the UAE, especially for banks, delivery firms, clinics and real estate. A verified badge next to your name is the quickest way for a customer to know the chat is genuine. It also makes your messages look more trustworthy when someone sees your number for the first time."),
    ('p',"The old green tick has been replaced by Meta's blue verified badge, the same one used on Facebook and Instagram. How you get it depends on which version of WhatsApp your business runs on."),
+   ('h2',"The WhatsApp Business verification process in Dubai, step by step"),
+   ('p',"Whichever route you take, Meta checks the same thing first: that your business is real and that the details match everywhere. For a Dubai or UAE company, that means:"),
+   ('ul',["**Step 1, trade licence ready.** Have your UAE trade licence (mainland or free zone) as a clear PDF, with the legal name exactly as registered.",
+          "**Step 2, matching details online.** Your website should show the same business name, address and phone number as the licence. A mismatch is the most common reason for refusal.",
+          "**Step 3, business verification in Meta Business Manager.** Go to Security Centre, start business verification, upload the licence and confirm by phone, email or domain.",
+          "**Step 4, two step verification on the number.** Turn it on in WhatsApp before applying for any badge.",
+          "**Step 5, apply for the badge.** Meta Verified on the app, or the blue tick request in WhatsApp Manager on the platform, as described below.",
+          "**Step 6, wait for the decision.** Business verification usually takes a few working days. The badge decision can take longer, and if refused, Meta tells you when you can apply again."]),
    ('h2',"Route 1: Meta Verified on the WhatsApp Business app"),
    ('p',"If your team uses the free WhatsApp Business app on a phone, verification comes through Meta Verified, a paid monthly subscription. Meta has been rolling it out country by country, so it is not available to every business in every market yet."),
    ('ul',["Open the WhatsApp Business app and look under Settings or Business tools for Meta Verified. If you do not see it, it is not available for your account or country yet.",
@@ -962,9 +970,9 @@ ARTICLES.insert(0, dict(slug='whatsapp-vs-whatsapp-business-uae', date='2026-11-
   related=['whatsapp-ai-agent-uae','arabic-ai-chatbot-uae','ai-automation']))
 
 # whatsapp business solution provider 480/KD36 (CPC 9), official whatsapp business solution provider 70/43, whatsapp business platform 140/48
-ARTICLES.insert(0, dict(slug='whatsapp-business-solution-provider-uae', date='2026-11-08', read='6 min',
+ARTICLES.insert(0, dict(slug='whatsapp-business-solution-provider-uae', date='2026-11-08', updated='2026-11-20', read='7 min',
   kicker='WhatsApp automation',
-  title="WhatsApp Business Solution Provider in the UAE: How to Choose | Ads n' Codes",
+  title="WhatsApp Business Solution Provider UAE: What They Do & How to Choose | Ads n' Codes",
   desc="What a WhatsApp Business Solution Provider does, whether you need one or can use Meta's Cloud API directly, and the questions UAE businesses should ask before signing up.",
   h1='WhatsApp Business Solution Provider in the UAE: what they do and how to choose one',
   lede="To use the WhatsApp Business Platform, most businesses go through a Business Solution Provider. The choice decides your monthly cost, what your team can do and how hard it is to leave. Here is how to choose well.",
@@ -979,6 +987,13 @@ ARTICLES.insert(0, dict(slug='whatsapp-business-solution-provider-uae', date='20
           "Connects WhatsApp to your CRM, booking system, store or ads, and sometimes adds chatbots or AI."]),
    ('h2',"Do you need a BSP, or can you go direct?"),
    ('p',"Meta also offers the Cloud API directly to businesses. Going direct avoids a provider's markup, but there is no inbox or interface, so you need developers to build or connect one. For most UAE small and mid sized businesses, a provider or a ready made agent is simpler. For businesses with a development team, direct access gives the most control."),
+   ('h2',"Official Meta partner or reseller?"),
+   ('p',"Many companies in the UAE sell WhatsApp Business Platform access. Some are official Meta Business Partners listed in Meta's partner directory. Others resell an official provider's platform under their own name. A reseller can still be a good choice when it adds local setup, Arabic support or an AI agent, but you should know whose platform sits underneath, because that decides the message charges, the features and how you would move later."),
+   ('ul',["Ask which official provider, or Meta's own Cloud API, the service runs on.",
+          "Check the company in Meta's Business Partner directory if it calls itself an official partner.",
+          "Make sure the WhatsApp Business account is created in your own Meta Business Manager, not the reseller's."]),
+   ('h2',"How long setup takes in the UAE"),
+   ('p',"With your trade licence and a website that matches your company details, Meta business verification usually takes a few working days. Connecting the number, setting up the inbox and getting the first message templates approved can often be done in the same week. Delays usually come from mismatched company names, a website without your business details, or a number still active on the WhatsApp Business app that has to be moved or set up for coexistence."),
    ('h2',"Questions to ask before you choose"),
    ('ul',["**What exactly will I pay?** Ask for the software fee, any markup on Meta's message charges, setup fees and the cost per extra user, in writing.",
           "**Who owns the number and the WhatsApp Business account?** It should be registered to your company in your own Meta Business Manager, so you can move providers later.",

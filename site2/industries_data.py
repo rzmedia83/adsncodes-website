@@ -113,7 +113,7 @@ INDUSTRIES = [
   related=['photography-dubai','influencer-marketing-dubai','whatsapp-ordering-restaurants-dubai']),
 
  dict(slug='hotel-marketing-agency-dubai', nav='Hotels and tourism', short='Hotel and tourism marketing', ind='Hotels and tourism',
-  title="Hotel & Tourism Marketing Agency in Dubai & UAE | Ads n' Codes",
+  title="Tourism & Hotel Marketing Agency in Dubai & UAE | Ads n' Codes",
   desc="Hotel, resort and tourism marketing in Dubai and the UAE: destination content, direct booking campaigns, creator stays and guest messaging on WhatsApp.",
   h1=['Hotel and tourism', 'marketing in the UAE'], img='assets/img/hospitality.webp', alt='Beachfront hotel in Dubai',
   lede="For hotels, resorts, holiday homes, tour operators and attractions. Content that makes people want to be there, campaigns that bring direct bookings, and guests answered around the clock.",
