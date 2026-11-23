@@ -18,9 +18,22 @@ def _inline(t):
 def _date(d):
     import datetime as _dt
     return _dt.date.fromisoformat(d).strftime('%-d %B %Y')
+WA_CTA = ('Missing WhatsApp enquiries after hours?',
+          "Our WhatsApp AI agent replies to customers in seconds, in Arabic and English, answers prices and questions, books appointments and passes hot leads to your team.",
+          'whatsapp-ai-agent-uae.html', 'See how the AI agent works')
+def _cta_html(c):
+    h, t, href, label = c
+    return f'<aside class="art-cta"><p class="art-cta-h">{e(h)}</p><p>{e(t)}</p><a class="btn btn-i" href="{href}">{e(label)}</a></aside>'
 def article_page(a):
     parts = []
-    for kind, v in a['body']:
+    body = list(a['body'])
+    cta = a.get('cta') or (WA_CTA if 'whatsapp' in a['slug'] else None)
+    if cta and not any(k == 'cta' for k, _ in body):
+        h2s = [i for i, (k, _) in enumerate(body) if k == 'h2']
+        at = h2s[2] if len(h2s) > 2 else len(body)
+        body.insert(at, ('cta', cta))
+    for kind, v in body:
+        if kind == 'cta': parts.append(_cta_html(v)); continue
         if kind == 'p': parts.append(f'<p>{_inline(v)}</p>')
         elif kind == 'h2': parts.append(f'<h2>{e(v)}</h2>')
         elif kind == 'img': parts.append(f'<figure class="art-fig"><img src="{v[0]}" alt="{e(v[1])}" width="1480" height="832" loading="lazy" decoding="async"><figcaption>{e(v[1])}</figcaption></figure>')
