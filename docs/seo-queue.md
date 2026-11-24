@@ -4,7 +4,7 @@ The Tue/Thu article task takes the FIRST unchecked item, writes it, publishes it
 Each item exists because Search Console shows impressions for the query (positions 10 to 30), or it supports a money page.
 Rules: CLAUDE.md content rules, facts researched and cited in `sources`, no prices, no negatives about competitors, link to the money page named.
 
-- [ ] Tourism marketing in Dubai: how tour operators and travel companies win bookings. Query "tourism marketing agency (dubai)" pos 19 to 26. Money page: hotel-marketing-agency-dubai.
+- [x] 2026-11-24 insights-tourism-marketing-dubai-tour-operators: Tourism marketing in Dubai: how tour operators and travel companies win bookings. Query "tourism marketing agency (dubai)" pos 19 to 26. Money page: hotel-marketing-agency-dubai.
 - [ ] Ghost mannequin photography in Dubai: what it is and when ecommerce brands need it. Query "ghost mannequin photography in dubai" pos 11. Money page: product-photography-dubai.
 - [ ] PPC management in Abu Dhabi: what a good agency does each month. Query "ppc management abu dhabi" 65 impressions pos 29. Money page: ppc-agency-abu-dhabi.
 - [ ] Instagram ads in Abu Dhabi: targeting, creative and what drives cost. Query "instagram ads abu dhabi" pos 26. Money page: instagram-marketing-agency-dubai and social-media-agency-abu-dhabi.

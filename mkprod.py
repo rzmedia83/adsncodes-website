@@ -1,5 +1,5 @@
 import re,glob,hashlib,os,shutil,subprocess
-os.chdir('/tmp/claude-0/-home-claude/35c3f5ad-aa3e-5285-ae81-3a4fa777bc81/scratchpad')
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 main404=open('site2/src/_404main.html',encoding='utf-8').read().strip()
 for f in glob.glob('site2/*.html'):
     if os.path.basename(f).startswith('_'): continue
