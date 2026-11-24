@@ -12,6 +12,7 @@ cv=hashlib.md5(open('assets/site.css','rb').read()).hexdigest()[:8]; jv=hashlib.
 for f in glob.glob('*.html')+glob.glob('ar/*.html'):
     if f=='404.html': continue
     s=open(f,encoding='utf-8').read()
+    s=s.replace('</span></span><span class="ln','</span></span> <span class="ln')  # word gap between heading lines, so Google reads 'brand and' not 'brandand'
     s=re.sub(r'<meta name="claude:[^"]*" content="[^"]*">\n?','',s)
     s=s.replace('href="assets/site.css"',f'href="assets/site.css?v={cv}"').replace('src="assets/site.js"',f'src="assets/site.js?v={jv}"')
     s=re.sub(r'<video\b[^>]*>', lambda m: re.sub(r'\sposter="', ' data-lposter="', m.group(0)) if ('data-src=' in m.group(0) and 'sr-v' not in m.group(0)) else m.group(0), s)
