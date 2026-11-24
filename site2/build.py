@@ -17,7 +17,7 @@ SOCIAL = [
 socials_html = '<div class="socials">' + ''.join(f'<a href="{u}" aria-label="{n}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">{p}</svg></a>' for n, u, p in SOCIAL) + '</div>'
 ORG = {
   "@context": "https://schema.org", "@type": ["ProfessionalService", "LocalBusiness"], "@id": DOMAIN + "#org",
-  "name": "Ads n' Codes", "alternateName": ["Ads n Codes", "AdsnCodes", "Ads and Codes", "Ads Codes", "Ads N Codes FZE LLC"], "legalName": "Ads N Codes FZE LLC", "url": DOMAIN, "logo": DOMAIN + "assets/logo-ink.png", "image": DOMAIN + "assets/logo-ink.png",
+  "name": "Ads n' Codes", "alternateName": ["Ads n Codes", "AdsnCodes", "Ads Codes", "Ads N Codes FZE LLC"], "legalName": "Ads N Codes FZE LLC", "url": DOMAIN, "logo": DOMAIN + "assets/logo-ink.png", "image": DOMAIN + "assets/logo-ink.png",
   "description": "Marketing and technology company in Dubai offering digital marketing, social media marketing, paid ads, SEO, branding, photography, video production, web and app development, and AI automation across the UAE.",
   "telephone": "+971565440310", "email": "hello@adsncodes.com", "priceRange": "AED",
   "address": {"@type": "PostalAddress", "streetAddress": "B Hive, Level 3, BurJuman Business Tower", "addressLocality": "Dubai", "addressRegion": "Dubai", "addressCountry": "AE"},
@@ -300,7 +300,7 @@ for name, cur, title, desc, ftitle in STATIC:
     body = (S / f'{name}.html').read_text().replace('{{VOICES}}', VOICES).replace('{{LANDING}}', LANDING).replace('{{AGENTSHOW}}', AGENTSHOW).replace('{{RESULTS}}', RESULTS).replace('{{CHATDEMO}}', CHAT_DEMO)
     extra = [crumbs_ld([("Home", ""), (title.split(' | ')[0], name + '.html')])] if name != 'index' else []
     if name == 'index':
-        extra.append({"@context": "https://schema.org", "@type": "WebSite", "@id": DOMAIN + "#website", "name": "Ads n' Codes", "alternateName": ["Ads n Codes", "AdsnCodes", "Ads and Codes"], "url": DOMAIN, "publisher": {"@id": DOMAIN + "#org"}, "inLanguage": "en-AE"})
+        extra.append({"@context": "https://schema.org", "@type": "WebSite", "@id": DOMAIN + "#website", "name": "Ads n' Codes", "alternateName": ["Ads n Codes", "AdsnCodes"], "url": DOMAIN, "publisher": {"@id": DOMAIN + "#org"}, "inLanguage": "en-AE"})
     if name in ('index', 'ai-automation'):
         qs = re.findall(r'id="[qp]\d+">([^<]+)<', body); ans = re.findall(r'aria-labelledby="[qp]\d+"><div><p>(.*?)</p>', body)
         if qs and len(qs) == len(ans): extra.append(faq_ld([(q, re.sub('<[^>]+>', '', a)) for q, a in zip(qs, ans)]))
