@@ -16,6 +16,7 @@ Rules: CLAUDE.md content rules, facts researched and cited in `sources`, no pric
 - [ ] Advertising photography in Dubai: briefing a commercial shoot. Queries "advertising photographer", "photography commercial" pos 15 to 26. Money page: photography-dubai.
 
 ## Done
+- 2026-11-25: titles now lead with the top query: insights-how-to-use-whatsapp-business-web ("whatsapp business login in chrome", 834 impressions, pos 6.5) and ppc-agency-abu-dhabi ("ppc abu dhabi", pos 17); PPC page gained a monthly work FAQ.
 - 2026-11-20: upgraded insights-whatsapp-business-solution-provider-uae and insights-verify-whatsapp-business-account-uae (position 11 queries); hotel page title now leads with Tourism.
 
 ## Indexing (URL inspection, 22 Nov 2026)

@@ -9,7 +9,7 @@ WEB_WORK = [('assets/work/laryklean-store.webp', 'LaryKlean, streetwear e-commer
 CITY_SERVICES = [
 
 dict(AD, slug='ppc-agency-abu-dhabi', nav='PPC in Abu Dhabi', short='PPC in Abu Dhabi', stype='PPC management',
-  title="PPC Management & Google Ads in Abu Dhabi | Ads n' Codes",
+  title="PPC Abu Dhabi: PPC Management & Google Ads Agency | Ads n' Codes",
   desc="PPC management in Abu Dhabi and Al Ain: Google Search, Performance Max and YouTube ads in Arabic and English, tracked to calls, WhatsApp chats and leads.",
   h1=['PPC management', 'in Abu Dhabi'], img='assets/img/ppc-agency-abu-dhabi-hero.webp', img_pos='100% 50%',
   alt='A Google search ad and a lead campaign targeted at Abu Dhabi',
@@ -35,6 +35,7 @@ dict(AD, slug='ppc-agency-abu-dhabi', nav='PPC in Abu Dhabi', short='PPC in Abu 
        ("Should Abu Dhabi and Al Ain have separate campaigns?","Usually yes. Al Ain has different search habits, competitors and costs, so a shared campaign tends to spend most of the budget on the island and starve Al Ain. Separate campaigns keep both under control."),
        ("Do we need Arabic ads in Abu Dhabi?","For most consumer and government facing businesses, yes. A good share of Abu Dhabi searches happen in Arabic, and Arabic ads often face less competition than English ones."),
        ("How quickly will Google Ads bring leads in Abu Dhabi?","Search ads can bring enquiries in the first week. The first month is about learning which keywords, areas and ads convert, then budget moves toward them."),
+       ("What does PPC management in Abu Dhabi include each month?","Each month we read the search terms and add negative keywords, move budget toward the areas and keywords that bring enquiries, test new ad copy in Arabic and English, check that call, form and WhatsApp tracking still fires, and send a plain report of leads and cost per lead."),
        ("Do we own the Google Ads account?","Yes. The account is in your name and stays yours. We work inside it with access you can remove at any time."),
        ("Do you also manage PPC in Dubai?","Yes. If you serve both cities, we run [PPC in Dubai](ppc-google-ads-agency-dubai.html) and Abu Dhabi as separate campaigns in one account, with one monthly report.")],
   related=['seo-agency-abu-dhabi','lead-generation-agency-dubai','web-design-abu-dhabi'],
