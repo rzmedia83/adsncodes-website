@@ -14,6 +14,7 @@ Claude reminds Razal about these every day at 10:00 Dubai until each is ticked, 
 - [ ] LinkedIn and TikTok: profile picture to the white wordmark on charcoal
 
 ## Bigger impact
+- [ ] Connectively (free): sign up so journalist answers can be sent; review drafts in docs/pr-drafts.md: https://connectively.us
 - [ ] Send a clean headshot, for "Razal Mohammed, Founder" author bio on articles and About
 - [ ] Send 5 names of people he has really worked with, for Google reviews (Claude drafts the WhatsApp ask with the review link)
 
